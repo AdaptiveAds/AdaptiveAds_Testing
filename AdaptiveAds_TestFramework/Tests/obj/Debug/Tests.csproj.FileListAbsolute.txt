@@ -25,3 +25,17 @@ F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.xml
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.dll
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\Tests.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\Tests.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\nunit.framework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\TestStack.BDDfy.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveAds_TestFramework.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\nunit.framework.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\TestStack.BDDfy.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.pdb

@@ -64,7 +64,7 @@ namespace AdaptiveAds_TestFramework
         public static void Initialise()
         {
             Close();
-            Instance = new FirefoxDriver();
+            Instance = new FirefoxDriver(new FirefoxBinary(@"C:\Program Files (x86)\Mozilla Firefox\firefox.exe"), new FirefoxProfile());
             WaitPeriod = Period.None;
         }
 
