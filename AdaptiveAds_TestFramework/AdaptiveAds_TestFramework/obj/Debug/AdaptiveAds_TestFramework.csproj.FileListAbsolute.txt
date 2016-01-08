@@ -16,3 +16,12 @@ F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\D
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.csprojResolveAssemblyReference.cache
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.dll
 F:\uni\Y3\GroupProject\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\AdaptiveAds_TestFramework.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.Support.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.pdb
