@@ -52,7 +52,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 
         private string loginInputName = "username";
         private string passwordInputName = "password";
-        private string loginButtonName = "submitLogin";
+        private string loginButtonClass = "submit";
 
         private IWebElement loginInput;
         private IWebElement passwordInput;
@@ -95,7 +95,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             {
                 loginInput = Driver.Instance.FindElement(By.Name(loginInputName));
                 passwordInput = Driver.Instance.FindElement(By.Name(passwordInputName));
-                loginButton = Driver.Instance.FindElement(By.Name(loginButtonName));
+                loginButton = Driver.Instance.FindElement(By.ClassName(loginButtonClass));
             }
             catch (NoSuchElementException e)
             {
