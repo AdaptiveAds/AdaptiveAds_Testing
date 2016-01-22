@@ -10,20 +10,6 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
     /// </summary>
     public static class LoginPage
     {
-        private static string _url = "http://adaptiveads.uk/auth/login";
-
-        /// <summary>
-        /// TODO: Fill this in
-        /// </summary>
-        public static void GoTo()
-        {
-            Driver.Instance.Navigate().GoToUrl(_url);
-            //var wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
-
-            //wait.Until(d =>)
-
-        }
-
         /// <summary>
         /// TODO: Fill this in
         /// </summary>

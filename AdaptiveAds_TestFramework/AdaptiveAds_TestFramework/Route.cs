@@ -1,11 +1,13 @@
 ﻿namespace AdaptiveAds_TestFramework
 {
-        public enum Location
-        {
-            Login,
-            Dashboard,
-            Advert
-        }
+    public enum Location
+    {
+        Login,
+        Dashboard,
+        Adverts,
+        Playlists
+    }
+
     public class Route
     {
 

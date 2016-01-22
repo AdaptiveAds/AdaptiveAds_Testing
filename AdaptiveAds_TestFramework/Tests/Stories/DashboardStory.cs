@@ -17,6 +17,8 @@ namespace Tests.Stories
         public void Init()
         {
             Driver.Initialise();
+            Driver.GoTo(Location.Login);
+            LoginPage.LoginAs("dev").WithPassword("password").Login();
         }
 
         [TearDown]
@@ -27,30 +29,28 @@ namespace Tests.Stories
 
         #endregion
 
-        //[Test]
-        //public void UserCanNavigateToTheAdvertsPageFromTheDashboard()
-        //{
-        //    DashboardPage.GoTo();
+        [Test]
+        public void UserCanNavigateToTheAdvertsPageFromTheDashboard()
+        {
+            Driver.GoTo(Location.Dashboard);
 
-        //    this.Given(x => Driver.IsAt(Route.Location.Dashboard), "Given I am at the Dashboard.")
-        //        .And(x => DashboardPage.HasAdvertsLink(), "And I have the option to navigate to the adverts page")
-        //        .When(x => DashboardPage.Select("Adverts"), "When I select the adverts link.")
-        //        .Then(x => Driver.IsNotAt(Route.Location.Dashboard), "Then I should no longer be at the Dashboard page.")
-        //        .And(x => Driver.IsAt(Route.Location.Adverts), "I should be at the Adverts page.")
-        //        .BDDfy<DashboardStory>();
-        //}
+            this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
+                .When(x => DashboardPage.Select(DashboardLink.Adverts), "When I select the adverts link.")
+                .Then(x => Driver.IsNotAt(Location.Dashboard), "Then I should no longer be at the Dashboard page.")
+                .And(x => Driver.IsAt(Location.Adverts), "I should be at the Adverts page.")
+                .BDDfy<DashboardStory>();
+        }
 
-        //[Test]
-        //public void UserCanNavigateToThePlaylistsPageFromTheDashboard()
-        //{
-        //    DashboardPage.GoTo();
+        [Test]
+        public void UserCanNavigateToThePlaylistsPageFromTheDashboard()
+        {
+            Driver.GoTo(Location.Dashboard);
 
-        //    this.Given(x => Driver.IsAt(Route.Location.Dashboard), "Given I am at the Dashboard.")
-        //        .And(x => DashboardPage.HasAdvertsLink(), "And I have the option to navigate to the adverts page")
-        //        .When(x => DashboardPage.Select("Adverts"), "When I select the adverts link.")
-        //        .Then(x => Driver.IsNotAt(Route.Location.Dashboard), "Then I should no longer be at the Dashboard page.")
-        //        .And(x => Driver.IsAt(Route.Location.Adverts), "I should be at the Adverts page.")
-        //        .BDDfy<DashboardStory>();
-        //}
+            this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
+                .When(x => DashboardPage.Select(DashboardLink.Playlists), "When I select the playlists link.")
+                .Then(x => Driver.IsNotAt(Location.Dashboard), "Then I should no longer be at the Dashboard page.")
+                .And(x => Driver.IsAt(Location.Playlists), "I should be at the Playlists page.")
+                .BDDfy<DashboardStory>();
+        }
     }
 }

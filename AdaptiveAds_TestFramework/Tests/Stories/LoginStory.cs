@@ -30,7 +30,7 @@ namespace Tests.Stories
         [Test]
         public void UserCanLoginWithCorrectCredentials()
         {
-            LoginPage.GoTo();
+            Driver.GoTo(Location.Login);
 
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("dev")
@@ -45,7 +45,7 @@ namespace Tests.Stories
         [Test]
         public void UserCantLoginWithIncorrectUsername()
         {
-            LoginPage.GoTo();
+            Driver.GoTo(Location.Login);
 
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("deeeeev")
@@ -61,7 +61,7 @@ namespace Tests.Stories
         [Test]
         public void UserCantLoginWithIncorrectPassword()
         {
-            LoginPage.GoTo();
+            Driver.GoTo(Location.Login);
 
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("dev")
