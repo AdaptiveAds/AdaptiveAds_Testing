@@ -33,7 +33,7 @@ namespace AdaptiveAds_TestFramework
             {
                 new Route(Location.Login, "/auth/login"),
                 new Route(Location.Dashboard, "/dashboard"),
-                new Route(Location.Advert, "/dashboard/advert")
+                new Route(Location.Adverts, "/dashboard/advert")
             };
         }
 
@@ -77,25 +77,43 @@ namespace AdaptiveAds_TestFramework
         #endregion //setup and teardown
 
         #region NavigableLocations
-
+        
+        /// <summary>
+        /// TODO: Fill this in
+        /// </summary>
+        public static void GoTo(Location location)
+        {
+            foreach (Route route in NavigableLocations)
+            {
+                if (route.Location == location)
+                {
+                    Driver.Instance.Navigate().GoToUrl(_address + route.UrlExtension);
+                    //Driver navigated to the specified location.
+                    return;
+                }
+            }
+            //Did not find the location in the list.
+            throw new NotFoundException("Route not found.",
+                new NotImplementedException("Route not yet supported within Driver."));
+        }
 
         /// <summary>
         /// Ensures the Driver is at the specified location. 
         /// </summary>
-        /// <param name="LocationName">Route to check the browser is at.</param>
-        public static void IsAt(Location LocationName)
+        /// <param name="location">Route to check the browser is at.</param>
+        public static void IsAt(Location location)
         {
-            foreach (Route location in NavigableLocations)
+            foreach (Route route in NavigableLocations)
             {
-                if (location.Location == LocationName)
+                if (route.Location == location)
                 {
-                    if (Instance.Url != _address + location.UrlExtension)
+                    if (Instance.Url != _address + route.UrlExtension)
                     {
                         //Driver is not at the specified location.
                         throw new WebDriverException("Incorrect location.",
                             new InvalidElementStateException(
                                 "The location did not match the driver." +
-                                " Expected \"" + _address + location.UrlExtension + "\" Actual \"" + Instance.Url + "\""));
+                                " Expected \"" + _address + route.UrlExtension + "\" Actual \"" + Instance.Url + "\""));
                     }
                     //Driver is at the specified location.
                     return;
