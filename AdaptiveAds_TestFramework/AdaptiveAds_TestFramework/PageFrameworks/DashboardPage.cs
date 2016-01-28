@@ -1,23 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
-        public enum DashboardLink
-        {
-            Adverts,
-            Playlists
-        }
+    /// <summary>
+    /// Links available on the Dashboard page.
+    /// </summary>
+    public enum DashboardLink
+    {
+        Adverts,
+        Playlists
+    }
+
+    /// <summary>
+    /// Dashboard page interaction framework, allows for items on the Dashboard page to be interacted with and manipulated.
+    /// </summary>
     public static class DashboardPage
     {
         /// <summary>
-        /// TODO: Fill this in
+        /// Selects the given link on the page. 
         /// </summary>
+        /// <param name="link"></param>
         public static void Select(DashboardLink link)
         {
+            // Ensure that dashboard is the current page.
+            Driver.IsAt(Location.Dashboard);
+
+            // Select the given link.
             switch (link)
             {
                 //TODO: impliment selection of links

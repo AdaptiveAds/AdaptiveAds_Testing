@@ -53,7 +53,7 @@ namespace Tests.Stories
                                     .Login(),
                                     "When I provide an incorrect username.")
                 .Then(x => Driver.IsAt(Location.Login), "Then I should still be at the login screen.")
-                .And(x => LoginPage.ShowingErrorMessage(),
+                .And(x => LoginPage.ErrorMessage(true),
                           "And a message is shown to inform of an unsuccessful login attempt.")
                 .BDDfy<LoginStory>();
         }
@@ -69,7 +69,7 @@ namespace Tests.Stories
                                     .Login(),
                                     "When I provide an incorrect password.")
                 .Then(x => Driver.IsAt(Location.Login), "Then I should still be at the login screen.")
-                .And(x => LoginPage.ShowingErrorMessage(),
+                .And(x => LoginPage.ErrorMessage(true),
                           "And a message is shown to inform of an unsuccessful login attempt.")
                 .BDDfy<LoginStory>();            
         }
