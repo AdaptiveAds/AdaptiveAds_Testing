@@ -1,0 +1,14 @@
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\Tests.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\Tests.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\nunit.framework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\TestStack.BDDfy.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\WebDriver.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\AdaptiveAds_TestFramework.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\nunit.framework.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\TestStack.BDDfy.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Release\WebDriver.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Release\Tests.csprojResolveAssemblyReference.cache
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Release\Tests.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Release\Tests.pdb

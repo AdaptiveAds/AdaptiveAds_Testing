@@ -1,0 +1,8 @@
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\AdaptiveAds_TestFramework.pdb
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\WebDriver.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\WebDriver.Support.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\WebDriver.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Release\WebDriver.Support.xml
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Release\AdaptiveAds_TestFramework.dll
+C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Release\AdaptiveAds_TestFramework.pdb
