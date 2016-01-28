@@ -1,33 +1,37 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using System.Threading;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
     /// <summary>
-    /// TODO: Fill this in
+    /// Login page interaction framework, allows for items on the Login page to be interacted with and manipulated.
     /// </summary>
     public static class LoginPage
     {
         /// <summary>
-        /// TODO: Fill this in
+        /// Creates a new LoginCommand with the given username for a fluent implimentation of login to the system.
+        /// LoginAs(Username).WithPassword(Password).Login();
         /// </summary>
-        /// <param name="username">TODO: Fill this in</param>
-        /// <returns>TODO: Fill this in</returns>
+        /// <param name="username">Username to login to the system with.</param>
+        /// <returns>LoginCommand with a stored set username.</returns>
         public static LoginCommand LoginAs(string username)
         {
             return new LoginCommand(username);
         }
-        
-        public static bool ShowingErrorMessage()
+
+        /// <summary>
+        /// Validates the state of the error message matches that of the IsDiplayed parameter.
+        /// </summary>
+        /// <param name="IsDiplayed">The state to which the error message visibility will be compared to.</param>
+        public static void ErrorMessage(bool IsDiplayed)
         {
             throw new NotImplementedException();
         }
     }
 
     /// <summary>
-    /// TODO: Fill this in
+    /// Enables a fluent method of implementing the login process.
     /// </summary>
     public class LoginCommand
     {
@@ -49,19 +53,19 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         #region Methods
 
         /// <summary>
-        /// TODO: Fill this in
+        /// Must take a username on construction of the object.
         /// </summary>
-        /// <param name="userName">TODO: Fill this in</param>
+        /// <param name="userName">Username to login with.</param>
         public LoginCommand(string userName)
         {
             _userName = userName;
         }
 
         /// <summary>
-        /// TODO: Fill this in
+        /// Sets the password to used in the login process.
         /// </summary>
-        /// <param name="password">TODO: Fill this in</param>
-        /// <returns></returns>
+        /// <param name="password">Password to login with.</param>
+        /// <returns>Returns itself enabling continuation of fluent imlementation.</returns>
         public LoginCommand WithPassword(string password)
         {
             _password = password;
@@ -69,14 +73,14 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         }
 
         /// <summary>
-        /// TODO: Fill this in
+        /// Automates the login process. 
         /// </summary>
         public void Login()
         {
             // Ensure application is at the correct page.
             Driver.IsAt(Location.Login);
 
-            // Attempt to find elements on the page
+            // Attempt to find elements on the page.
             try
             {
                 loginInput = Driver.Instance.FindElement(By.Name(loginInputName));
@@ -85,7 +89,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             }
             catch (NoSuchElementException e)
             {
-                // Ensure elements have been found
+                // Errors if elements have not been found.
                 if (loginInput == null || passwordInput == null || loginButton == null)
                     throw new NotFoundException("Page elements not found",
                           new NotFoundException("At least one of the following login elements were not found. " +
@@ -93,13 +97,13 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
                           "Password or " +
                           "Submit."));
             }
-
-
+            
             // Login
             loginInput.SendKeys(_userName);
             passwordInput.SendKeys(_password);
             loginButton.Click();
 
+            //Wait allows system time to process login.
             Thread.Sleep(5000);
         }
 
