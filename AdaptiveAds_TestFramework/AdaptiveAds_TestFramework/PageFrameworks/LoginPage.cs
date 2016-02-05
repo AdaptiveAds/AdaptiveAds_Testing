@@ -91,11 +91,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             {
                 // Errors if elements have not been found.
                 if (loginInput == null || passwordInput == null || loginButton == null)
-                    throw new NotFoundException("Page elements not found",
+                    throw new NotFoundException("Page elements not found.",
                           new NotFoundException("At least one of the following login elements were not found. " +
                           "Username, " +
                           "Password or " +
-                          "Submit."));
+                          "Submit.",e));
             }
             
             // Login
