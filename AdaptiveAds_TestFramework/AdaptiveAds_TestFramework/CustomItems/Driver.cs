@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using AdaptiveAds_TestFramework.CustomItems;
 
 namespace AdaptiveAds_TestFramework
 {

@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Driver.cs" />
+    <Compile Include="ConfigurationManager\DataReadWrite.cs" />
+    <Compile Include="CustomItems\PairObject.cs" />
+    <Compile Include="ConfigurationManager\SerializableDictionary.cs" />
+    <Compile Include="CustomItems\Driver.cs" />
     <Compile Include="Route.cs" />
     <Compile Include="PageFrameworks\DashboardPage.cs" />
     <Compile Include="PageFrameworks\LoginPage.cs" />
@@ -60,6 +63,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

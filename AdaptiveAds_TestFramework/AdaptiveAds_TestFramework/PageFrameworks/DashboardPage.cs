@@ -1,6 +1,7 @@
-﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using OpenQA.Selenium;
+using AdaptiveAds_TestFramework.ConfigurationManager;
+using AdaptiveAds_TestFramework.CustomItems;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
@@ -20,18 +21,6 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
     {
         private static IWebElement linkObj;
 
-        static DashboardPage()
-        {
-            DashboardLinks = new Dictionary<DashboardLink, string>();
-            DashboardLinks.Add(DashboardLink.Adverts, "ulAdverts");
-            DashboardLinks.Add(DashboardLink.Playlists, "ulPlaylists");
-        }
-
-        /// <summary>
-        /// TODO: Remove and create config class to hold this data.
-        /// </summary>
-        private static Dictionary<DashboardLink,string> DashboardLinks { get; set; }
-
         /// <summary>
         /// Selects the given link on the page. 
         /// </summary>
@@ -41,13 +30,20 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Ensure that dashboard is the current page.
             Driver.IsAt(Location.Dashboard);
 
-            foreach(KeyValuePair<DashboardLink,string> linkPair in DashboardLinks)
+            foreach(PairObject linkPair in DataReadWrite.ReadPairObjects("DashboardLinks"))
             {
-                if (linkPair.Key == link)
+                if ((DashboardLink)linkPair.Object1 == link)
                 {
                     try
                     {
-                        linkObj = Driver.Instance.FindElement(By.Name(linkPair.Value));
+                        string searchString = (string)linkPair.Object2;
+
+                        if (string.IsNullOrWhiteSpace(searchString))
+                        {
+                            throw new NotFoundException("Invalid search parameter.",
+                                  new NotFoundException("The search paremeter provided is null or contains white space."));
+                        }
+                        linkObj = Driver.Instance.FindElement(By.Name(searchString));
                         linkObj.Click();
                         return;
                     }
@@ -56,7 +52,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
                         // Errors if elements have not been found.
                         if (linkObj == null)
                             throw new NotFoundException("Link not found.",
-                                  new NotFoundException("The specified link could not be found, user may not have permission to see this data.",e));
+                                  new NotFoundException("The specified link could not be found, user may not have permission to see this data.", e));
                     }
                 }
             }

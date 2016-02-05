@@ -1,6 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using System.Threading;
+using AdaptiveAds_TestFramework.CustomItems;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
@@ -104,7 +105,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             loginButton.Click();
 
             //Wait allows system time to process login.
-            Thread.Sleep(5000);
+            Thread.Sleep(2500);
         }
 
         #endregion //Methods

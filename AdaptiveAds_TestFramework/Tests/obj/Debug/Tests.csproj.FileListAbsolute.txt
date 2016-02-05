@@ -40,8 +40,6 @@ C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\
 C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.dll
 C:\Users\l14m9\Source\Repos\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.pdb
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
-D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.dll
-D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.pdb
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\Tests.dll
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\Tests.pdb
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveAds_TestFramework.dll
@@ -53,3 +51,5 @@ D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveA
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\nunit.framework.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\TestStack.BDDfy.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.xml
+D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.dll
+D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\obj\Debug\Tests.pdb

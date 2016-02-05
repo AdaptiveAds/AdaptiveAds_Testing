@@ -1,4 +1,4 @@
-﻿namespace AdaptiveAds_TestFramework
+﻿namespace AdaptiveAds_TestFramework.CustomItems
 {
     /// <summary>
     /// Location in the framework supported in the test framework.
