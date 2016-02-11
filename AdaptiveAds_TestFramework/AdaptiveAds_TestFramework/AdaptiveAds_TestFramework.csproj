@@ -51,11 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigurationManager\DataReadWrite.cs" />
-    <Compile Include="CustomItems\PairObject.cs" />
-    <Compile Include="ConfigurationManager\SerializableDictionary.cs" />
-    <Compile Include="CustomItems\Driver.cs" />
-    <Compile Include="Route.cs" />
+    <Compile Include="Config\Data.cs" />
+    <Compile Include="Helpers\Driver.cs" />
+    <Compile Include="Helpers\Helper.cs" />
     <Compile Include="PageFrameworks\DashboardPage.cs" />
     <Compile Include="PageFrameworks\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using System.Threading;
 using AdaptiveAds_TestFramework.CustomItems;
+using AdaptiveAds_TestFramework.Config;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
@@ -40,11 +41,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 
         private string _userName = "";
         private string _password = "";
-
-        private string loginInputName = "username";
-        private string passwordInputName = "password";
-        private string loginButtonClass = "submit";
-
+        
         private IWebElement loginInput;
         private IWebElement passwordInput;
         private IWebElement loginButton;
@@ -84,9 +81,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Attempt to find elements on the page.
             try
             {
-                loginInput = Driver.Instance.FindElement(By.Name(loginInputName));
-                passwordInput = Driver.Instance.FindElement(By.Name(passwordInputName));
-                loginButton = Driver.Instance.FindElement(By.ClassName(loginButtonClass));
+                loginInput = Driver.Instance.FindElement(By.Name(Data.loginUsernameBoxName));
+                passwordInput = Driver.Instance.FindElement(By.Name(Data.loginPasswordBoxName));
+                loginButton = Driver.Instance.FindElement(By.ClassName(Data.loginButtonClass));
             }
             catch (NoSuchElementException e)
             {
