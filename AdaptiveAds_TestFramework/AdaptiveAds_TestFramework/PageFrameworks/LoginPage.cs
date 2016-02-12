@@ -1,6 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using System.Threading;
+using AdaptiveAds_TestFramework.CustomItems;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
@@ -39,11 +40,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 
         private string _userName = "";
         private string _password = "";
-
-        private string loginInputName = "username";
-        private string passwordInputName = "password";
-        private string loginButtonClass = "submit";
-
+        
         private IWebElement loginInput;
         private IWebElement passwordInput;
         private IWebElement loginButton;
@@ -73,7 +70,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         }
 
         /// <summary>
-        /// Automates the login process. 
+        /// Automates the login process.
+        /// Throws a WebDriverException if not at the login page.
+        /// Throws a NotFoundException if the login items can not be found.
         /// </summary>
         public void Login()
         {
@@ -83,9 +82,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Attempt to find elements on the page.
             try
             {
-                loginInput = Driver.Instance.FindElement(By.Name(loginInputName));
-                passwordInput = Driver.Instance.FindElement(By.Name(passwordInputName));
-                loginButton = Driver.Instance.FindElement(By.ClassName(loginButtonClass));
+                loginInput = Driver.Instance.FindElement(By.Name(ConfigData.loginUsernameBoxName));
+                passwordInput = Driver.Instance.FindElement(By.Name(ConfigData.loginPasswordBoxName));
+                loginButton = Driver.Instance.FindElement(By.ClassName(ConfigData.loginButtonClass));
             }
             catch (NoSuchElementException e)
             {
@@ -104,7 +103,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             loginButton.Click();
 
             //Wait allows system time to process login.
-            Thread.Sleep(5000);
+            Thread.Sleep(2500);
         }
 
         #endregion //Methods
