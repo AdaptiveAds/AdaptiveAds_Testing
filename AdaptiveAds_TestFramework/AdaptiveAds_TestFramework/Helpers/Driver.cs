@@ -1,7 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using AdaptiveAds_TestFramework.Config;
 using AdaptiveAds_TestFramework.Helpers;
 
 namespace AdaptiveAds_TestFramework.CustomItems
@@ -13,6 +12,7 @@ namespace AdaptiveAds_TestFramework.CustomItems
     {
         #region Variables
 
+        private static IWebDriver _instance;
         private static Period _waitPeriod;
 
         #endregion//Variables
@@ -22,7 +22,11 @@ namespace AdaptiveAds_TestFramework.CustomItems
         /// <summary>
         /// Browser automation object.
         /// </summary>
-        public static IWebDriver Instance { get; set; }
+        public static IWebDriver Instance
+        {
+            get { return _instance; }
+            set { _instance = value; SetWait(WaitPeriod); }
+        }
 
         /// <summary>
         /// Duration automation famework must wait before erroring.
@@ -49,8 +53,8 @@ namespace AdaptiveAds_TestFramework.CustomItems
         public static void Initialise()
         {
             Close();
-            Instance = new FirefoxDriver(new FirefoxBinary(Data.FireFoxPath), new FirefoxProfile());
-            WaitPeriod = Data.DefaultWaitPeriod;
+            Instance = new FirefoxDriver(new FirefoxBinary(ConfigData.FireFoxPath), new FirefoxProfile());
+            WaitPeriod = ConfigData.DefaultWaitPeriod;
         }
 
         /// <summary>
@@ -73,11 +77,11 @@ namespace AdaptiveAds_TestFramework.CustomItems
         public static void GoTo(Location location)
         {
             // Navigate browser to the location.
-            Driver.Instance.Navigate().GoToUrl(Helper.RouteURL(location));
+            Instance.Navigate().GoToUrl(Helper.RouteURL(location));
         }
 
         /// <summary>
-        /// Ensures the Driver is at the specified location. 
+        /// Ensures the Driver is at the specified location, throws a WebDriverException if at another location.
         /// </summary>
         /// <param name="location">Location to check the browser is at.</param>
         public static void IsAt(Location location)
@@ -88,7 +92,7 @@ namespace AdaptiveAds_TestFramework.CustomItems
             // Check the browser is at the correct location.
             if (actual !=expected)
             {
-                //Driver is not at the specified location.
+                // Driver is not at the specified location.
                 throw new WebDriverException("Incorrect location.",
                     new InvalidElementStateException(
                         "The given location did not match the browser." +
@@ -97,7 +101,7 @@ namespace AdaptiveAds_TestFramework.CustomItems
         }
 
         /// <summary>
-        /// Ensures the Driver is not at the specified location.  
+        /// Ensures the Driver is not at the specified location, throws a WebDriverException if at the location.
         /// </summary>
         /// <param name="location">Location to check the browser is not at.</param>
         public static void IsNotAt(Location location)
@@ -108,7 +112,7 @@ namespace AdaptiveAds_TestFramework.CustomItems
             // Check the browser is not at the correct location.
             if (actual == expected)
             {
-                //Driver is at the specified location.
+                // Driver is at the specified location.
                 throw new WebDriverException("Incorrect location.",
                             new InvalidElementStateException(
                                 "The given location matched the browser."));
@@ -126,9 +130,12 @@ namespace AdaptiveAds_TestFramework.CustomItems
         /// <param name="action">Action to execute.</param>
         public static void ActionWait(Period waitPeriod, Action action)
         {
+            // Store the current wait period
             Period previousPeriod = WaitPeriod;
+            // Run task with given wait period
             SetWait(waitPeriod);
             action();
+            // Revert to the old wait period
             SetWait(previousPeriod);
         }
 
@@ -139,9 +146,13 @@ namespace AdaptiveAds_TestFramework.CustomItems
         private static void SetWait(Period waitPeriod)
         {
             int miliseconds;
-            Data.WaitPeriods.TryGetValue(waitPeriod, out miliseconds);
+            ConfigData.WaitPeriods.TryGetValue(waitPeriod, out miliseconds);
 
-            Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(miliseconds));
+            // Set the drivers instance to use the wait period.
+            if (Instance != null)
+            {
+                Instance.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromMilliseconds(miliseconds));
+            }
         }
 
         #endregion//WaitHandling

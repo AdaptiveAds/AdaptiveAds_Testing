@@ -1,5 +1,4 @@
 ﻿using AdaptiveAds_TestFramework;
-using AdaptiveAds_TestFramework.Config;
 using AdaptiveAds_TestFramework.CustomItems;
 using AdaptiveAds_TestFramework.PageFrameworks;
 using NUnit.Framework;

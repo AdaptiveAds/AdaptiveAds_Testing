@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using System.Threading;
 using AdaptiveAds_TestFramework.CustomItems;
-using AdaptiveAds_TestFramework.Config;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {
@@ -71,7 +70,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         }
 
         /// <summary>
-        /// Automates the login process. 
+        /// Automates the login process.
+        /// Throws a WebDriverException if not at the login page.
+        /// Throws a NotFoundException if the login items can not be found.
         /// </summary>
         public void Login()
         {
@@ -81,9 +82,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Attempt to find elements on the page.
             try
             {
-                loginInput = Driver.Instance.FindElement(By.Name(Data.loginUsernameBoxName));
-                passwordInput = Driver.Instance.FindElement(By.Name(Data.loginPasswordBoxName));
-                loginButton = Driver.Instance.FindElement(By.ClassName(Data.loginButtonClass));
+                loginInput = Driver.Instance.FindElement(By.Name(ConfigData.loginUsernameBoxName));
+                passwordInput = Driver.Instance.FindElement(By.Name(ConfigData.loginPasswordBoxName));
+                loginButton = Driver.Instance.FindElement(By.ClassName(ConfigData.loginButtonClass));
             }
             catch (NoSuchElementException e)
             {

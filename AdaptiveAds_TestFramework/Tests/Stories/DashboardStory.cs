@@ -1,6 +1,6 @@
-﻿using AdaptiveAds_TestFramework.CustomItems;
+﻿using AdaptiveAds_TestFramework;
+using AdaptiveAds_TestFramework.CustomItems;
 using AdaptiveAds_TestFramework.PageFrameworks;
-using AdaptiveAds_TestFramework.Config;
 using NUnit.Framework;
 using TestStack.BDDfy;
 
@@ -41,7 +41,7 @@ namespace Tests.Stories
                 .And(x => Driver.IsAt(Location.Adverts), "I should be at the Adverts page.")
                 .BDDfy<DashboardStory>();
         }
-
+        
         [Test]
         public void UserCanNavigateToThePlaylistsPageFromTheDashboard()
         {
