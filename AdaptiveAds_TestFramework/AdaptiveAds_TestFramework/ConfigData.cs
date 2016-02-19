@@ -76,7 +76,8 @@ namespace AdaptiveAds_TestFramework
         public static Dictionary<Location, string> Routes = new Dictionary<Location, string>(){
                 {Location.Adverts,"/dashboard/advert"},
                 {Location.Dashboard,"/dashboard"},
-                {Location.Login,"/auth/login"}
+                {Location.Login,"/auth/login"},
+                {Location.Playlists,"/dashboard/playlist"}
             };
 
         /// <summary>
@@ -117,8 +118,8 @@ namespace AdaptiveAds_TestFramework
         /// </summary>
         public static Dictionary<DashboardLink, string> DashboardLinks = new Dictionary<DashboardLink, string>()
             {
-                {DashboardLink.Adverts,"llAdvert" },
-                {DashboardLink.Playlists,"liPlaylist" }
+                {DashboardLink.Adverts,"lnkAdverts" },
+                {DashboardLink.Playlists,"lnkPlaylists" }
             };
 
         #endregion //Dashboard
