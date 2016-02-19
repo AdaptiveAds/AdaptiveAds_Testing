@@ -9,9 +9,13 @@ namespace AdaptiveAds_TestFramework
     /// </summary>
     public enum Location
     {
+        ///<summary>Login page where users verify their eligibility to use the system.</summary>
         Login,
+        ///<summary>This is the main hub for the application. From here users can navigate to most places in the application.</summary>
         Dashboard,
+        ///<summary>Here users can view a list of adverts and from here perform actions such as create, edit and delete.</summary>
         Adverts,
+        ///<summary>Here users can view a list of playlists and from here perform actions such as create, edit and delete.</summary>
         Playlists
     }
 
@@ -20,9 +24,13 @@ namespace AdaptiveAds_TestFramework
     /// </summary>
     public enum Period
     {
+        ///<summary>An empty time period.</summary>
         None,
+        ///<summary>A time period of Short length.</summary>
         Short,
+        ///<summary>A time period of Medium length.</summary>
         Medium,
+        ///<summary>A time period of Long length.</summary>
         Long
     }
 
@@ -31,7 +39,9 @@ namespace AdaptiveAds_TestFramework
     /// </summary>
     public enum DashboardLink
     {
+        ///<summary>A link from the Dashboard to the Adverts page</summary>
         Adverts,
+        ///<summary>A link from the Dashboard to the Playlists page</summary>
         Playlists
     }
 

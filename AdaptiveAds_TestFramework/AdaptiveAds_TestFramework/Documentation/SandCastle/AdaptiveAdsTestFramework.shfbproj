@@ -15,12 +15,11 @@
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
-    <HtmlHelpName>Documentation</HtmlHelpName>
+    <HtmlHelpName>TestFramework_Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\AdaptiveAds_TestFramework.XML" />
-      <DocumentationSource sourceFile="..\..\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\AdaptiveAds_TestFramework.dll" />
-    </DocumentationSources>
+      <DocumentationSource sourceFile="..\..\bin\Debug\AdaptiveAds_TestFramework.dll" />
+<DocumentationSource sourceFile="..\..\bin\Debug\AdaptiveAds_TestFramework.xml" /></DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
@@ -36,7 +35,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>AdaptiveAds_TestFramework</HelpTitle>
+    <HelpTitle>TestFramework_Documentation</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
@@ -70,10 +69,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="WebDriver">
-      <HintPath>..\..\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.dll</HintPath>
+      <HintPath>..\..\bin\Debug\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support">
-      <HintPath>..\..\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.Support.dll</HintPath>
+      <HintPath>..\..\bin\Debug\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

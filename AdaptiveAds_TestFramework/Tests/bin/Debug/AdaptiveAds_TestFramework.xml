@@ -9,15 +9,45 @@
             Location in the application supported by the test framework.
             </summary>
         </member>
+        <member name="F:AdaptiveAds_TestFramework.Location.Login">
+            <summary>Login page where users verify their eligibility to use the system.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Location.Dashboard">
+            <summary>This is the main hub for the application. From here users can navigate to most places in the application.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Location.Adverts">
+            <summary>Here users can view a list of adverts and from here perform actions such as create, edit and delete.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Location.Playlists">
+            <summary>Here users can view a list of playlists and from here perform actions such as create, edit and delete.</summary>
+        </member>
         <member name="T:AdaptiveAds_TestFramework.Period">
             <summary>
             Period of time.
             </summary>
         </member>
+        <member name="F:AdaptiveAds_TestFramework.Period.None">
+            <summary>An empty time period.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Period.Short">
+            <summary>A time period of Short length.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Period.Medium">
+            <summary>A time period of Medium length.</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.Period.Long">
+            <summary>A time period of Long length.</summary>
+        </member>
         <member name="T:AdaptiveAds_TestFramework.DashboardLink">
             <summary>
             Links available on the Dashboard page.
             </summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.DashboardLink.Adverts">
+            <summary>A link from the Dashboard to the Adverts page</summary>
+        </member>
+        <member name="F:AdaptiveAds_TestFramework.DashboardLink.Playlists">
+            <summary>A link from the Dashboard to the Playlists page</summary>
         </member>
         <member name="T:AdaptiveAds_TestFramework.ConfigData">
             <summary>
@@ -152,6 +182,16 @@
             <param name="URL">The full or extension URL from which to find the location of.</param>
             <returns>The location of the given URL.</returns>
         </member>
+        <member name="T:AdaptiveAds_TestFramework.Helpers.NamespaceDoc">
+            <summary>
+            Helpers contains Items for the use of helping the framework to perform actions such as shared methods and objects.
+            </summary>
+        </member>
+        <member name="T:AdaptiveAds_TestFramework.NamespaceDoc">
+            <summary>
+            AdaptiveAds_TestFramework is the default namespace of the project which contains just configuration data at this level.
+            </summary>
+        </member>
         <member name="T:AdaptiveAds_TestFramework.PageFrameworks.DashboardPage">
             <summary>
             Dashboard page interaction framework, allows for items on the Dashboard page to be interacted with and manipulated.
@@ -207,6 +247,11 @@
             Automates the login process.
             Throws a WebDriverException if not at the login page.
             Throws a NotFoundException if the login items can not be found.
+            </summary>
+        </member>
+        <member name="T:AdaptiveAds_TestFramework.PageFrameworks.NamespaceDoc">
+            <summary>
+            PageFrameworks contains the individual frameworks for each page of the system.
             </summary>
         </member>
     </members>

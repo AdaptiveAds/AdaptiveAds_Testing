@@ -7,11 +7,14 @@
   <HelpKINode Title="AdaptiveAds_TestFramework.Helpers namespace" Url="html/57ea8580-4b96-1a81-9a87-c59c681664e2.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.Helpers.Driver class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.Helpers.Helper class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Helpers.NamespaceDoc class" Url="html/852c8e53-1c6d-8d46-c035-4fe17ac02e2c.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.Location enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.NamespaceDoc class" Url="html/a3aebb22-2dce-e9ef-58e6-74dc932a2c70.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks namespace" Url="html/13741861-794c-db33-d9ea-40e209e687af.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.DashboardPage class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginCommand class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginPage class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.NamespaceDoc class" Url="html/f8666902-78ce-c220-cfa5-5b5de1ec11f0.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.Period enumeration" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
   <HelpKINode Title="Adverts enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/ebe9b291-4abd-0719-45df-776e7f5b1c81.htm" />
@@ -96,6 +99,14 @@
   <HelpKINode Title="loginUsernameBoxName field" Url="html/d0404c56-c0d1-7493-f6bf-b45f126cabee.htm" />
   <HelpKINode Title="Long enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
   <HelpKINode Title="Medium enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="NamespaceDoc class">
+    <HelpKINode Title="NamespaceDoc Class" Url="html/a3aebb22-2dce-e9ef-58e6-74dc932a2c70.htm" />
+    <HelpKINode Title="NamespaceDoc Class" Url="html/852c8e53-1c6d-8d46-c035-4fe17ac02e2c.htm" />
+    <HelpKINode Title="NamespaceDoc Class" Url="html/f8666902-78ce-c220-cfa5-5b5de1ec11f0.htm" />
+    <HelpKINode Title="about NamespaceDoc class" Url="html/a3aebb22-2dce-e9ef-58e6-74dc932a2c70.htm" />
+    <HelpKINode Title="about NamespaceDoc class" Url="html/852c8e53-1c6d-8d46-c035-4fe17ac02e2c.htm" />
+    <HelpKINode Title="about NamespaceDoc class" Url="html/f8666902-78ce-c220-cfa5-5b5de1ec11f0.htm" />
+  </HelpKINode>
   <HelpKINode Title="None enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
   <HelpKINode Title="Period enumeration" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
   <HelpKINode Title="Playlists enumeration member">
