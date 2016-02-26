@@ -1,2 +1,2 @@
-# ResourceManager
-Manager for catering resources
+# AdaptiveAds_TestFramework
+TestFramework for AdaptiveAds
