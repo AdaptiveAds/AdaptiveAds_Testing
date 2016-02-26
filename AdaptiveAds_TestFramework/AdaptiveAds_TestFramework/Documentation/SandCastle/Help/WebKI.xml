@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="ActionWait method" Url="html/72c3f230-8dc1-3cd9-13d4-262e5d27e742.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework namespace" Url="html/0636e5dc-1490-e495-2258-34f85a2f2970.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.ConfigData class" Url="html/f78356eb-ddee-1a92-6493-01b9c733ab50.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.DashboardLink enumeration" Url="html/ebe9b291-4abd-0719-45df-776e7f5b1c81.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Helpers namespace" Url="html/57ea8580-4b96-1a81-9a87-c59c681664e2.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Helpers.Driver class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Helpers.Helper class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Location enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks namespace" Url="html/13741861-794c-db33-d9ea-40e209e687af.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.DashboardPage class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginCommand class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginPage class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.Period enumeration" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="Adverts enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/ebe9b291-4abd-0719-45df-776e7f5b1c81.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Close method" Url="html/f31a12cd-286c-78d7-d640-f174930f342d.htm" />
+  <HelpKINode Title="ConfigData class">
+    <HelpKINode Title="ConfigData Class" Url="html/f78356eb-ddee-1a92-6493-01b9c733ab50.htm" />
+    <HelpKINode Title="about ConfigData class" Url="html/f78356eb-ddee-1a92-6493-01b9c733ab50.htm" />
+    <HelpKINode Title="fields" Url="html/ec3e5df1-23b1-dbe7-3544-f4aa72b0fca2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConfigData.DashboardLinks field" Url="html/a6d2bccb-e2c4-37a3-338a-bbf0162658d8.htm" />
+  <HelpKINode Title="ConfigData.DefaultWaitPeriod field" Url="html/c20e028e-0e71-cd07-c5b6-517e326ba2c4.htm" />
+  <HelpKINode Title="ConfigData.FireFoxPath field" Url="html/2d3dea0b-fafe-d4e7-79b8-798a4b79b0f6.htm" />
+  <HelpKINode Title="ConfigData.loginButtonClass field" Url="html/d779af28-006a-a57c-36e0-221b986edf61.htm" />
+  <HelpKINode Title="ConfigData.loginPasswordBoxName field" Url="html/d60aba86-c911-892e-361e-5de70ceae940.htm" />
+  <HelpKINode Title="ConfigData.loginUsernameBoxName field" Url="html/d0404c56-c0d1-7493-f6bf-b45f126cabee.htm" />
+  <HelpKINode Title="ConfigData.Routes field" Url="html/c023782c-028f-6be3-5860-2e0f05be9af0.htm" />
+  <HelpKINode Title="ConfigData.URL_Address field" Url="html/1cc25bbe-2f98-bc03-c93a-82c584bf899b.htm" />
+  <HelpKINode Title="ConfigData.WaitPeriods field" Url="html/56ab38af-7e45-4c58-7673-4620c313bace.htm" />
+  <HelpKINode Title="Dashboard enumeration member" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  <HelpKINode Title="DashboardLink enumeration" Url="html/ebe9b291-4abd-0719-45df-776e7f5b1c81.htm" />
+  <HelpKINode Title="DashboardLinks field" Url="html/a6d2bccb-e2c4-37a3-338a-bbf0162658d8.htm" />
+  <HelpKINode Title="DashboardPage class">
+    <HelpKINode Title="DashboardPage Class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm" />
+    <HelpKINode Title="about DashboardPage class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm" />
+    <HelpKINode Title="methods" Url="html/cb636a0f-c30e-0e2f-89c1-346f6fa463aa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DashboardPage.Select method" Url="html/374f029c-3dce-f169-bcf5-a606f1e37dae.htm" />
+  <HelpKINode Title="DefaultWaitPeriod field" Url="html/c20e028e-0e71-cd07-c5b6-517e326ba2c4.htm" />
+  <HelpKINode Title="Driver class">
+    <HelpKINode Title="Driver Class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm" />
+    <HelpKINode Title="about Driver class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm" />
+    <HelpKINode Title="methods" Url="html/64ad2a32-03ba-aed2-a5a8-88e775c4aec8.htm" />
+    <HelpKINode Title="properties" Url="html/24636b5e-fb74-e105-eb0f-39aeda1395f6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Driver.ActionWait method" Url="html/72c3f230-8dc1-3cd9-13d4-262e5d27e742.htm" />
+  <HelpKINode Title="Driver.Close method" Url="html/f31a12cd-286c-78d7-d640-f174930f342d.htm" />
+  <HelpKINode Title="Driver.GoTo method" Url="html/7f8f4070-383f-f8db-2862-fdf340ac0dc0.htm" />
+  <HelpKINode Title="Driver.Initialise method" Url="html/46a758f9-02d7-c3ac-d334-c112a3e4cd94.htm" />
+  <HelpKINode Title="Driver.Instance property" Url="html/a9f07161-0c02-f974-b1cc-1e7bde49fef4.htm" />
+  <HelpKINode Title="Driver.IsAt method" Url="html/8d6a6d5a-8f01-1d58-fe5c-84f400d3da34.htm" />
+  <HelpKINode Title="Driver.IsNotAt method" Url="html/f46fe4f9-8ff8-a7f4-abe0-89b808ea63b5.htm" />
+  <HelpKINode Title="Driver.WaitPeriod property" Url="html/44cb41b9-b527-3865-7700-cb85ed8e6cdf.htm" />
+  <HelpKINode Title="ErrorMessage method" Url="html/39c7e0e1-eb46-394d-495a-3f7c7e094ceb.htm" />
+  <HelpKINode Title="FireFoxPath field" Url="html/2d3dea0b-fafe-d4e7-79b8-798a4b79b0f6.htm" />
+  <HelpKINode Title="GoTo method" Url="html/7f8f4070-383f-f8db-2862-fdf340ac0dc0.htm" />
+  <HelpKINode Title="Helper class">
+    <HelpKINode Title="Helper Class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm" />
+    <HelpKINode Title="about Helper class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm" />
+    <HelpKINode Title="methods" Url="html/28ace41b-5c68-6d19-7e04-f273acf28c21.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Helper.RouteLocation method" Url="html/bcd792df-abeb-b673-ed5d-13303f2fa5fb.htm" />
+  <HelpKINode Title="Helper.RouteURL method" Url="html/a075a943-5cf8-d63c-3c2d-bc049299cfe0.htm" />
+  <HelpKINode Title="Helper.RouteURLExtension method" Url="html/6c5796f7-6c3d-1469-fdb1-e1ecc79929dc.htm" />
+  <HelpKINode Title="Initialise method" Url="html/46a758f9-02d7-c3ac-d334-c112a3e4cd94.htm" />
+  <HelpKINode Title="Instance property" Url="html/a9f07161-0c02-f974-b1cc-1e7bde49fef4.htm" />
+  <HelpKINode Title="IsAt method" Url="html/8d6a6d5a-8f01-1d58-fe5c-84f400d3da34.htm" />
+  <HelpKINode Title="IsNotAt method" Url="html/f46fe4f9-8ff8-a7f4-abe0-89b808ea63b5.htm" />
+  <HelpKINode Title="Location enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  <HelpKINode Title="Login enumeration member" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  <HelpKINode Title="Login method" Url="html/a0b740eb-8032-7509-1014-5a9e65d95da5.htm" />
+  <HelpKINode Title="LoginAs method" Url="html/6f272118-30ee-aca7-ee7c-8109ec28697c.htm" />
+  <HelpKINode Title="loginButtonClass field" Url="html/d779af28-006a-a57c-36e0-221b986edf61.htm" />
+  <HelpKINode Title="LoginCommand class">
+    <HelpKINode Title="LoginCommand Class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm" />
+    <HelpKINode Title="about LoginCommand class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm" />
+    <HelpKINode Title="constructor" Url="html/668733c2-3160-f34e-b496-884dcaea8af0.htm" />
+    <HelpKINode Title="methods" Url="html/1a280ebf-7091-7f77-dee9-7ed40dbd4bf8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoginCommand.Login method" Url="html/a0b740eb-8032-7509-1014-5a9e65d95da5.htm" />
+  <HelpKINode Title="LoginCommand.LoginCommand constructor" Url="html/668733c2-3160-f34e-b496-884dcaea8af0.htm" />
+  <HelpKINode Title="LoginCommand.WithPassword method" Url="html/be33cdea-94bc-b9dd-1ca0-01b6ace04680.htm" />
+  <HelpKINode Title="LoginPage class">
+    <HelpKINode Title="LoginPage Class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm" />
+    <HelpKINode Title="about LoginPage class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm" />
+    <HelpKINode Title="methods" Url="html/ce1a5bb5-47e8-37bf-b8e2-e6cb1dd402ac.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoginPage.ErrorMessage method" Url="html/39c7e0e1-eb46-394d-495a-3f7c7e094ceb.htm" />
+  <HelpKINode Title="LoginPage.LoginAs method" Url="html/6f272118-30ee-aca7-ee7c-8109ec28697c.htm" />
+  <HelpKINode Title="loginPasswordBoxName field" Url="html/d60aba86-c911-892e-361e-5de70ceae940.htm" />
+  <HelpKINode Title="loginUsernameBoxName field" Url="html/d0404c56-c0d1-7493-f6bf-b45f126cabee.htm" />
+  <HelpKINode Title="Long enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="Medium enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="None enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="Period enumeration" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="Playlists enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/ebe9b291-4abd-0719-45df-776e7f5b1c81.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RouteLocation method" Url="html/bcd792df-abeb-b673-ed5d-13303f2fa5fb.htm" />
+  <HelpKINode Title="Routes field" Url="html/c023782c-028f-6be3-5860-2e0f05be9af0.htm" />
+  <HelpKINode Title="RouteURL method" Url="html/a075a943-5cf8-d63c-3c2d-bc049299cfe0.htm" />
+  <HelpKINode Title="RouteURLExtension method" Url="html/6c5796f7-6c3d-1469-fdb1-e1ecc79929dc.htm" />
+  <HelpKINode Title="Select method" Url="html/374f029c-3dce-f169-bcf5-a606f1e37dae.htm" />
+  <HelpKINode Title="Short enumeration member" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
+  <HelpKINode Title="URL_Address field" Url="html/1cc25bbe-2f98-bc03-c93a-82c584bf899b.htm" />
+  <HelpKINode Title="WaitPeriod property" Url="html/44cb41b9-b527-3865-7700-cb85ed8e6cdf.htm" />
+  <HelpKINode Title="WaitPeriods field" Url="html/56ab38af-7e45-4c58-7673-4620c313bace.htm" />
+  <HelpKINode Title="WithPassword method" Url="html/be33cdea-94bc-b9dd-1ca0-01b6ace04680.htm" />
+</HelpKI>

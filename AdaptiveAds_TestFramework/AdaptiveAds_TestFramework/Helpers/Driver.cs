@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using AdaptiveAds_TestFramework.Helpers;
 
-namespace AdaptiveAds_TestFramework.CustomItems
+namespace AdaptiveAds_TestFramework.Helpers
 {
     /// <summary>
     /// Contains functionality for browser automation.

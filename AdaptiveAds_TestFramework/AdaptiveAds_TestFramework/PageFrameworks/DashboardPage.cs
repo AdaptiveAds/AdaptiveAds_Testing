@@ -1,6 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
-using AdaptiveAds_TestFramework.CustomItems;
+using AdaptiveAds_TestFramework.Helpers;
 
 namespace AdaptiveAds_TestFramework.PageFrameworks
 {

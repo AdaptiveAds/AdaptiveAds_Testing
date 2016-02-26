@@ -47,6 +47,7 @@ D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\nunit.fra
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\TestStack.BDDfy.dll
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.dll
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveAds_TestFramework.pdb
+D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\AdaptiveAds_TestFramework.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\nunit.framework.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\TestStack.BDDfy.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\bin\Debug\WebDriver.xml

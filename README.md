@@ -1,0 +1,2 @@
+# AdaptiveAds_TestFramework
+TestFramework for AdaptiveAds
