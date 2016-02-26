@@ -3,7 +3,8 @@
     /// <summary>
     /// PageFrameworks contains the individual frameworks for each page of the system.
     /// </summary>
-    public static class NamespaceDoc
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
     {
     }
 }

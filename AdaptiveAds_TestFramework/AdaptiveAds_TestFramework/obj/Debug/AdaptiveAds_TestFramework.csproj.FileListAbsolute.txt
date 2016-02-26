@@ -33,4 +33,3 @@ D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\bin\Debug\WebDriver.Support.xml
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.dll
 D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.pdb
-D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\obj\Debug\AdaptiveAds_TestFramework.csprojResolveAssemblyReference.cache
