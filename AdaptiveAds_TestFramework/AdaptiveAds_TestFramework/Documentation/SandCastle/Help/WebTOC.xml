@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="e133d97b-6fba-4a07-bd78-879df96eec27" Title="AdaptiveAds_TestFramework" Url="html/0636e5dc-1490-e495-2258-34f85a2f2970.htm">
-    <HelpTOCNode Id="a38b9af1-d280-4256-a8fe-f3d853e9e6ed" Title="ConfigData Class" Url="html/f78356eb-ddee-1a92-6493-01b9c733ab50.htm">
-      <HelpTOCNode Id="d3849984-d0b5-4d37-98bd-5cd714cdfb8a" Title="ConfigData Fields" Url="html/ec3e5df1-23b1-dbe7-3544-f4aa72b0fca2.htm">
+  <HelpTOCNode Id="16ed4f19-f2a3-4fce-9703-3077e0889136" Title="AdaptiveAds_TestFramework" Url="html/0636e5dc-1490-e495-2258-34f85a2f2970.htm">
+    <HelpTOCNode Id="2705addc-8156-4118-a696-80234b3f158a" Title="ConfigData Class" Url="html/f78356eb-ddee-1a92-6493-01b9c733ab50.htm">
+      <HelpTOCNode Id="80f2dde4-a214-4922-be1d-c33663d77d61" Title="ConfigData Fields" Url="html/ec3e5df1-23b1-dbe7-3544-f4aa72b0fca2.htm">
         <HelpTOCNode Title="DashboardLinks Field" Url="html/a6d2bccb-e2c4-37a3-338a-bbf0162658d8.htm" />
         <HelpTOCNode Title="DefaultWaitPeriod Field" Url="html/c20e028e-0e71-cd07-c5b6-517e326ba2c4.htm" />
         <HelpTOCNode Title="FireFoxPath Field" Url="html/2d3dea0b-fafe-d4e7-79b8-798a4b79b0f6.htm" />
@@ -19,13 +19,13 @@
     <HelpTOCNode Title="Location Enumeration" Url="html/39b04656-457d-a4f3-6077-24030998ae00.htm" />
     <HelpTOCNode Title="Period Enumeration" Url="html/8c9e7c70-60a4-1b17-d08a-cb92c6707b06.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="75d3c923-1781-4269-99a1-5c27b2e4ecb0" Title="AdaptiveAds_TestFramework.Helpers" Url="html/57ea8580-4b96-1a81-9a87-c59c681664e2.htm">
-    <HelpTOCNode Id="cc2ec43b-6bea-4812-b3dd-48aa514b93bd" Title="Driver Class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm">
-      <HelpTOCNode Id="86565fcc-9085-4e49-98cb-35696a7e53bd" Title="Driver Properties" Url="html/24636b5e-fb74-e105-eb0f-39aeda1395f6.htm">
+  <HelpTOCNode Id="d23952be-202a-4e6e-88db-ccd2947365b5" Title="AdaptiveAds_TestFramework.Helpers" Url="html/57ea8580-4b96-1a81-9a87-c59c681664e2.htm">
+    <HelpTOCNode Id="800b5309-01ad-4158-ad81-ad4ad9bc0f82" Title="Driver Class" Url="html/b345602a-ac68-a924-b58f-a352a9440f40.htm">
+      <HelpTOCNode Id="7bcb7347-8c5e-4f7a-a69d-8335fd66ff35" Title="Driver Properties" Url="html/24636b5e-fb74-e105-eb0f-39aeda1395f6.htm">
         <HelpTOCNode Title="Instance Property " Url="html/a9f07161-0c02-f974-b1cc-1e7bde49fef4.htm" />
         <HelpTOCNode Title="WaitPeriod Property " Url="html/44cb41b9-b527-3865-7700-cb85ed8e6cdf.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a61e6769-7698-4f20-9594-3ffd21621509" Title="Driver Methods" Url="html/64ad2a32-03ba-aed2-a5a8-88e775c4aec8.htm">
+      <HelpTOCNode Id="53f735f5-9ec7-4e25-a317-9c0867076163" Title="Driver Methods" Url="html/64ad2a32-03ba-aed2-a5a8-88e775c4aec8.htm">
         <HelpTOCNode Title="ActionWait Method " Url="html/72c3f230-8dc1-3cd9-13d4-262e5d27e742.htm" />
         <HelpTOCNode Title="Close Method " Url="html/f31a12cd-286c-78d7-d640-f174930f342d.htm" />
         <HelpTOCNode Title="GoTo Method " Url="html/7f8f4070-383f-f8db-2862-fdf340ac0dc0.htm" />
@@ -34,29 +34,29 @@
         <HelpTOCNode Title="IsNotAt Method " Url="html/f46fe4f9-8ff8-a7f4-abe0-89b808ea63b5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d1654131-9baa-4b5c-8ba1-b6c94f23745d" Title="Helper Class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm">
-      <HelpTOCNode Id="11cef604-c781-40e9-984a-cb83e3af0db1" Title="Helper Methods" Url="html/28ace41b-5c68-6d19-7e04-f273acf28c21.htm">
+    <HelpTOCNode Id="fe97facd-6cff-4949-beb6-2b71c89718a7" Title="Helper Class" Url="html/16d31b92-0d47-923d-4489-0634888e8b4e.htm">
+      <HelpTOCNode Id="137aae90-6c8e-4a63-ac0f-38d81928dd84" Title="Helper Methods" Url="html/28ace41b-5c68-6d19-7e04-f273acf28c21.htm">
         <HelpTOCNode Title="RouteLocation Method " Url="html/bcd792df-abeb-b673-ed5d-13303f2fa5fb.htm" />
         <HelpTOCNode Title="RouteURL Method " Url="html/a075a943-5cf8-d63c-3c2d-bc049299cfe0.htm" />
         <HelpTOCNode Title="RouteURLExtension Method " Url="html/6c5796f7-6c3d-1469-fdb1-e1ecc79929dc.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="f5fbe075-de44-4517-ba7a-de8d4af27999" Title="AdaptiveAds_TestFramework.PageFrameworks" Url="html/13741861-794c-db33-d9ea-40e209e687af.htm">
-    <HelpTOCNode Id="7093182c-cee0-4ccf-8bbd-f35a695c742b" Title="DashboardPage Class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm">
-      <HelpTOCNode Id="38e2ec06-c425-47f0-ba34-40248c95752b" Title="DashboardPage Methods" Url="html/cb636a0f-c30e-0e2f-89c1-346f6fa463aa.htm">
+  <HelpTOCNode Id="8d9cd796-c17f-4933-b8b4-45f81248df56" Title="AdaptiveAds_TestFramework.PageFrameworks" Url="html/13741861-794c-db33-d9ea-40e209e687af.htm">
+    <HelpTOCNode Id="e32564b9-29eb-4c47-827c-bdbeb848c866" Title="DashboardPage Class" Url="html/33755eea-3d24-bda2-c6e5-d29b1dbe1a02.htm">
+      <HelpTOCNode Id="0f1314fa-46c2-490a-801e-51f286385309" Title="DashboardPage Methods" Url="html/cb636a0f-c30e-0e2f-89c1-346f6fa463aa.htm">
         <HelpTOCNode Title="Select Method " Url="html/374f029c-3dce-f169-bcf5-a606f1e37dae.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="bc2da037-80b8-4701-982e-2e418035f11b" Title="LoginCommand Class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm">
+    <HelpTOCNode Id="5658c172-9028-40c6-b8ea-1caf83e786d9" Title="LoginCommand Class" Url="html/84566b00-df3c-16b2-7407-902901bb3e92.htm">
       <HelpTOCNode Title="LoginCommand Constructor " Url="html/668733c2-3160-f34e-b496-884dcaea8af0.htm" />
-      <HelpTOCNode Id="09855a1e-f952-4982-80b5-a30308cd93f4" Title="LoginCommand Methods" Url="html/1a280ebf-7091-7f77-dee9-7ed40dbd4bf8.htm">
+      <HelpTOCNode Id="da3773b7-7160-44fa-97a8-f0716c9fcc42" Title="LoginCommand Methods" Url="html/1a280ebf-7091-7f77-dee9-7ed40dbd4bf8.htm">
         <HelpTOCNode Title="Login Method " Url="html/a0b740eb-8032-7509-1014-5a9e65d95da5.htm" />
         <HelpTOCNode Title="WithPassword Method " Url="html/be33cdea-94bc-b9dd-1ca0-01b6ace04680.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="71f0d11a-341d-43dd-b906-9e341e165a62" Title="LoginPage Class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm">
-      <HelpTOCNode Id="15c8d2d5-b6cd-4105-90bc-53c769409ee5" Title="LoginPage Methods" Url="html/ce1a5bb5-47e8-37bf-b8e2-e6cb1dd402ac.htm">
+    <HelpTOCNode Id="9ffb88f3-d3b5-4825-b12a-baf43b9d7cdf" Title="LoginPage Class" Url="html/60c8b553-4e80-36b0-15bb-27dd98fc720c.htm">
+      <HelpTOCNode Id="83018424-2891-416b-90ec-7c7d5a2c700f" Title="LoginPage Methods" Url="html/ce1a5bb5-47e8-37bf-b8e2-e6cb1dd402ac.htm">
         <HelpTOCNode Title="ErrorMessage Method " Url="html/39c7e0e1-eb46-394d-495a-3f7c7e094ceb.htm" />
         <HelpTOCNode Title="LoginAs Method " Url="html/6f272118-30ee-aca7-ee7c-8109ec28697c.htm" />
       </HelpTOCNode>
