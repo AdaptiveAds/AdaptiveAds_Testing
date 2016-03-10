@@ -14,7 +14,7 @@
     <Name>Documentation</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
-    <OutputPath>.\Help\</OutputPath>
+    <OutputPath>WebDocumentation\</OutputPath>
     <HtmlHelpName>TestFramework_Documentation</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
@@ -27,7 +27,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>1.2.1</HelpFileVersion>
+    <HelpFileVersion>1.3.3</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -35,7 +35,7 @@
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>Guid</NamingMethod>
+    <NamingMethod>MemberName</NamingMethod>
     <HelpTitle>TestFramework_Documentation</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
   </PropertyGroup>
