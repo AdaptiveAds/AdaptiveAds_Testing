@@ -63,7 +63,7 @@ namespace AdaptiveAds_TestFramework
         /// URL of the application, This should be "http://adaptiveads.uk" and modified for local testing only.
         /// Changes to this should only be committed to production if the default location of the application changes.
         /// </summary>
-        public static string URL_Address = "http://adaptiveads.uk";
+        public static string URL_Address = "http://localhost";
 
         /// <summary>
         /// Time for the automation framework to wait before erroring as default.
@@ -76,7 +76,7 @@ namespace AdaptiveAds_TestFramework
         public static Dictionary<Location, string> Routes = new Dictionary<Location, string>(){
                 {Location.Adverts,"/dashboard/advert"},
                 {Location.Dashboard,"/dashboard"},
-                {Location.Login,"/auth/login"},
+                {Location.Login,"/login"},
                 {Location.Playlists,"/dashboard/playlist"}
             };
 
@@ -97,7 +97,7 @@ namespace AdaptiveAds_TestFramework
         /// <summary>
         /// Name of the login page username input.
         /// </summary>
-        public static string loginUsernameBoxName = "username";
+        public static string loginUsernameBoxName = "login";
 
         /// <summary>
         /// Name of the login page password input.
@@ -118,8 +118,8 @@ namespace AdaptiveAds_TestFramework
         /// </summary>
         public static Dictionary<DashboardLink, string> DashboardLinks = new Dictionary<DashboardLink, string>()
             {
-                {DashboardLink.Adverts,"lnkAdverts" },
-                {DashboardLink.Playlists,"lnkPlaylists" }
+                {DashboardLink.Adverts,"liAdvert" },
+                {DashboardLink.Playlists,"liPlaylist" }
             };
 
         #endregion //Dashboard
