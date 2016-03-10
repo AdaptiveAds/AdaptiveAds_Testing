@@ -105,9 +105,14 @@ namespace AdaptiveAds_TestFramework
         public static string loginPasswordBoxName = "password";
 
         /// <summary>
-        /// Name of the login page submit button.
+        /// Class name of the login page submit button.
         /// </summary>
         public static string loginButtonClass = "submit";
+
+        /// <summary>
+        /// Class name of the login page error message.
+        /// </summary>
+        public static string ErrorMessageClass = "alert-danger";
 
         #endregion //Login
 
