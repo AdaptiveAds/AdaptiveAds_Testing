@@ -27,7 +27,24 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// <param name="IsDiplayed">The state to which the error message visibility will be compared to.</param>
         public static void ErrorMessage(bool IsDiplayed)
         {
-            throw new NotImplementedException();
+            bool shown;
+            try
+            {
+                var errormessage = Driver.Instance.FindElement(By.ClassName(ConfigData.ErrorMessageClass));
+                shown = true;
+            }
+            catch
+            {
+                shown = false;
+            }
+
+            if (shown == IsDiplayed) return;
+
+            throw new Exception(string.Format("The error message visibility did not match that expected. "+
+                                              "Expected {0} actual {1}", IsDiplayed, shown),null);  
+
+
+
         }
     }
 
