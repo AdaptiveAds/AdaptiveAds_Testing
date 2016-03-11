@@ -7,20 +7,31 @@ using TestStack.BDDfy;
 namespace Tests.Stories
 {
     [TestFixture]
-    [Story( AsA="As the product owner",
-            IWant="I want the product to be login protected",
-            SoThat="So that only privalaged users may access the system")]
+    [Story(AsA = "As the product owner",
+            IWant = "I want the product to be login protected",
+            SoThat = "So that only privalaged users may access the system")]
     public class LoginStory
     {
         #region Initialise and clean up
 
-        [SetUp]
+
+        [OneTimeSetUp]
         public void Init()
         {
             Driver.Initialise();
         }
 
-        [TearDown]
+        [SetUp]
+        public void SetUp()
+        {
+            Driver.ActionWait(Period.Medium, () =>
+            {
+                Driver.SignOut(errorIfAlreadySignedOut: false);
+                Driver.GoTo(Location.Login, false);
+            });
+        }
+
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Driver.Quit();
@@ -31,23 +42,19 @@ namespace Tests.Stories
         [Test]
         public void UserCanLoginWithCorrectCredentials()
         {
-            Driver.GoTo(Location.Login);
-
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("dev")
                                     .WithPassword("password")
                                     .Login(),
                                     "When I provide a correct username and password.")
-                .Then(x => Driver.IsNotAt(Location.Login),"Then I should no longer be at the login page.")
-                .And(x=>Driver.IsAt(Location.Dashboard),"I should be at the Dashboard page.")
+                .Then(x => Driver.IsNotAt(Location.Login), "Then I should no longer be at the login page.")
+                .And(x => Driver.IsAt(Location.Dashboard), "I should be at the Dashboard page.")
                 .BDDfy<LoginStory>();
         }
 
         [Test]
         public void UserCantLoginWithIncorrectUsername()
         {
-            Driver.GoTo(Location.Login);
-
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("deeeeev")
                                     .WithPassword("password")
@@ -62,8 +69,6 @@ namespace Tests.Stories
         [Test]
         public void UserCantLoginWithIncorrectPassword()
         {
-            Driver.GoTo(Location.Login);
-
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("dev")
                                     .WithPassword("paaaaaaaasword")
@@ -72,7 +77,7 @@ namespace Tests.Stories
                 .Then(x => Driver.IsAt(Location.Login), "Then I should still be at the login screen.")
                 .And(x => LoginPage.ErrorMessage(true),
                           "And a message is shown to inform of an unsuccessful login attempt.")
-                .BDDfy<LoginStory>();            
+                .BDDfy<LoginStory>();
         }
     }
 }

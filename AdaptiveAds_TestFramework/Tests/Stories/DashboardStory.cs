@@ -13,15 +13,21 @@ namespace Tests.Stories
     public class DashboardStory
     {
         #region Initialise and clean up
-
-        [SetUp]
+        
+        [OneTimeSetUp]
         public void Init()
         {
             Driver.Initialise();
-            Driver.GoTo(Location.Login);
         }
 
-        [TearDown]
+        [SetUp]
+        public void SetUp()
+        {
+            Driver.ActionWait(Period.Medium, () =>
+                Driver.GoTo(Location.Dashboard, true));
+        }
+
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Driver.Quit();
@@ -32,8 +38,6 @@ namespace Tests.Stories
         [Test]
         public void UserCanNavigateToTheAdvertsPageFromTheDashboard()
         {
-            Driver.GoTo(Location.Dashboard, true);
-
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Adverts), "When I select the adverts link.")
                 .Then(x => Driver.IsNotAt(Location.Dashboard), "Then I should no longer be at the Dashboard page.")
@@ -44,8 +48,6 @@ namespace Tests.Stories
         [Test]
         public void UserCanNavigateToThePlaylistsPageFromTheDashboard()
         {
-            Driver.GoTo(Location.Dashboard, true);
-
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Playlists), "When I select the playlists link.")
                 .Then(x => Driver.IsNotAt(Location.Dashboard), "Then I should no longer be at the Dashboard page.")
