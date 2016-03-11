@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using AdaptiveAds_TestFramework.Helpers;
+using AdaptiveAds_TestFramework.PageFrameworks;
 
 namespace AdaptiveAds_TestFramework.Helpers
 {
@@ -69,15 +69,27 @@ namespace AdaptiveAds_TestFramework.Helpers
         #endregion //setup and teardown
 
         #region NavigableLocations
-
         /// <summary>
         /// Navigate browser to a given location.
         /// </summary>
         /// <param name="location">Location to navigate to.</param>
-        public static void GoTo(Location location)
+        /// <param name="LogInIfNeeded">Logs in if authentication is required.</param>
+        public static void GoTo(Location location, bool LogInIfNeeded = false)
         {
             // Navigate browser to the location.
             Instance.Navigate().GoToUrl(Helper.RouteURL(location));
+            if (!LogInIfNeeded) return;
+            try
+            {
+                IsAt(Location.Login);
+            }
+            catch
+            {
+                // Not at login page so Login not needed.
+                return;
+            }
+            LoginPage.LoginAs("dev").WithPassword("password").Login();
+            GoTo(location);
         }
 
         /// <summary>
