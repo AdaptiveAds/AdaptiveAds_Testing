@@ -52,7 +52,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// </summary>
         public static void Initialise()
         {
-            Close();
+            Quit();
             Instance = new FirefoxDriver(new FirefoxBinary(ConfigData.FireFoxPath), new FirefoxProfile());
             WaitPeriod = ConfigData.DefaultWaitPeriod;
         }
@@ -60,10 +60,10 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <summary>
         /// Disposes of the automation object.
         /// </summary>
-        public static void Close()
+        public static void Quit()
         {
             if(Instance!=null)
-                Instance.Close();
+                Instance.Quit();
         }
 
         #endregion //setup and teardown

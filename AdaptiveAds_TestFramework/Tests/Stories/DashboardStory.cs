@@ -25,7 +25,7 @@ namespace Tests.Stories
         [TearDown]
         public void CleanUp()
         {
-            Driver.Close();
+            Driver.Quit();
         }
 
         #endregion
