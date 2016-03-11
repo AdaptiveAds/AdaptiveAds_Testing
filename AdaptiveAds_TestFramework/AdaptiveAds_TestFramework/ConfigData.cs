@@ -45,7 +45,7 @@ namespace AdaptiveAds_TestFramework
         Playlists
     }
 
-    #endregion
+    #endregion //Enums
 
     /// <summary>
     /// Contains configuration settings data for automation.
@@ -55,7 +55,7 @@ namespace AdaptiveAds_TestFramework
         #region Driver
 
         /// <summary>
-        /// Path of the firefox.exe installed on the local machiene.
+        /// Path of the firefox.exe installed on the local machine.
         /// </summary>
         public static string FireFoxPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
 
@@ -63,10 +63,10 @@ namespace AdaptiveAds_TestFramework
         /// URL of the application, This should be "http://adaptiveads.uk" and modified for local testing only.
         /// Changes to this should only be committed to production if the default location of the application changes.
         /// </summary>
-        public static string URL_Address = "http://localhost";
+        public static string UrlAddress = "http://localhost";
 
         /// <summary>
-        /// Time for the automation framework to wait before erroring as default.
+        /// Time for the automation framework to wait before throwing an error as default.
         /// </summary>
         public static Period DefaultWaitPeriod = Period.None;
 
@@ -81,7 +81,7 @@ namespace AdaptiveAds_TestFramework
             };
 
         /// <summary>
-        /// WaitPeriods, dictionary of periods and associated time in millisecconds.
+        /// WaitPeriods, dictionary of periods and associated time in milliseconds.
         /// </summary>
         public static Dictionary<Period, int> WaitPeriods = new Dictionary<Period, int>(){
                 {Period.None,0},
@@ -95,19 +95,39 @@ namespace AdaptiveAds_TestFramework
         #region Login
 
         /// <summary>
+        /// Name of the SignIn link.
+        /// </summary>
+        public static string SignInName = "lnkSignIn";
+
+        /// <summary>
+        /// Name of the SignOut link.
+        /// </summary>
+        public static string SignOutName = "lnkSignOut";
+
+        /// <summary>
+        /// A valid username for the system.
+        /// </summary>
+        public static string Username = "dev";
+
+        /// <summary>
+        /// A valid password given the username for the system.
+        /// </summary>
+        public static string Password = "password";
+
+        /// <summary>
         /// Name of the login page username input.
         /// </summary>
-        public static string loginUsernameBoxName = "login";
+        public static string LoginUsernameBoxName = "login";
 
         /// <summary>
         /// Name of the login page password input.
         /// </summary>
-        public static string loginPasswordBoxName = "password";
+        public static string LoginPasswordBoxName = "password";
 
         /// <summary>
         /// Class name of the login page submit button.
         /// </summary>
-        public static string loginButtonClass = "submit";
+        public static string LoginButtonClass = "submit";
 
         /// <summary>
         /// Class name of the login page error message.

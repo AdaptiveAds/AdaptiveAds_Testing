@@ -11,7 +11,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
     /// </summary>
     public static class DashboardPage
     {
-        private static IWebElement linkObj;
+        private static IWebElement _linkObj;
 
         /// <summary>
         /// Selects the given link on the page. 
@@ -22,25 +22,24 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Ensure that dashboard is the current page.
             Driver.IsAt(Location.Dashboard);
 
-            string linkName = "";
+            string linkName;
 
             ConfigData.DashboardLinks.TryGetValue(link, out linkName);
 
             // throw a NotImplementedException if elements was not in the links.
             if (string.IsNullOrWhiteSpace(linkName))
             {
-                throw new NotImplementedException("The specified link is not yet implimented into the test framework.");
+                throw new NotImplementedException("The specified link is not yet implemented into the test framework.");
             }
             try
             {
-                linkObj = Driver.Instance.FindElement(By.Name(linkName));
-                linkObj.Click();
-                return;
+                _linkObj = Driver.Instance.FindElement(By.Name(linkName));
+                _linkObj.Click();
             }
             catch (NoSuchElementException e)
             {
                 // throw a NoSuchElementException if elements have not been found.
-                if (linkObj == null)
+                if (_linkObj == null)
                     throw new NoSuchElementException("The specified link does not exist.",
                           new NoSuchElementException("User may not have permission to see this data.", e));
             }
