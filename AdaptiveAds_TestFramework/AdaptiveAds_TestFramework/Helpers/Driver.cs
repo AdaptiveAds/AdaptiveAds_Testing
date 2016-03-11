@@ -74,23 +74,34 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// Navigate browser to a given location.
         /// </summary>
         /// <param name="location">Location to navigate to.</param>
-        /// <param name="LogInIfNeeded">Logs in if authentication is required.</param>
-        public static void GoTo(Location location, bool LogInIfNeeded = false)
+        /// <param name="logInIfNeeded">Logs in if authentication is required.</param>
+        /// <param name="errorIfNotReached">Errors if the location was not reached.</param>
+        public static void GoTo(Location location, bool logInIfNeeded = false,bool errorIfNotReached = true)
         {
             // Navigate browser to the location.
             Instance.Navigate().GoToUrl(Helper.RouteURL(location));
-            if (!LogInIfNeeded) return;
-            try
+            bool needToLogIn = false;
+            if (logInIfNeeded)
             {
-                IsAt(Location.Login);
+                try
+                {
+                    IsAt(Location.Login);
+                    needToLogIn = true;
+                }
+                catch
+                {
+                    // Not at login page so Login not needed.
+                }
+                if (needToLogIn)
+                {
+                    LoginPage.LoginAs("dev").WithPassword("password").Login();
+                    GoTo(location,false, errorIfNotReached);
+                }
             }
-            catch
+            if (errorIfNotReached)
             {
-                // Not at login page so Login not needed.
-                return;
+                IsAt(location);
             }
-            LoginPage.LoginAs("dev").WithPassword("password").Login();
-            GoTo(location);
         }
 
         /// <summary>
