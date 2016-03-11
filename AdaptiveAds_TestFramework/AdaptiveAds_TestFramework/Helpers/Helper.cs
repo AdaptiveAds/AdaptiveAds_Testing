@@ -5,47 +5,47 @@ using OpenQA.Selenium;
 namespace AdaptiveAds_TestFramework.Helpers
 {
     /// <summary>
-    /// Contains methods to help with opertions in multiple locations throughout the framework.
+    /// Contains methods to help with operations in multiple locations throughout the framework.
     /// </summary>
     public static class Helper
     {
         /// <summary>
-        /// Gets the full URL path of the provided location, throws a NotImplementedException location is not setup in ConfigData.Routes.
+        /// Gets the full URL path of the provided location, throws a NotImplementedException location is not set-up in ConfigData.Routes.
         /// </summary>
         /// <param name="location">Location from which to find the URL.</param>
         /// <returns>The full URL of the location.</returns>
-        public static string RouteURL(Location location)
+        public static string RouteUrl(Location location)
         {
-            string extension = "";
+            string extension;
 
-            //try to find the locations url extension
+            //try to find the locations URL extension
             ConfigData.Routes.TryGetValue(location, out extension);
 
             //throw a NotImplementedException if a route was not round
             if (string.IsNullOrWhiteSpace(extension))
             {
-                throw new NotImplementedException("The given location is not setup in  ConfigData.Routes.");
+                throw new NotImplementedException("The given location is not set-up in  ConfigData.Routes.");
             }
-            //return the full url of the location
-            return ConfigData.URL_Address + extension;
+            //return the full URL of the location
+            return ConfigData.UrlAddress + extension;
         }
 
         /// <summary>
-        /// Gets the URL extension path of the provided location, throws a NotImplementedException location is not setup in ConfigData.Routes.
+        /// Gets the URL extension path of the provided location, throws a NotImplementedException location is not set-up in ConfigData.Routes.
         /// </summary>
         /// <param name="location">Location from which to find the URL.</param>
         /// <returns>The URL extension of the location.</returns>
-        public static string RouteURLExtension(Location location)
+        public static string RouteUrlExtension(Location location)
         {
-            string extension = "";
+            string extension;
 
-            //try to find the locations url extension
+            //try to find the locations URL extension
             ConfigData.Routes.TryGetValue(location, out extension);
 
             //throw a NotImplementedException if a route was not round
             if (string.IsNullOrWhiteSpace(extension))
             {
-                throw new NotImplementedException("The given location is not setup in  ConfigData.Routes.");
+                throw new NotImplementedException("The given location is not set-up in  ConfigData.Routes.");
             }
             //return the extension of the location
             return extension;
@@ -54,14 +54,14 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <summary>
         /// Gets the location of a given URL, throws a NoSuchElementException if not found.
         /// </summary>
-        /// <param name="URL">The full or extension URL from which to find the location of.</param>
+        /// <param name="url">The full or extension URL from which to find the location of.</param>
         /// <returns>The location of the given URL.</returns>
-        public static Location RouteLocation(string URL)
+        public static Location RouteLocation(string url)
         {
             //search routes for one that matches the given parameter
             foreach (KeyValuePair<Location, string> route in ConfigData.Routes)
             {
-                if (route.Value == URL || ConfigData.URL_Address + route.Value == URL)
+                if (route.Value == url || ConfigData.UrlAddress + route.Value == url)
                 {
                     //return the location of the route
                     return route.Key;

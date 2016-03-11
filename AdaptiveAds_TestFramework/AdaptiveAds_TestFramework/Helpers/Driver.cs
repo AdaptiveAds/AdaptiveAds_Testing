@@ -29,7 +29,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         }
 
         /// <summary>
-        /// Duration automation famework must wait before erroring.
+        /// Duration automation framework must wait before throwing an error.
         /// </summary>
         public static Period WaitPeriod
         {
@@ -45,7 +45,7 @@ namespace AdaptiveAds_TestFramework.Helpers
 
         #region Methods
 
-        #region setup and teardown
+        #region set-up and tear-down
 
         /// <summary>
         /// Sets up a new automation object.
@@ -67,7 +67,7 @@ namespace AdaptiveAds_TestFramework.Helpers
                 Instance.Quit();
         }
 
-        #endregion //setup and teardown
+        #endregion //set-up and tear-down
 
         #region NavigableLocations
         /// <summary>
@@ -76,10 +76,10 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <param name="location">Location to navigate to.</param>
         /// <param name="logInIfNeeded">Logs in if authentication is required.</param>
         /// <param name="errorIfNotReached">Errors if the location was not reached.</param>
-        public static void GoTo(Location location, bool logInIfNeeded = false,bool errorIfNotReached = true)
+        public static void GoTo(Location location, bool logInIfNeeded = false, bool errorIfNotReached = true)
         {
             // Navigate browser to the location.
-            Instance.Navigate().GoToUrl(Helper.RouteURL(location));
+            Instance.Navigate().GoToUrl(Helper.RouteUrl(location));
             bool needToLogIn = false;
             if (logInIfNeeded)
             {
@@ -94,8 +94,8 @@ namespace AdaptiveAds_TestFramework.Helpers
                 }
                 if (needToLogIn)
                 {
-                    LoginPage.LoginAs("dev").WithPassword("password").Login();
-                    GoTo(location,false, errorIfNotReached);
+                    LoginPage.LoginAs(ConfigData.Username).WithPassword(ConfigData.Password).Login();
+                    GoTo(location, false, errorIfNotReached);
                 }
             }
             if (errorIfNotReached)
@@ -110,7 +110,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <param name="location">Location to check the browser is at.</param>
         public static void IsAt(Location location)
         {
-            string expected = Helper.RouteURL(location);
+            string expected = Helper.RouteUrl(location);
             string actual = Instance.Url;
 
             // Check the browser is at the correct location.
@@ -131,7 +131,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <param name="location">Location to check the browser is not at.</param>
         public static void IsNotAt(Location location)
         {
-            string expected = Helper.RouteURL(location);
+            string expected = Helper.RouteUrl(location);
             string actual = Instance.Url;
 
             // Check the browser is not at the correct location.
@@ -208,27 +208,29 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <summary>
         /// Asserts the logged in state agents the parameter.
         /// </summary>
-        /// <param name="CheckLoggedIn">Parameter to check agents logged in state.</param>
-        public static void LoggedIn(bool CheckLoggedIn)
+        /// <param name="checkLoggedIn">Parameter to check agents logged in state.</param>
+        public static void LoggedIn(bool checkLoggedIn)
         {
-            IWebElement SignIn = null;
-            IWebElement SignOut = null;
-            bool IsLoggedIn = false;
+            bool signInFound;
+            bool signOutFound;
+            bool isLoggedIn = false;
 
-            try { SignIn = Instance.FindElement(By.Name("lnkSignIn")); } catch { }
-            try { SignOut = Instance.FindElement(By.Name("lnkSignOut")); } catch { }
+            try { Instance.FindElement(By.Name(ConfigData.SignInName)); signInFound = true; }
+            catch { signInFound = false; }
+            try { Instance.FindElement(By.Name(ConfigData.SignOutName)); signOutFound = true; }
+            catch { signOutFound = false; }
 
-            if (SignIn == null && SignOut == null)
+            if (!signInFound && !signOutFound)
             {
                 throw new ElementNotVisibleException("Unable to assert state due to unavailability of SignIn/Out links.");
             }
 
-            if (SignIn != null) IsLoggedIn = false;
-            if (SignOut != null) IsLoggedIn = true;
+            if (signOutFound) isLoggedIn = true;
+            if (signInFound) isLoggedIn = false;
 
-            if (IsLoggedIn != CheckLoggedIn)
+            if (isLoggedIn != checkLoggedIn)
             {
-                throw new Exception(string.Format("Logged in Expected: {0} Actual: {1}", CheckLoggedIn, IsLoggedIn));
+                throw new Exception($"Logged in Expected: {checkLoggedIn} Actual: {isLoggedIn}");
             }
         }
 
@@ -242,17 +244,17 @@ namespace AdaptiveAds_TestFramework.Helpers
             {
                 LoggedIn(true);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 if (errorIfAlreadySignedOut)
                 {
-                    throw e;
+                    throw;
                 }
                 return;
             }
 
-            IWebElement SignOut = Instance.FindElement(By.Name("lnkSignOut"));
-            SignOut.Click();
+            IWebElement signOut = Instance.FindElement(By.Name(ConfigData.SignOutName));
+            signOut.Click();
 
         }
 
