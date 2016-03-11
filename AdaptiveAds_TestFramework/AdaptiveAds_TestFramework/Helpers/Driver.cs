@@ -54,6 +54,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         {
             Quit();
             Instance = new FirefoxDriver(new FirefoxBinary(ConfigData.FireFoxPath), new FirefoxProfile());
+            Instance.Manage().Window.Maximize();
             WaitPeriod = ConfigData.DefaultWaitPeriod;
         }
 
