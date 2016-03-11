@@ -16,7 +16,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         private static Period _waitPeriod;
 
         #endregion//Variables
-        
+
         #region Properties
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// </summary>
         public static void Quit()
         {
-            if(Instance!=null)
+            if (Instance != null)
                 Instance.Quit();
         }
 
@@ -102,7 +102,7 @@ namespace AdaptiveAds_TestFramework.Helpers
             string actual = Instance.Url;
 
             // Check the browser is at the correct location.
-            if (actual !=expected)
+            if (actual != expected)
             {
                 // Driver is not at the specified location.
                 throw new WebDriverException("Incorrect location.",
@@ -168,6 +168,57 @@ namespace AdaptiveAds_TestFramework.Helpers
         }
 
         #endregion//WaitHandling
+
+        /// <summary>
+        /// Asserts the logged in state agents the parameter.
+        /// </summary>
+        /// <param name="CheckLoggedIn">Parameter to check agents logged in state.</param>
+        public static void LoggedIn(bool CheckLoggedIn)
+        {
+            IWebElement SignIn = null;
+            IWebElement SignOut = null;
+            bool IsLoggedIn=false;
+
+            try { SignIn = Instance.FindElement(By.Name("lnkSignIn")); } catch { }
+            try { SignOut = Instance.FindElement(By.Name("lnkSignOut")); } catch { }
+
+            if(SignIn==null&&SignOut==null)
+            {
+                throw new ElementNotVisibleException("Unable to assert state due to unavailability of SignIn/Out links.");
+            }
+
+            if (SignIn != null) IsLoggedIn = false;
+            if (SignOut != null) IsLoggedIn = true;
+
+            if(IsLoggedIn!=CheckLoggedIn)
+            {
+                throw new Exception(string.Format("Logged in Expected: {0} Actual: {1}", CheckLoggedIn,IsLoggedIn));
+            }
+        }
+
+        /// <summary>
+        /// Signs out of the system.
+        /// </summary>
+        /// <param name="errorIfAlreadySignedOut">Determines whether to throw an error if already signed out.</param>
+        public static void SignOut(bool errorIfAlreadySignedOut = true)
+        {
+            try
+            {
+                LoggedIn(true);
+            }
+            catch (Exception e)
+            {
+                if (errorIfAlreadySignedOut)
+                {
+                    throw e;
+                }
+                return;
+            }
+
+            IWebElement SignOut = Instance.FindElement(By.Name("lnkSignIn"));
+            SignOut.Click();
+
+        }
 
         #endregion//Methods
     }
