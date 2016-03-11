@@ -27,7 +27,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>1.3.3</HelpFileVersion>
+    <HelpFileVersion>1.4.2</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
