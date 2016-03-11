@@ -111,6 +111,7 @@ namespace AdaptiveAds_TestFramework.Helpers
                         "The given location did not match the browser." +
                         " Expected \"" + expected + "\" Actual \"" + actual + "\""));
             }
+            ActionWait(Period.None, CheckForLavarelError);
         }
 
         /// <summary>
@@ -170,6 +171,29 @@ namespace AdaptiveAds_TestFramework.Helpers
 
         #endregion//WaitHandling
 
+        #region AppState
+
+        /// <summary>
+        /// Checks that the website hasn't crashed from the back end.
+        /// </summary>
+        public static void CheckForLavarelError()
+        {
+            bool error = false;
+            try
+            {
+                Instance.FindElement(By.ClassName("exception_message"));
+                error = true;
+            }
+            catch
+            {
+                // all good, could not find error content.
+            }
+            if (error)
+            {
+                throw new Exception("Lavarel threw an error");
+            }
+        }
+
         /// <summary>
         /// Asserts the logged in state agents the parameter.
         /// </summary>
@@ -220,6 +244,8 @@ namespace AdaptiveAds_TestFramework.Helpers
             SignOut.Click();
 
         }
+
+        #endregion//AppState
 
         #endregion//Methods
     }
