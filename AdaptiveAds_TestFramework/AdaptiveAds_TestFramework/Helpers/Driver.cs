@@ -177,12 +177,12 @@ namespace AdaptiveAds_TestFramework.Helpers
         {
             IWebElement SignIn = null;
             IWebElement SignOut = null;
-            bool IsLoggedIn=false;
+            bool IsLoggedIn = false;
 
             try { SignIn = Instance.FindElement(By.Name("lnkSignIn")); } catch { }
             try { SignOut = Instance.FindElement(By.Name("lnkSignOut")); } catch { }
 
-            if(SignIn==null&&SignOut==null)
+            if (SignIn == null && SignOut == null)
             {
                 throw new ElementNotVisibleException("Unable to assert state due to unavailability of SignIn/Out links.");
             }
@@ -190,9 +190,9 @@ namespace AdaptiveAds_TestFramework.Helpers
             if (SignIn != null) IsLoggedIn = false;
             if (SignOut != null) IsLoggedIn = true;
 
-            if(IsLoggedIn!=CheckLoggedIn)
+            if (IsLoggedIn != CheckLoggedIn)
             {
-                throw new Exception(string.Format("Logged in Expected: {0} Actual: {1}", CheckLoggedIn,IsLoggedIn));
+                throw new Exception(string.Format("Logged in Expected: {0} Actual: {1}", CheckLoggedIn, IsLoggedIn));
             }
         }
 
@@ -215,7 +215,7 @@ namespace AdaptiveAds_TestFramework.Helpers
                 return;
             }
 
-            IWebElement SignOut = Instance.FindElement(By.Name("lnkSignIn"));
+            IWebElement SignOut = Instance.FindElement(By.Name("lnkSignOut"));
             SignOut.Click();
 
         }
