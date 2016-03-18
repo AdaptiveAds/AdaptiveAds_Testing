@@ -47,6 +47,10 @@
   </HelpKINode>
   <HelpKINode Title="DashboardPage.Select method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage_Select.htm" />
   <HelpKINode Title="DefaultWaitPeriod field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DefaultWaitPeriod.htm" />
+  <HelpKINode Title="Departments enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="Driver class">
     <HelpKINode Title="Driver Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm" />
     <HelpKINode Title="about Driver class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm" />
@@ -81,6 +85,10 @@
   <HelpKINode Title="IsAt method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_IsAt.htm" />
   <HelpKINode Title="IsNotAt method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_IsNotAt.htm" />
   <HelpKINode Title="Location enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  <HelpKINode Title="Locations enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="LoggedIn method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_LoggedIn.htm" />
   <HelpKINode Title="Login enumeration member" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   <HelpKINode Title="Login method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand_Login.htm" />
@@ -113,18 +121,38 @@
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
+  <HelpKINode Title="Privileges enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="Quit method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_Quit.htm" />
   <HelpKINode Title="RouteLocation method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteLocation.htm" />
   <HelpKINode Title="Routes field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Routes.htm" />
   <HelpKINode Title="RouteUrl method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrl.htm" />
   <HelpKINode Title="RouteUrlExtension method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrlExtension.htm" />
+  <HelpKINode Title="Screens enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="Select method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage_Select.htm" />
   <HelpKINode Title="Short enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="SignInName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignInName.htm" />
   <HelpKINode Title="SignOut method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_SignOut.htm" />
   <HelpKINode Title="SignOutName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignOutName.htm" />
+  <HelpKINode Title="Skins enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Templates enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="UrlAddress field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_UrlAddress.htm" />
   <HelpKINode Title="Username field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Username.htm" />
+  <HelpKINode Title="Users enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
   <HelpKINode Title="WaitPeriods field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_WaitPeriods.htm" />
   <HelpKINode Title="WithPassword method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand_WithPassword.htm" />

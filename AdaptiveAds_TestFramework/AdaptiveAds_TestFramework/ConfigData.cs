@@ -16,7 +16,21 @@ namespace AdaptiveAds_TestFramework
         ///<summary>Here users can view a list of adverts and from here perform actions such as create, edit and delete.</summary>
         Adverts,
         ///<summary>Here users can view a list of playlists and from here perform actions such as create, edit and delete.</summary>
-        Playlists
+        Playlists,
+        ///<summary>Here users can view a list of locations and from here perform actions such as create, edit and delete.</summary>
+        Locations,
+        ///<summary>Here users can view a list of departments and from here perform actions such as create, edit and delete.</summary>
+        Departments,
+        ///<summary>Here users can view a list of screens and from here perform actions such as create, edit and delete.</summary>
+        Screens,
+        ///<summary>Here users can view a list of users and from here perform actions such as create, edit and delete.</summary>
+        Users,
+        ///<summary>Here users can view a list of templates and from here perform actions such as create, edit and delete.</summary>
+        Templates,
+        ///<summary>Here users can view a list of skins and from here perform actions such as create, edit and delete.</summary>
+        Skins,
+        ///<summary>Here users can view a list of privileges and from here perform actions such as create, edit and delete.</summary>
+        Privileges
     }
 
     /// <summary>
@@ -42,7 +56,21 @@ namespace AdaptiveAds_TestFramework
         ///<summary>A link from the Dashboard to the Adverts page</summary>
         Adverts,
         ///<summary>A link from the Dashboard to the Playlists page</summary>
-        Playlists
+        Playlists,
+        ///<summary>A link from the Dashboard to the Locations page</summary>
+        Locations,
+        ///<summary>A link from the Dashboard to the Departments page</summary>
+        Departments,
+        ///<summary>A link from the Dashboard to the Screens page</summary>
+        Screens,
+        ///<summary>A link from the Dashboard to the Users page</summary>
+        Users,
+        ///<summary>A link from the Dashboard to the Templates page</summary>
+        Templates,
+        ///<summary>A link from the Dashboard to the Skins page</summary>
+        Skins,
+        ///<summary>A link from the Dashboard to the Privileges page</summary>
+        Privileges
     }
 
     #endregion //Enums
@@ -77,7 +105,14 @@ namespace AdaptiveAds_TestFramework
                 {Location.Adverts,"/dashboard/advert"},
                 {Location.Dashboard,"/dashboard"},
                 {Location.Login,"/login"},
-                {Location.Playlists,"/dashboard/playlist"}
+                {Location.Playlists,"/dashboard/playlist"},
+                {Location.Locations,"/dashboard/settings/locations"},
+                {Location.Departments,"/dashboard/settings/departments"},
+                {Location.Screens,"/dashboard/settings/screens"},
+                {Location.Users,"/dashboard/settings/users"},
+                {Location.Templates,"/dashboard/settings/templates"},
+                {Location.Skins,"/dashboard/settings/skins"},
+                {Location.Privileges,"/dashboard/settings/privileges"}
             };
 
         /// <summary>
@@ -144,7 +179,14 @@ namespace AdaptiveAds_TestFramework
         public static Dictionary<DashboardLink, string> DashboardLinks = new Dictionary<DashboardLink, string>()
             {
                 {DashboardLink.Adverts,"liAdvert" },
-                {DashboardLink.Playlists,"liPlaylist" }
+                {DashboardLink.Playlists,"liPlaylist" },
+                {DashboardLink.Locations,"liLocations" },
+                {DashboardLink.Departments,"liDepartments" },
+                {DashboardLink.Screens,"liScreens" },
+                {DashboardLink.Users,"liUsers" },
+                {DashboardLink.Templates,"liTemplates" },
+                {DashboardLink.Skins,"liSkins" },
+                {DashboardLink.Privileges,"liPrivileges" }
             };
 
         #endregion //Dashboard
