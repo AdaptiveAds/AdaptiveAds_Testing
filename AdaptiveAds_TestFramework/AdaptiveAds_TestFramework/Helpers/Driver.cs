@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using AdaptiveAds_TestFramework.Helpers;
+using AdaptiveAds_TestFramework.PageFrameworks;
 
 namespace AdaptiveAds_TestFramework.Helpers
 {
@@ -16,7 +16,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         private static Period _waitPeriod;
 
         #endregion//Variables
-        
+
         #region Properties
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         }
 
         /// <summary>
-        /// Duration automation famework must wait before erroring.
+        /// Duration automation framework must wait before throwing an error.
         /// </summary>
         public static Period WaitPeriod
         {
@@ -45,39 +45,63 @@ namespace AdaptiveAds_TestFramework.Helpers
 
         #region Methods
 
-        #region setup and teardown
+        #region set-up and tear-down
 
         /// <summary>
         /// Sets up a new automation object.
         /// </summary>
         public static void Initialise()
         {
-            Close();
+            Quit();
             Instance = new FirefoxDriver(new FirefoxBinary(ConfigData.FireFoxPath), new FirefoxProfile());
+            Instance.Manage().Window.Maximize();
             WaitPeriod = ConfigData.DefaultWaitPeriod;
         }
 
         /// <summary>
         /// Disposes of the automation object.
         /// </summary>
-        public static void Close()
+        public static void Quit()
         {
-            if(Instance!=null)
-                Instance.Close();
+            if (Instance != null)
+                Instance.Quit();
         }
 
-        #endregion //setup and teardown
+        #endregion //set-up and tear-down
 
         #region NavigableLocations
-
         /// <summary>
         /// Navigate browser to a given location.
         /// </summary>
         /// <param name="location">Location to navigate to.</param>
-        public static void GoTo(Location location)
+        /// <param name="logInIfNeeded">Logs in if authentication is required.</param>
+        /// <param name="errorIfNotReached">Errors if the location was not reached.</param>
+        public static void GoTo(Location location, bool logInIfNeeded = false, bool errorIfNotReached = true)
         {
             // Navigate browser to the location.
-            Instance.Navigate().GoToUrl(Helper.RouteURL(location));
+            Instance.Navigate().GoToUrl(Helper.RouteUrl(location));
+            bool needToLogIn = false;
+            if (logInIfNeeded)
+            {
+                try
+                {
+                    IsAt(Location.Login);
+                    needToLogIn = true;
+                }
+                catch
+                {
+                    // Not at login page so Login not needed.
+                }
+                if (needToLogIn)
+                {
+                    LoginPage.LoginAs(ConfigData.Username).WithPassword(ConfigData.Password).Login();
+                    GoTo(location, false, errorIfNotReached);
+                }
+            }
+            if (errorIfNotReached)
+            {
+                IsAt(location);
+            }
         }
 
         /// <summary>
@@ -86,11 +110,11 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <param name="location">Location to check the browser is at.</param>
         public static void IsAt(Location location)
         {
-            string expected = Helper.RouteURL(location);
+            string expected = Helper.RouteUrl(location);
             string actual = Instance.Url;
 
             // Check the browser is at the correct location.
-            if (actual !=expected)
+            if (actual != expected)
             {
                 // Driver is not at the specified location.
                 throw new WebDriverException("Incorrect location.",
@@ -98,6 +122,7 @@ namespace AdaptiveAds_TestFramework.Helpers
                         "The given location did not match the browser." +
                         " Expected \"" + expected + "\" Actual \"" + actual + "\""));
             }
+            ActionWait(Period.None, CheckForLavarelError);
         }
 
         /// <summary>
@@ -106,7 +131,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         /// <param name="location">Location to check the browser is not at.</param>
         public static void IsNotAt(Location location)
         {
-            string expected = Helper.RouteURL(location);
+            string expected = Helper.RouteUrl(location);
             string actual = Instance.Url;
 
             // Check the browser is not at the correct location.
@@ -156,6 +181,84 @@ namespace AdaptiveAds_TestFramework.Helpers
         }
 
         #endregion//WaitHandling
+
+        #region AppState
+
+        /// <summary>
+        /// Checks that the website hasn't crashed from the back end.
+        /// </summary>
+        public static void CheckForLavarelError()
+        {
+            bool error = false;
+            try
+            {
+                Instance.FindElement(By.ClassName("exception_message"));
+                error = true;
+            }
+            catch
+            {
+                // all good, could not find error content.
+            }
+            if (error)
+            {
+                throw new Exception("Lavarel threw an error");
+            }
+        }
+
+        /// <summary>
+        /// Asserts the logged in state agents the parameter.
+        /// </summary>
+        /// <param name="checkLoggedIn">Parameter to check agents logged in state.</param>
+        public static void LoggedIn(bool checkLoggedIn)
+        {
+            bool signInFound;
+            bool signOutFound;
+            bool isLoggedIn = false;
+
+            try { Instance.FindElement(By.Name(ConfigData.SignInName)); signInFound = true; }
+            catch { signInFound = false; }
+            try { Instance.FindElement(By.Name(ConfigData.SignOutName)); signOutFound = true; }
+            catch { signOutFound = false; }
+
+            if (!signInFound && !signOutFound)
+            {
+                throw new ElementNotVisibleException("Unable to assert state due to unavailability of SignIn/Out links.");
+            }
+
+            if (signOutFound) isLoggedIn = true;
+            if (signInFound) isLoggedIn = false;
+
+            if (isLoggedIn != checkLoggedIn)
+            {
+                throw new Exception($"Logged in Expected: {checkLoggedIn} Actual: {isLoggedIn}");
+            }
+        }
+
+        /// <summary>
+        /// Signs out of the system.
+        /// </summary>
+        /// <param name="errorIfAlreadySignedOut">Determines whether to throw an error if already signed out.</param>
+        public static void SignOut(bool errorIfAlreadySignedOut = true)
+        {
+            try
+            {
+                LoggedIn(true);
+            }
+            catch (Exception)
+            {
+                if (errorIfAlreadySignedOut)
+                {
+                    throw;
+                }
+                return;
+            }
+
+            IWebElement signOut = Instance.FindElement(By.Name(ConfigData.SignOutName));
+            signOut.Click();
+
+        }
+
+        #endregion//AppState
 
         #endregion//Methods
     }

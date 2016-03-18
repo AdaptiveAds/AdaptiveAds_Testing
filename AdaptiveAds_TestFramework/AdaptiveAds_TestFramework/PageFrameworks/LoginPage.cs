@@ -11,7 +11,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
     public static class LoginPage
     {
         /// <summary>
-        /// Creates a new LoginCommand with the given username for a fluent implimentation of login to the system.
+        /// Creates a new LoginCommand with the given username for a fluent implementation of login to the system.
         /// LoginAs(Username).WithPassword(Password).Login();
         /// </summary>
         /// <param name="username">Username to login to the system with.</param>
@@ -24,13 +24,13 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// <summary>
         /// Validates the state of the error message matches that of the IsDiplayed parameter.
         /// </summary>
-        /// <param name="IsDiplayed">The state to which the error message visibility will be compared to.</param>
-        public static void ErrorMessage(bool IsDiplayed)
+        /// <param name="isDiplayed">The state to which the error message visibility will be compared to.</param>
+        public static void ErrorMessage(bool isDiplayed)
         {
             bool shown;
             try
             {
-                var errormessage = Driver.Instance.FindElement(By.ClassName(ConfigData.ErrorMessageClass));
+                Driver.Instance.FindElement(By.ClassName(ConfigData.ErrorMessageClass));
                 shown = true;
             }
             catch
@@ -38,10 +38,10 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
                 shown = false;
             }
 
-            if (shown == IsDiplayed) return;
+            if (shown == isDiplayed) return;
 
-            throw new Exception(string.Format("The error message visibility did not match that expected. "+
-                                              "Expected {0} actual {1}", IsDiplayed, shown),null);  
+            throw new Exception("The error message visibility did not match that expected. "
+                + $"Expected {isDiplayed} actual {shown}", null);
 
 
 
@@ -55,12 +55,12 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
     {
         #region Variables
 
-        private string _userName = "";
-        private string _password = "";
-        
-        private IWebElement loginInput;
-        private IWebElement passwordInput;
-        private IWebElement loginButton;
+        private readonly string _userName;
+        private string _password;
+
+        private IWebElement _loginInput;
+        private IWebElement _passwordInput;
+        private IWebElement _loginButton;
 
         #endregion //Variables
 
@@ -79,7 +79,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// Sets the password to used in the login process.
         /// </summary>
         /// <param name="password">Password to login with.</param>
-        /// <returns>Returns itself enabling continuation of fluent imlementation.</returns>
+        /// <returns>Returns itself enabling continuation of fluent implementation.</returns>
         public LoginCommand WithPassword(string password)
         {
             _password = password;
@@ -99,25 +99,25 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             // Attempt to find elements on the page.
             try
             {
-                loginInput = Driver.Instance.FindElement(By.Name(ConfigData.loginUsernameBoxName));
-                passwordInput = Driver.Instance.FindElement(By.Name(ConfigData.loginPasswordBoxName));
-                loginButton = Driver.Instance.FindElement(By.ClassName(ConfigData.loginButtonClass));
+                _loginInput = Driver.Instance.FindElement(By.Name(ConfigData.LoginUsernameBoxName));
+                _passwordInput = Driver.Instance.FindElement(By.Name(ConfigData.LoginPasswordBoxName));
+                _loginButton = Driver.Instance.FindElement(By.ClassName(ConfigData.LoginButtonClass));
             }
             catch (NoSuchElementException e)
             {
                 // Errors if elements have not been found.
-                if (loginInput == null || passwordInput == null || loginButton == null)
+                if (_loginInput == null || _passwordInput == null || _loginButton == null)
                     throw new NotFoundException("Page elements not found.",
                           new NotFoundException("At least one of the following login elements were not found. " +
                           "Username, " +
                           "Password or " +
-                          "Submit.",e));
+                          "Submit.", e));
             }
-            
+
             // Login
-            loginInput.SendKeys(_userName);
-            passwordInput.SendKeys(_password);
-            loginButton.Click();
+            _loginInput.SendKeys(_userName);
+            _passwordInput.SendKeys(_password);
+            _loginButton.Click();
 
             //Wait allows system time to process login.
             Thread.Sleep(2500);
