@@ -42,8 +42,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="TestStack.BDDfy, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TestStack.BDDfy.4.2.0\lib\net40\TestStack.BDDfy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.52.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.52.0\lib\net40\WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -61,6 +66,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Stories\DashboardStory.cs" />
+    <Compile Include="Stories\DepartmentStory.cs" />
     <Compile Include="Stories\LoginStory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,7 +9,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
 /*If you drop a custom stylesheet named BDDfyCustom.css in your output folder it gets embedded here. This way you can apply some custom styles over your html report.*/
 
     </style>
-    <title>BDDfy Test Result 18/03/2016</title>
+    <title>BDDfy Test Result 09/05/2016</title>
   </head>
   <body>
     <div id='main'>
@@ -23,19 +23,19 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='storySummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Stories</div>
-              <span class='summaryCount'>2</span>
+              <span class='summaryCount'>3</span>
             </div>
           </li>
           <li class='scenarioSummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Scenarios</div>
-              <span class='summaryCount'>12</span>
+              <span class='summaryCount'>15</span>
             </div>
           </li>
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>12</span>
+              <span class='summaryCount'>14</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -53,7 +53,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='Failed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Failed</div>
-              <span class='summaryCount'>0</span>
+              <span class='summaryCount'>1</span>
             </div>
           </li>
         </ul>
@@ -235,6 +235,90 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
           <li>
+            <div class='story Failed'>
+              <div class='storyMetadata'>
+                <div class='storyTitle'>Story: Department story</div>
+                <ul class='storyNarrative'>
+                  <li>As a As user</li>
+                  <li>I want a departments page</li>
+                  <li>So that I can manage departments in the system.</li>
+                </ul>
+              </div>
+              <div class='scenarios'>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-10'>User can add departments</div>
+                  <ul class='steps' id='scenario-10'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-10-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-10-2' >
+                      <span>When I add an item.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-10-3' >
+                      <span>Then it is added to the system.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-10-4' >
+                      <span>And this test cleans up.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-11'>User can edit departments</div>
+                  <ul class='steps' id='scenario-11'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-11-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-11-2' >
+                      <span>And the department "TestDepartmentEdit" exists.</span>
+                    </li>
+                    <li class='step Failed  Transition canToggle' data-toggle-target='step-11-3' >
+                      <span>When I edit an item. [Exception Message: 'Element is not currently visible and so may not be interacted with']</span>
+                      <div class='step FailedException' id='step-11-3'>
+                        <code>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Clear()
+   at AdaptiveAds_TestFramework.PageFrameworks.DepartmentsPage.Edit(String departmentName) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\DepartmentsPage.cs:line 80
+   at lambda_method(Closure , DepartmentStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.DepartmentStory.UserCanEditDepartments() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\DepartmentStory.cs:line 54</code>
+                      </div>
+                    </li>
+                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-11-4' >
+                      <span>Then it is updated in the system.</span>
+                    </li>
+                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-11-5' >
+                      <span>This test cleans up.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-12'>User can remove departments</div>
+                  <ul class='steps' id='scenario-12'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-12-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-12-2' >
+                      <span>And the department "TestDepartmentRemove" exists.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-12-3' >
+                      <span>When I remove an item.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-12-4' >
+                      <span>Then it is no longer in the system.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
             <div class='story Passed'>
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Login story</div>
@@ -246,52 +330,52 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               </div>
               <div class='scenarios'>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-10'>User can login with correct credentials</div>
-                  <ul class='steps' id='scenario-10'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-10-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-13'>User can login with correct credentials</div>
+                  <ul class='steps' id='scenario-13'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-13-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-10-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-13-2' >
                       <span>When I provide a correct username and password.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-10-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-13-3' >
                       <span>Then I should no longer be at the login page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-10-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-13-4' >
                       <span>I should be at the Dashboard page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-11'>User cant login with incorrect password</div>
-                  <ul class='steps' id='scenario-11'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-11-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-14'>User cant login with incorrect password</div>
+                  <ul class='steps' id='scenario-14'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-14-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-11-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-14-2' >
                       <span>When I provide an incorrect password.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-11-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-14-3' >
                       <span>Then I should still be at the login screen.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-11-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-14-4' >
                       <span>And a message is shown to inform of an unsuccessful login attempt.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-12'>User cant login with incorrect username</div>
-                  <ul class='steps' id='scenario-12'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-12-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-15'>User cant login with incorrect username</div>
+                  <ul class='steps' id='scenario-15'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-15-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-12-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-15-2' >
                       <span>When I provide an incorrect username.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-12-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-15-3' >
                       <span>Then I should still be at the login screen.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-12-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-15-4' >
                       <span>And a message is shown to inform of an unsuccessful login attempt.</span>
                     </li>
                   </ul>
@@ -300,7 +384,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 18/03/2016 19:29:37</span></p>
+        <p><span>Tested at: 09/05/2016 17:11:57</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>

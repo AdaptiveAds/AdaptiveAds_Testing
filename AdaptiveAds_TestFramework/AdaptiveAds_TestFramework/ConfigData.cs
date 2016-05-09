@@ -190,5 +190,72 @@ namespace AdaptiveAds_TestFramework
             };
 
         #endregion //Dashboard
+
+        #region Department
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a department.
+        /// </summary>
+        public static string DepartmentAdd = "btnAddDepartment";
+
+        /// <summary>
+        /// Name of the text input for department name.
+        /// </summary>
+        public static string DepartmentAddName = "txtDepartmentName";
+
+        /// <summary>
+        /// Name of the button to save a department.
+        /// </summary>
+        public static string DepartmentAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a department.
+        /// </summary>
+        public static string DepartmentEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing department name.
+        /// </summary>
+        public static string DepartmentEditName = "txtDepartmentName";
+
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string DepartmentEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a department.
+        /// </summary>
+        public static string DepartmentDelete = "btnDelete";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string DepartmentDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string DepartmentDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        /// <summary>
+        /// Name of the container for departments.
+        /// </summary>
+        public static string DepartmentsContainer = "lstDepartmentItems";
+
+        #endregion //Department
+
     }
 }
