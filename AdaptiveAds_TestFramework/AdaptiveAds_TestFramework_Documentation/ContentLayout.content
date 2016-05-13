@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="e2f3a6a8-2641-4b05-9a94-dce7deecaddd" visible="True" isDefault="true" title="Welcome to the class library documentation of the AdaptiveAds_TestFramework">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="f0e38565-94e1-4c20-9716-f552a23ce0d0" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="a040a869-e387-4051-a52e-4bc656f0ace4" visible="True" title="Version 1.0.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.0.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="071272B6-B0D6-4319-93EC-DCD7B5F64538" visible="True" isSelected="true" title="Version 1.0.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.1.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>
