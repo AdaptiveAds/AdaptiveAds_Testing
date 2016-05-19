@@ -100,10 +100,16 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentEdit));
             editButtons[NumberInList(departmentName)-1].Click();
 
+            Thread.Sleep(250);//wait for pop-up to become visible
+
             var nameInput = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentEditName));
-            string editedText = nameInput.Text + "_Edited";
             nameInput.Clear();
-            nameInput.SendKeys(editedText);
+            nameInput.SendKeys(departmentName + "_Edited");
+
+            Thread.Sleep(500);//wait for text to be entered fully
+
+            var confirmButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentEditSave));
+            confirmButton.Click();
         }
 
         /// <summary>

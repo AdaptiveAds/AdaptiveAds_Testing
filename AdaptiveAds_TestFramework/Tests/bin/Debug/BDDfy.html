@@ -9,7 +9,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
 /*If you drop a custom stylesheet named BDDfyCustom.css in your output folder it gets embedded here. This way you can apply some custom styles over your html report.*/
 
     </style>
-    <title>BDDfy Test Result 09/05/2016</title>
+    <title>BDDfy Test Result 19/05/2016</title>
   </head>
   <body>
     <div id='main'>
@@ -68,7 +68,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
         </div>
         <ul class='testResult'>
           <li>
-            <div class='story Passed'>
+            <div class='story Failed'>
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Dashboard story</div>
                 <ul class='storyNarrative'>
@@ -181,7 +181,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-7'>User can navigate to the skins page from the dashboard</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-7'>User can navigate to the skins page from the dashboard</div>
                   <ul class='steps' id='scenario-7'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-7-1' >
                       <span>Given I am at the Dashboard.</span>
@@ -189,11 +189,33 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     <li class='step Passed  Transition ' data-toggle-target='step-7-2' >
                       <span>When I select the skins link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-7-3' >
-                      <span>Then I should no longer be at the Dashboard page.</span>
+                    <li class='step Failed  Assertion canToggle' data-toggle-target='step-7-3' >
+                      <span>Then I should no longer be at the Dashboard page. [Exception Message: 'Incorrect location.']</span>
+                      <div class='step FailedException' id='step-7-3'>
+                        <code>   at AdaptiveAds_TestFramework.Helpers.Driver.IsNotAt(Location location) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\Helpers\Driver.cs:line 141
+   at lambda_method(Closure , DashboardStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.DashboardStory.UserCanNavigateToTheSkinsPageFromTheDashboard() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\DashboardStory.cs:line 111</code>
+                      </div>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-7-4' >
-                      <span>I should be at the Skins page.</span>
+                    <li class='step Failed  ConsecutiveAssertion canToggle' data-toggle-target='step-7-4' >
+                      <span>I should be at the Skins page. [Exception Message: 'Incorrect location.']</span>
+                      <div class='step FailedException' id='step-7-4'>
+                        <code>   at AdaptiveAds_TestFramework.Helpers.Driver.IsAt(Location location) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\Helpers\Driver.cs:line 120
+   at lambda_method(Closure , DashboardStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)</code>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -235,7 +257,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
           <li>
-            <div class='story Failed'>
+            <div class='story Passed'>
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Department story</div>
                 <ul class='storyNarrative'>
@@ -263,7 +285,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-11'>User can edit departments</div>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-11'>User can edit departments</div>
                   <ul class='steps' id='scenario-11'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-11-1' >
                       <span>Given I am at the Departments page.</span>
@@ -271,29 +293,13 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-11-2' >
                       <span>And the department "TestDepartmentEdit" exists.</span>
                     </li>
-                    <li class='step Failed  Transition canToggle' data-toggle-target='step-11-3' >
-                      <span>When I edit an item. [Exception Message: 'Element is not currently visible and so may not be interacted with']</span>
-                      <div class='step FailedException' id='step-11-3'>
-                        <code>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-   at OpenQA.Selenium.Remote.RemoteWebElement.Clear()
-   at AdaptiveAds_TestFramework.PageFrameworks.DepartmentsPage.Edit(String departmentName) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\DepartmentsPage.cs:line 80
-   at lambda_method(Closure , DepartmentStory )
-   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
-   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
-   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
-   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
-   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
-   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
-   at TestStack.BDDfy.Engine.Run()
-   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
-   at Tests.Stories.DepartmentStory.UserCanEditDepartments() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\DepartmentStory.cs:line 54</code>
-                      </div>
+                    <li class='step Passed  Transition ' data-toggle-target='step-11-3' >
+                      <span>When I edit an item.</span>
                     </li>
-                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-11-4' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-11-4' >
                       <span>Then it is updated in the system.</span>
                     </li>
-                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-11-5' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-11-5' >
                       <span>This test cleans up.</span>
                     </li>
                   </ul>
@@ -384,7 +390,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 09/05/2016 17:11:57</span></p>
+        <p><span>Tested at: 19/05/2016 23:58:07</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>
