@@ -150,6 +150,10 @@
   <HelpKINode Title="Medium enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="None enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="NumberInList method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_NumberInList.htm" />
+  <HelpKINode Title="PageBackgrounds enumeration member">
+    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
+    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
+  </HelpKINode>
   <HelpKINode Title="Password field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Password.htm" />
   <HelpKINode Title="Period enumeration" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="Playlists enumeration member">
@@ -175,10 +179,6 @@
   <HelpKINode Title="SignInName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignInName.htm" />
   <HelpKINode Title="SignOut method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_SignOut.htm" />
   <HelpKINode Title="SignOutName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignOutName.htm" />
-  <HelpKINode Title="Skins enumeration member">
-    <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
-    <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
-  </HelpKINode>
   <HelpKINode Title="Templates enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
@@ -193,6 +193,9 @@
     <HelpKINode Title="1.0.0.0" Url="html/a040a869-e387-4051-a52e-4bc656f0ace4.htm" />
     <HelpKINode Title="1.0.1.0" Url="html/071272B6-B0D6-4319-93EC-DCD7B5F64538.htm" />
     <HelpKINode Title="history" Url="html/f0e38565-94e1-4c20-9716-f552a23ce0d0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Version">
+    <HelpKINode Title="1.0.2.0" Url="html/503C69AE-52A4-467D-8A19-768911464CE5.htm" />
   </HelpKINode>
   <HelpKINode Title="WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
   <HelpKINode Title="WaitPeriods field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_WaitPeriods.htm" />

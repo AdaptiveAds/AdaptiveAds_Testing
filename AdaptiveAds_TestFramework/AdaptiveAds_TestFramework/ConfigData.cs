@@ -27,8 +27,8 @@ namespace AdaptiveAds_TestFramework
         Users,
         ///<summary>Here users can view a list of templates and from here perform actions such as create, edit and delete.</summary>
         Templates,
-        ///<summary>Here users can view a list of skins and from here perform actions such as create, edit and delete.</summary>
-        Skins,
+        ///<summary>Here users can view a list of page backgrounds and from here perform actions such as create, edit and delete.</summary>
+        PageBackgrounds,
         ///<summary>Here users can view a list of privileges and from here perform actions such as create, edit and delete.</summary>
         Privileges
     }
@@ -67,8 +67,8 @@ namespace AdaptiveAds_TestFramework
         Users,
         ///<summary>A link from the Dashboard to the Templates page</summary>
         Templates,
-        ///<summary>A link from the Dashboard to the Skins page</summary>
-        Skins,
+        ///<summary>A link from the Dashboard to the Page Backgrounds page</summary>
+        PageBackgrounds,
         ///<summary>A link from the Dashboard to the Privileges page</summary>
         Privileges
     }
@@ -111,7 +111,7 @@ namespace AdaptiveAds_TestFramework
                 {Location.Screens,"/dashboard/settings/screens"},
                 {Location.Users,"/dashboard/settings/users"},
                 {Location.Templates,"/dashboard/settings/templates"},
-                {Location.Skins,"/dashboard/settings/skins"},
+                {Location.PageBackgrounds,"/dashboard/settings/backgrounds"},
                 {Location.Privileges,"/dashboard/settings/privileges"}
             };
 
@@ -185,7 +185,7 @@ namespace AdaptiveAds_TestFramework
                 {DashboardLink.Screens,"liScreens" },
                 {DashboardLink.Users,"liUsers" },
                 {DashboardLink.Templates,"liTemplates" },
-                {DashboardLink.Skins,"liSkins" },
+                {DashboardLink.PageBackgrounds,"liBackgrounds" },
                 {DashboardLink.Privileges,"liPrivileges" }
             };
 

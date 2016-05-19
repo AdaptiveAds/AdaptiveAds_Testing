@@ -106,12 +106,12 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheSkinsPageFromTheDashboard()
+        public void UserCanNavigateToThePageBackgroundsPageFromTheDashboard()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
-                .When(x => DashboardPage.Select(DashboardLink.Skins), "When I select the skins link.")
+                .When(x => DashboardPage.Select(DashboardLink.PageBackgrounds), "When I select the Page Backgrounds link.")
                 .Then(x => Driver.IsNotAt(Location.Dashboard), "Then I should no longer be at the Dashboard page.")
-                .And(x => Driver.IsAt(Location.Skins), "I should be at the Skins page.")
+                .And(x => Driver.IsAt(Location.PageBackgrounds), "I should be at the Page Backgrounds page.")
                 .BDDfy<DashboardStory>();
         }
 
