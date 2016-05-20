@@ -255,6 +255,11 @@ namespace AdaptiveAds_TestFramework
         /// </summary>
         public static string DepartmentsContainer = "lstDepartmentItems";
 
+        /// <summary>
+        /// Name of the search box for departments.
+        /// </summary>
+        public static string DepartmentSearchBox = "txtDepartmentSearch"; 
+
         #endregion //Department
 
     }

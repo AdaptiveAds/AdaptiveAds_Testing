@@ -14,6 +14,13 @@
         <para>Select a version below to see a description of its changes.</para>
 
         <list class="bullet">
+          
+          <!-- Version 1.1.0.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="AC696048-C6A1-4745-8278-01D1AB005C6A" />
+            </para>
+          </listItem>
 
           <!-- Version 1.0.2.0 -->
           <listItem>

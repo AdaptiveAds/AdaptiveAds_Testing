@@ -25,10 +25,12 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentAddSave));
             saveButton.Click();
 
+            Thread.Sleep(250);//wait for pop-up to collapse
+
             //check
             if (check)
             {
-                Contains(departmentName,true);
+                Contains(departmentName, true);
             }
         }
 
@@ -54,7 +56,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
                 // Item was not found
                 if (doesContain)
                 {
-                    throw new NoSuchElementException("Could not find item " + departmentName + ".",e);
+                    throw new NoSuchElementException("Could not find item " + departmentName + ".", e);
                 }
             }
         }
@@ -63,9 +65,10 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// Finds the position of a given department in the departments list.
         /// </summary>
         /// <param name="departmentName">Name of the department to find.</param>
-        /// <returns>Number representing the position of the department in the list.</returns>
-        /// <exception cref="NotFoundException">Thrown if the department is not found.</exception>
-        public static int NumberInList(string departmentName)
+        /// <param name="throwIfNotFound">If true (default) then an exception will be thrown if not found, if false then -1 is returned.</param>
+        /// <returns>Number representing the position of the department in the list.(-1 if not found and throwIfNotFound is false.)</returns>
+        /// <exception cref="NotFoundException">Thrown if the department is not found and throwIfNotFound is true.</exception>
+        public static int NumberInList(string departmentName, bool throwIfNotFound = true)
         {
             int number = 1;
 
@@ -88,7 +91,14 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
                 }
                 number++;
             }
-            throw new NotFoundException("Item was not found");
+            if (throwIfNotFound)
+            {
+                throw new NotFoundException("Item was not found");
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /// <summary>
@@ -98,7 +108,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         public static void Edit(string departmentName)
         {
             var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentEdit));
-            editButtons[NumberInList(departmentName)-1].Click();
+            editButtons[NumberInList(departmentName) - 1].Click();
 
             Thread.Sleep(250);//wait for pop-up to become visible
 
@@ -121,18 +131,44 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             //delete
             var deleteButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentDelete));
-            deleteButtons[NumberInList(departmentName)-1].Click();
+            int position = NumberInList(departmentName, false);
+            if (position != -1)
+            {
+                deleteButtons[position - 1].Click();
 
-            Thread.Sleep(500);
+                Thread.Sleep(500);
 
-            var confirmButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentDeleteConfirm));
-            confirmButtons[1].Click();
+                var confirmButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentDeleteConfirm));
+                confirmButtons[1].Click();
+            }
 
             //check
             if (check)
             {
                 Contains(departmentName, false);
             }
+        }
+
+        /// <summary>
+        /// Updates the Departments search filter.
+        /// </summary>
+        /// <param name="searchCriteria">New search filter to apply.</param>
+        public static void Search(string searchCriteria)
+        {
+            var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentSearchBox));
+            searchBox.Clear();
+            searchBox.SendKeys(searchCriteria);
+            searchBox.SendKeys(Keys.Return);
+        }
+
+        /// <summary>
+        /// Clears the search box used to filter Departments.
+        /// </summary>
+        public static void ClearSearch()
+        {
+            var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentSearchBox));
+            searchBox.Clear();
+            searchBox.SendKeys(Keys.Enter);
         }
     }
 }

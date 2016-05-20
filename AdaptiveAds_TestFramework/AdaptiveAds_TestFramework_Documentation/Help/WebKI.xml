@@ -20,6 +20,7 @@
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
   <HelpKINode Title="CheckForLavarelError method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_CheckForLavarelError.htm" />
+  <HelpKINode Title="ClearSearch method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_ClearSearch.htm" />
   <HelpKINode Title="ConfigData class">
     <HelpKINode Title="ConfigData Class" Url="html/T_AdaptiveAds_TestFramework_ConfigData.htm" />
     <HelpKINode Title="about ConfigData class" Url="html/T_AdaptiveAds_TestFramework_ConfigData.htm" />
@@ -37,6 +38,7 @@
   <HelpKINode Title="ConfigData.DepartmentEditName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentEditName.htm" />
   <HelpKINode Title="ConfigData.DepartmentEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentEditSave.htm" />
   <HelpKINode Title="ConfigData.DepartmentsContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentsContainer.htm" />
+  <HelpKINode Title="ConfigData.DepartmentSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentSearchBox.htm" />
   <HelpKINode Title="ConfigData.ErrorMessageClass field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_ErrorMessageClass.htm" />
   <HelpKINode Title="ConfigData.FireFoxPath field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_FireFoxPath.htm" />
   <HelpKINode Title="ConfigData.LoginButtonClass field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginButtonClass.htm" />
@@ -74,16 +76,19 @@
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
   <HelpKINode Title="DepartmentsContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentsContainer.htm" />
+  <HelpKINode Title="DepartmentSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentSearchBox.htm" />
   <HelpKINode Title="DepartmentsPage class">
     <HelpKINode Title="DepartmentsPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm" />
     <HelpKINode Title="about DepartmentsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm" />
   </HelpKINode>
   <HelpKINode Title="DepartmentsPage.Add method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Add.htm" />
+  <HelpKINode Title="DepartmentsPage.ClearSearch method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_ClearSearch.htm" />
   <HelpKINode Title="DepartmentsPage.Contains method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Contains.htm" />
   <HelpKINode Title="DepartmentsPage.Edit method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Edit.htm" />
   <HelpKINode Title="DepartmentsPage.NumberInList method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_NumberInList.htm" />
   <HelpKINode Title="DepartmentsPage.Remove method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Remove.htm" />
+  <HelpKINode Title="DepartmentsPage.Search method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Search.htm" />
   <HelpKINode Title="Driver class">
     <HelpKINode Title="Driver Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm" />
     <HelpKINode Title="about Driver class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm" />
@@ -174,6 +179,7 @@
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
+  <HelpKINode Title="Search method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Search.htm" />
   <HelpKINode Title="Select method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage_Select.htm" />
   <HelpKINode Title="Short enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="SignInName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignInName.htm" />
@@ -195,6 +201,7 @@
     <HelpKINode Title="history" Url="html/f0e38565-94e1-4c20-9716-f552a23ce0d0.htm" />
   </HelpKINode>
   <HelpKINode Title="Version">
+    <HelpKINode Title="1.1.0.0" Url="html/AC696048-C6A1-4745-8278-01D1AB005C6A.htm" />
     <HelpKINode Title="1.0.2.0" Url="html/503C69AE-52A4-467D-8A19-768911464CE5.htm" />
   </HelpKINode>
   <HelpKINode Title="WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />

@@ -2,14 +2,15 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the class library documentation of the AdaptiveAds_TestFramework" Url="html/e2f3a6a8-2641-4b05-9a94-dce7deecaddd.htm" />
-  <HelpTOCNode Id="bef01760-d561-44e1-9158-ccc2e6b1aace" Title="Version History" Url="html/f0e38565-94e1-4c20-9716-f552a23ce0d0.htm">
+  <HelpTOCNode Id="923661be-770e-4ae0-bd1c-07ff9adc8982" Title="Version History" Url="html/f0e38565-94e1-4c20-9716-f552a23ce0d0.htm">
+    <HelpTOCNode Title="Version 1.1.0.0" Url="html/AC696048-C6A1-4745-8278-01D1AB005C6A.htm" />
     <HelpTOCNode Title="Version 1.0.2.0" Url="html/503C69AE-52A4-467D-8A19-768911464CE5.htm" />
     <HelpTOCNode Title="Version 1.0.1.0" Url="html/071272B6-B0D6-4319-93EC-DCD7B5F64538.htm" />
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/a040a869-e387-4051-a52e-4bc656f0ace4.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="cf7c4820-cb76-4271-8a05-a79d2850a6b0" Title="AdaptiveAds_TestFramework" Url="html/N_AdaptiveAds_TestFramework.htm">
-    <HelpTOCNode Id="ea67f66e-0f0e-40dd-b76e-1bae635ff23a" Title="ConfigData Class" Url="html/T_AdaptiveAds_TestFramework_ConfigData.htm">
-      <HelpTOCNode Id="25858626-7de5-4ce9-952c-f8dbe9181186" Title="ConfigData Fields" Url="html/Fields_T_AdaptiveAds_TestFramework_ConfigData.htm">
+  <HelpTOCNode Id="73d29e0e-dfc5-4606-b510-91e1290b5ada" Title="AdaptiveAds_TestFramework" Url="html/N_AdaptiveAds_TestFramework.htm">
+    <HelpTOCNode Id="428bc0a1-975c-400d-9077-893446163745" Title="ConfigData Class" Url="html/T_AdaptiveAds_TestFramework_ConfigData.htm">
+      <HelpTOCNode Id="0ecf3297-2a11-4fcc-b49b-048dddcf3402" Title="ConfigData Fields" Url="html/Fields_T_AdaptiveAds_TestFramework_ConfigData.htm">
         <HelpTOCNode Title="DashboardLinks Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DashboardLinks.htm" />
         <HelpTOCNode Title="DefaultWaitPeriod Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DefaultWaitPeriod.htm" />
         <HelpTOCNode Title="DepartmentAdd Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentAdd.htm" />
@@ -22,6 +23,7 @@
         <HelpTOCNode Title="DepartmentEditName Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentEditName.htm" />
         <HelpTOCNode Title="DepartmentEditSave Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentEditSave.htm" />
         <HelpTOCNode Title="DepartmentsContainer Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentsContainer.htm" />
+        <HelpTOCNode Title="DepartmentSearchBox Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentSearchBox.htm" />
         <HelpTOCNode Title="ErrorMessageClass Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_ErrorMessageClass.htm" />
         <HelpTOCNode Title="FireFoxPath Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_FireFoxPath.htm" />
         <HelpTOCNode Title="LoginButtonClass Field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginButtonClass.htm" />
@@ -40,13 +42,13 @@
     <HelpTOCNode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
     <HelpTOCNode Title="Period Enumeration" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="4eb562c2-afa7-46e8-8f3e-6d82992e37fb" Title="AdaptiveAds_TestFramework.Helpers" Url="html/N_AdaptiveAds_TestFramework_Helpers.htm">
-    <HelpTOCNode Id="1b65fc14-0200-4c47-927f-b6482fd4c795" Title="Driver Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
-      <HelpTOCNode Id="9c90e2e2-81f5-452a-877d-b144cb6504ed" Title="Driver Properties" Url="html/Properties_T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
+  <HelpTOCNode Id="fe449d11-9126-451d-acad-1d0ceb687b8d" Title="AdaptiveAds_TestFramework.Helpers" Url="html/N_AdaptiveAds_TestFramework_Helpers.htm">
+    <HelpTOCNode Id="f0891339-9a8f-4854-87fc-f193d423e526" Title="Driver Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
+      <HelpTOCNode Id="511cacab-59a5-46de-8184-9651bde59929" Title="Driver Properties" Url="html/Properties_T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
         <HelpTOCNode Title="Instance Property " Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_Instance.htm" />
         <HelpTOCNode Title="WaitPeriod Property " Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1cdfa921-0cab-417c-bcc2-8b95952acd6e" Title="Driver Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
+      <HelpTOCNode Id="682ddeaf-598d-4973-af2a-fabd5b59bb73" Title="Driver Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_Helpers_Driver.htm">
         <HelpTOCNode Title="ActionWait Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_ActionWait.htm" />
         <HelpTOCNode Title="CheckForLavarelError Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_CheckForLavarelError.htm" />
         <HelpTOCNode Title="GoTo Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_GoTo.htm" />
@@ -58,38 +60,40 @@
         <HelpTOCNode Title="SignOut Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_SignOut.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="05e1d6cd-761c-49fd-9d47-5314fde122cd" Title="Helper Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Helper.htm">
-      <HelpTOCNode Id="ebc9f516-403b-4349-bf9f-1393b0a046a1" Title="Helper Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_Helpers_Helper.htm">
+    <HelpTOCNode Id="a866a6ae-80cf-4340-bc5e-de885680827f" Title="Helper Class" Url="html/T_AdaptiveAds_TestFramework_Helpers_Helper.htm">
+      <HelpTOCNode Id="9902555e-e8f4-4981-be4a-71866b2e39eb" Title="Helper Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_Helpers_Helper.htm">
         <HelpTOCNode Title="RouteLocation Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteLocation.htm" />
         <HelpTOCNode Title="RouteUrl Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrl.htm" />
         <HelpTOCNode Title="RouteUrlExtension Method " Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrlExtension.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="d04accf4-d6b4-460a-9afd-54cfd8af7f18" Title="AdaptiveAds_TestFramework.PageFrameworks" Url="html/N_AdaptiveAds_TestFramework_PageFrameworks.htm">
-    <HelpTOCNode Id="7033e878-a095-4429-b9da-02e031529946" Title="DashboardPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage.htm">
-      <HelpTOCNode Id="abfa3630-a840-4126-b074-cfd3713ed14c" Title="DashboardPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage.htm">
+  <HelpTOCNode Id="8ea81498-17bf-4b59-a191-9005cbc76a54" Title="AdaptiveAds_TestFramework.PageFrameworks" Url="html/N_AdaptiveAds_TestFramework_PageFrameworks.htm">
+    <HelpTOCNode Id="14ee9cca-48fb-493d-bc43-a30fd7be418d" Title="DashboardPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage.htm">
+      <HelpTOCNode Id="2e3c18f4-34aa-4ba9-b157-27a7a53b91d3" Title="DashboardPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage.htm">
         <HelpTOCNode Title="Select Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage_Select.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b0477d67-4145-46b3-bc59-c48e3b3bd27c" Title="DepartmentsPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm">
-      <HelpTOCNode Id="9ada09c5-bb80-48e2-aeb4-8d53d5d1d124" Title="DepartmentsPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm">
+    <HelpTOCNode Id="01d1f6d3-a2cd-4638-b845-e3f7b4fb0f04" Title="DepartmentsPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm">
+      <HelpTOCNode Id="62db4dee-832e-460b-a045-210999779668" Title="DepartmentsPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm">
         <HelpTOCNode Title="Add Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Add.htm" />
+        <HelpTOCNode Title="ClearSearch Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_ClearSearch.htm" />
         <HelpTOCNode Title="Contains Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Contains.htm" />
         <HelpTOCNode Title="Edit Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Edit.htm" />
         <HelpTOCNode Title="NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_NumberInList.htm" />
         <HelpTOCNode Title="Remove Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Remove.htm" />
+        <HelpTOCNode Title="Search Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Search.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="122e2001-68fd-42ee-bf77-c58445647a57" Title="LoginCommand Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand.htm">
+    <HelpTOCNode Id="32891ebd-5be6-4424-80a3-101a2a9c4e8e" Title="LoginCommand Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand.htm">
       <HelpTOCNode Title="LoginCommand Constructor " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand__ctor.htm" />
-      <HelpTOCNode Id="5fa4fde7-ace5-4a5b-8052-1247f31a665f" Title="LoginCommand Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand.htm">
+      <HelpTOCNode Id="684ed792-b7b9-4abb-a11d-f81f5ca5ea03" Title="LoginCommand Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand.htm">
         <HelpTOCNode Title="Login Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand_Login.htm" />
         <HelpTOCNode Title="WithPassword Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand_WithPassword.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d6212ee2-4da6-4d55-b08d-b15247f85238" Title="LoginPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginPage.htm">
-      <HelpTOCNode Id="a2e9ddb1-6014-4968-9ac7-4afff3c5609b" Title="LoginPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_LoginPage.htm">
+    <HelpTOCNode Id="c9a56868-2775-48a9-b9c8-fa005d645da6" Title="LoginPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginPage.htm">
+      <HelpTOCNode Id="415a6454-3e5f-4214-82eb-49001c87bd0b" Title="LoginPage Methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_LoginPage.htm">
         <HelpTOCNode Title="ErrorMessage Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginPage_ErrorMessage.htm" />
         <HelpTOCNode Title="LoginAs Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginPage_LoginAs.htm" />
       </HelpTOCNode>
