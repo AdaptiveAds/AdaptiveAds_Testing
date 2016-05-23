@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="F0DE4ED8-B2B7-4823-8B0E-1F3AAF41D010" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.1.1.0 was released in 2016 on May 22th at 16:27(UTC).
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Departments Filter clearing implemented.</para>
+          </listItem>
+        </list>
+        
+        <list class="bullet">
+          <listItem>
+            <para>Fixed robustness issues relating to performance on slower machines.</para>
+          </listItem>
+        </list>
+        
+        <list class="bullet">
+          <listItem>
+            <para>Updated non generic test's names to conform with standard of TestArea_TestAction_TestResult.</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

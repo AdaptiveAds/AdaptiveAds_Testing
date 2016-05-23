@@ -25,7 +25,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentAddSave));
             saveButton.Click();
 
-            Thread.Sleep(250);//wait for pop-up to collapse
+            Thread.Sleep(1000);//wait for pop-up to collapse
 
             //check
             if (check)
@@ -159,6 +159,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
             searchBox.SendKeys(Keys.Return);
+            Thread.Sleep(500);//wait to allow search to occur and update visuals
         }
 
         /// <summary>
@@ -169,6 +170,15 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentSearchBox));
             searchBox.Clear();
             searchBox.SendKeys(Keys.Enter);
+        }
+
+        /// <summary>
+        /// Clears the filter on Departments.
+        /// </summary>
+        public static void ClearFilter()
+        {
+            var clearFilterButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentClearFilterButton));
+            clearFilterButton.Click();
         }
     }
 }

@@ -9,24 +9,34 @@
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="AC696048-C6A1-4745-8278-01D1AB005C6A" visible="True" isSelected="true" title="Version 1.1.0.0">
+    <Topic id="F96F24FC-A72D-4048-8D22-E23297C18236" visible="True" title="Version 1.2.0.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="Version, 1.1.0.0" />
+        <HelpKeyword index="K" term="version, history, version history, 1.2.0.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="F0DE4ED8-B2B7-4823-8B0E-1F3AAF41D010" visible="True" isSelected="true" title="Version 1.1.1.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, history, version history, 1.1.1.0" />
+      </HelpKeywords>
+    </Topic>
+    <Topic id="AC696048-C6A1-4745-8278-01D1AB005C6A" visible="True" title="Version 1.1.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, history, version history, 1.1.0.0" />
       </HelpKeywords>
     </Topic>
     <Topic id="503C69AE-52A4-467D-8A19-768911464CE5" visible="True" title="Version 1.0.2.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="Version, 1.0.2.0" />
+        <HelpKeyword index="K" term="version, history, version history, 1.0.2.0" />
       </HelpKeywords>
     </Topic>
     <Topic id="071272B6-B0D6-4319-93EC-DCD7B5F64538" visible="True" title="Version 1.0.1.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.1.0" />
+        <HelpKeyword index="K" term="version, history, version history, 1.0.1.0" />
       </HelpKeywords>
     </Topic>
     <Topic id="a040a869-e387-4051-a52e-4bc656f0ace4" visible="True" title="Version 1.0.0.0">
       <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.0.0" />
+        <HelpKeyword index="K" term="version, history, version history, 1.0.0.0" />
       </HelpKeywords>
     </Topic>
   </Topic>

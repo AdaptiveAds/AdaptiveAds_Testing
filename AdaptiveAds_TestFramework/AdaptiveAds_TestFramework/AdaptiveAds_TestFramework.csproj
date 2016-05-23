@@ -61,6 +61,7 @@
     <Compile Include="Helpers\NamespaceDoc.cs" />
     <Compile Include="NamespaceDoc.cs" />
     <Compile Include="PageFrameworks\DashboardPage.cs" />
+    <Compile Include="PageFrameworks\AdvertsPage.cs" />
     <Compile Include="PageFrameworks\DepartmentsPage.cs" />
     <Compile Include="PageFrameworks\LoginPage.cs" />
     <Compile Include="PageFrameworks\NamespaceDoc.cs" />

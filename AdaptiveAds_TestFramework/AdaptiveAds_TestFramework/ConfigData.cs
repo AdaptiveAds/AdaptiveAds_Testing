@@ -191,6 +191,117 @@ namespace AdaptiveAds_TestFramework
 
         #endregion //Dashboard
 
+        #region Advert
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add an advert.
+        /// </summary>
+        public static string AdvertAdd = "btnAddAdvert";
+
+        /// <summary>
+        /// Name of the text input for advert name.
+        /// </summary>
+        public static string AdvertAddName = "txtAdvertName";
+
+        /// <summary>
+        /// Name of the drop box for advert Department.
+        /// </summary>
+        public static string AdvertAddDepartments = "drpDepartments";
+
+        /// <summary>
+        /// Name of the drop box for advert Background.
+        /// </summary>
+        public static string AdvertAddBackground = "drpBackgrounds";
+
+        /// <summary>
+        /// Name of the button to save an advert.
+        /// </summary>
+        public static string AdvertAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit an advert.
+        /// </summary>
+        public static string AdvertEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing advert name.
+        /// </summary>
+        public static string AdvertEditName = "txtAdvertName";
+
+        /// <summary>
+        /// Name of the drop box for editing advert Department.
+        /// </summary>
+        public static string AdvertEditDepartments = "drpDepartments";
+
+        /// <summary>
+        /// Name of the drop box for editing advert Background.
+        /// </summary>
+        public static string AdvertEditBackground = "drpBackgrounds";
+
+
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string AdvertEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete an advert.
+        /// </summary>
+        public static string AdvertDelete = "btnDeleted";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string AdvertDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string AdvertDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        #region Search
+
+        /// <summary>
+        /// Name of the search box for adverts.
+        /// </summary>
+        public static string AdvertSearchBox = "txtAdvertSearch";
+
+        /// <summary>
+        /// Name of the drop box for adverts departments.
+        /// </summary>
+        public static string AdvertDepartmentFilter = "drpDepartments";
+
+        /// <summary>
+        /// Name of the button to clear the filter on adverts.
+        /// </summary>
+        public static string AdvertClearFilterButton = "btnFindAll";
+
+        #endregion //Search
+
+        /// <summary>
+        /// Name of the container for adverts.
+        /// </summary>
+        public static string AdvertContainer = "lstAdvertItems";
+
+        /// <summary>
+        /// Name of the button to configure adverts.
+        /// </summary>
+        public static string AdvertsConfigure = "btnConfig";
+
+        #endregion //Advert
+
         #region Department
 
         #region Add
@@ -258,8 +369,13 @@ namespace AdaptiveAds_TestFramework
         /// <summary>
         /// Name of the search box for departments.
         /// </summary>
-        public static string DepartmentSearchBox = "txtDepartmentSearch"; 
+        public static string DepartmentSearchBox = "txtDepartmentSearch";
 
+        /// <summary>
+        /// Name of the button to clear the filter on departments.
+        /// </summary>
+        public static string DepartmentClearFilterButton = "btnFindAll";
+        
         #endregion //Department
 
     }

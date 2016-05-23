@@ -47,7 +47,8 @@ namespace Tests.Stories
             DepartmentsPage.Remove("TestDepartmentRemove", true);
             DepartmentsPage.Remove("TestDepartmentNonRelevant", true);
             DepartmentsPage.Remove("TestDepartmentSearch", true);
-            DepartmentsPage.Remove("TestDepartmentReShown", true);
+            DepartmentsPage.Remove("TestDepartmentReShownAfterSearch", true);
+            DepartmentsPage.Remove("TestDepartmentReShownAfterFilter", true);
         }
 
         #endregion
@@ -82,7 +83,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void DepartmentsSearch_NonRelevantItemsRemovedFromResults()
+        public void DepartmentsSearch_ApplySearchCriteria_NonRelevantItemsRemovedFromResults()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
                 .And(x => DepartmentsPage.Add("TestDepartmentNonRelevant", true), "And the department \"TestDepartmentNonRelevant\" exists.")
@@ -92,7 +93,7 @@ namespace Tests.Stories
         }
         
         [Test]
-        public void DepartmentsSearch_ItemsShownInResults()
+        public void DepartmentsSearch_ApplySearchCriteria_ReleventItemsShownInResults()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
                 .And(x => DepartmentsPage.Add("TestDepartmentSearch", true), "And the department \"TestDepartmentSearch\" exists.")
@@ -102,14 +103,26 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void DepartmentsSearch_NonRelevantItemsReShownWhenSearchCleared()
+        public void DepartmentsSearch_SearchCleared_NonRelevantItemsReShown()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentReShown", true), "And the department \"TestDepartmentReShown\" exists.")
+                .And(x => DepartmentsPage.Add("TestDepartmentReShownAfterSearch", true), "And the department \"TestDepartmentReShownAfterSearch\" exists.")
                 .And(x => DepartmentsPage.Search("TestDepartmentOther"), "And I search the name of another item.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentReShown", false), "And the department is no longer shown.")
-                .When(x=> DepartmentsPage.ClearSearch(),"When I clear the search Criteria.")
-                .Then(x => DepartmentsPage.Contains("TestDepartmentReShown", true), "Then the department is shown.")
+                .And(x => DepartmentsPage.Contains("TestDepartmentReShownAfterSearch", false), "And the department is no longer shown.")
+                .When(x => DepartmentsPage.ClearSearch(), "When I clear the search Criteria.")
+                .Then(x => DepartmentsPage.Contains("TestDepartmentReShownAfterSearch", true), "Then the department is shown.")
+                .BDDfy<DepartmentStory>();
+        }
+
+        [Test]
+        public void DepartmentsSearch_FilterCleared_NonRelevantItemsReShown()
+        {
+            this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
+                .And(x => DepartmentsPage.Add("TestDepartmentReShownAfterFilter", true), "And the department \"TestDepartmentReShownAfterFilter\" exists.")
+                .And(x => DepartmentsPage.Search("TestDepartmentOther"), "And I search the name of another item.")
+                .And(x => DepartmentsPage.Contains("TestDepartmentReShownAfterFilter", false), "And the department is no longer shown.")
+                .When(x => DepartmentsPage.ClearFilter(), "When I clear the filter.")
+                .Then(x => DepartmentsPage.Contains("TestDepartmentReShownAfterFilter", true), "Then the department is shown.")
                 .BDDfy<DepartmentStory>();
         }
     }
