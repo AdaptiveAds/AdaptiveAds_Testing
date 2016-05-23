@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="f0e38565-94e1-4c20-9716-f552a23ce0d0" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        The topics in this section describe the various changes made to the AdaptiveAds_TestFramework over the
+        life of the project.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Version History</title>
+      <content>
+        <para>Select a version below to see a description of its changes.</para>
+
+        <list class="bullet">
+          
+          <!-- Version 1.1.0.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="AC696048-C6A1-4745-8278-01D1AB005C6A" />
+            </para>
+          </listItem>
+
+          <!-- Version 1.0.2.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="503C69AE-52A4-467D-8A19-768911464CE5" />
+            </para>
+          </listItem>
+
+          <!-- Version 1.0.1.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="071272B6-B0D6-4319-93EC-DCD7B5F64538" />
+            </para>
+          </listItem>
+
+          <!-- Version 1.0.0.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="a040a869-e387-4051-a52e-4bc656f0ace4" />
+            </para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="e2f3a6a8-2641-4b05-9a94-dce7deecaddd" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

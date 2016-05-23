@@ -6,8 +6,6 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 {
     /// <summary>
     /// Dashboard page interaction framework, allows for items on the Dashboard page to be interacted with and manipulated.
-    /// Throws a NotImplementedException if the link is not set up in ConfigData.DashboardLinks.
-    /// Throws a NoSuchElementException if the link items are not found on the page.
     /// </summary>
     public static class DashboardPage
     {

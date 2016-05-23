@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="e2f3a6a8-2641-4b05-9a94-dce7deecaddd" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This is an automated class library documentation for the AdaptiveAds_TestFramework project.</para>
+		</introduction>
+
+		<section>
+			<title>Introduction</title>
+			<content>
+				<para>
+          The AdaptiveAds_TestFramework project allows for the automation of the AdaptiveAds web user interface.
+          This documentation lays out the class structure and description of items within the framework that can be used within test projects.
+          When developing tests using the AdaptiveAds_TestFramework project it is important to reference this documentation to improve understanding and
+          reduce the chances of errors.
+        </para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

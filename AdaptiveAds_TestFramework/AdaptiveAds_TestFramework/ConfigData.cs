@@ -27,8 +27,8 @@ namespace AdaptiveAds_TestFramework
         Users,
         ///<summary>Here users can view a list of templates and from here perform actions such as create, edit and delete.</summary>
         Templates,
-        ///<summary>Here users can view a list of skins and from here perform actions such as create, edit and delete.</summary>
-        Skins,
+        ///<summary>Here users can view a list of page backgrounds and from here perform actions such as create, edit and delete.</summary>
+        PageBackgrounds,
         ///<summary>Here users can view a list of privileges and from here perform actions such as create, edit and delete.</summary>
         Privileges
     }
@@ -67,8 +67,8 @@ namespace AdaptiveAds_TestFramework
         Users,
         ///<summary>A link from the Dashboard to the Templates page</summary>
         Templates,
-        ///<summary>A link from the Dashboard to the Skins page</summary>
-        Skins,
+        ///<summary>A link from the Dashboard to the Page Backgrounds page</summary>
+        PageBackgrounds,
         ///<summary>A link from the Dashboard to the Privileges page</summary>
         Privileges
     }
@@ -111,7 +111,7 @@ namespace AdaptiveAds_TestFramework
                 {Location.Screens,"/dashboard/settings/screens"},
                 {Location.Users,"/dashboard/settings/users"},
                 {Location.Templates,"/dashboard/settings/templates"},
-                {Location.Skins,"/dashboard/settings/skins"},
+                {Location.PageBackgrounds,"/dashboard/settings/backgrounds"},
                 {Location.Privileges,"/dashboard/settings/privileges"}
             };
 
@@ -185,10 +185,82 @@ namespace AdaptiveAds_TestFramework
                 {DashboardLink.Screens,"liScreens" },
                 {DashboardLink.Users,"liUsers" },
                 {DashboardLink.Templates,"liTemplates" },
-                {DashboardLink.Skins,"liSkins" },
+                {DashboardLink.PageBackgrounds,"liBackgrounds" },
                 {DashboardLink.Privileges,"liPrivileges" }
             };
 
         #endregion //Dashboard
+
+        #region Department
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a department.
+        /// </summary>
+        public static string DepartmentAdd = "btnAddDepartment";
+
+        /// <summary>
+        /// Name of the text input for department name.
+        /// </summary>
+        public static string DepartmentAddName = "txtDepartmentName";
+
+        /// <summary>
+        /// Name of the button to save a department.
+        /// </summary>
+        public static string DepartmentAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a department.
+        /// </summary>
+        public static string DepartmentEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing department name.
+        /// </summary>
+        public static string DepartmentEditName = "txtDepartmentName";
+
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string DepartmentEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a department.
+        /// </summary>
+        public static string DepartmentDelete = "btnDelete";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string DepartmentDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string DepartmentDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        /// <summary>
+        /// Name of the container for departments.
+        /// </summary>
+        public static string DepartmentsContainer = "lstDepartmentItems";
+
+        /// <summary>
+        /// Name of the search box for departments.
+        /// </summary>
+        public static string DepartmentSearchBox = "txtDepartmentSearch"; 
+
+        #endregion //Department
+
     }
 }
