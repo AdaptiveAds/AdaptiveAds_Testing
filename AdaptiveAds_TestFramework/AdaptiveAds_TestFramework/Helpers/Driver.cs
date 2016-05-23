@@ -70,13 +70,14 @@ namespace AdaptiveAds_TestFramework.Helpers
         #endregion //set-up and tear-down
 
         #region NavigableLocations
+
         /// <summary>
         /// Navigate browser to a given location.
         /// </summary>
         /// <param name="location">Location to navigate to.</param>
         /// <param name="logInIfNeeded">Logs in if authentication is required.</param>
         /// <param name="errorIfNotReached">Errors if the location was not reached.</param>
-        public static void GoTo(Location location, bool logInIfNeeded = false, bool errorIfNotReached = true)
+        public static void GoTo(Location location, bool logInIfNeeded, bool errorIfNotReached)
         {
             // Navigate browser to the location.
             Instance.Navigate().GoToUrl(Helper.RouteUrl(location));

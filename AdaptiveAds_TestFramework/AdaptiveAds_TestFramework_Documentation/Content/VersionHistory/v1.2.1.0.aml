@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="64C433C3-DA63-4299-994B-ADC4956324A1" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.2.1.0 was released in 2016 on May 23th at 23:37(UTC).
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        
+        <list class="bullet">
+          <listItem>
+            <para>Applied automation for the manipulation and assertion of departments adverts are assigned to.</para>
+          </listItem>
+
+          <listItem>
+            <para>Extensive refactor of code due to drop-down box coding errors. New methods were investigated and working approach was applied after much trial and error.</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

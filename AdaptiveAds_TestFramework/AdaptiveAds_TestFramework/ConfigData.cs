@@ -243,8 +243,7 @@ namespace AdaptiveAds_TestFramework
         /// Name of the drop box for editing advert Background.
         /// </summary>
         public static string AdvertEditBackground = "drpBackgrounds";
-
-
+        
         /// <summary>
         /// Name of the button to save an edit.
         /// </summary>
@@ -375,7 +374,7 @@ namespace AdaptiveAds_TestFramework
         /// Name of the button to clear the filter on departments.
         /// </summary>
         public static string DepartmentClearFilterButton = "btnFindAll";
-        
+
         #endregion //Department
 
     }

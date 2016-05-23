@@ -24,7 +24,7 @@ namespace Tests.Stories
         public void SetUp()
         {
             Driver.ActionWait(Period.Medium, () =>
-                Driver.GoTo(Location.Dashboard, true));
+                Driver.GoTo(Location.Dashboard, true, false));
         }
 
         [OneTimeTearDown]

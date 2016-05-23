@@ -27,7 +27,7 @@ namespace Tests.Stories
         public void SetUp()
         {
             Driver.ActionWait(Period.Medium, () =>
-                Driver.GoTo(Location.Departments, true));
+                Driver.GoTo(Location.Departments, true, false));
         }
 
         [OneTimeTearDown]
@@ -39,7 +39,7 @@ namespace Tests.Stories
         [TearDown]
         public void Clean()
         {
-            Driver.GoTo(Location.Departments,true,false);
+            Driver.GoTo(Location.Departments, true, false);
 
             DepartmentsPage.Remove("TestDepartmentAdd", true);
             DepartmentsPage.Remove("TestDepartmentEdit", true);
@@ -57,7 +57,7 @@ namespace Tests.Stories
         public void UserCanAddDepartments()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
-                .When(x => DepartmentsPage.Add("TestDepartmentAdd",false), "When I add an item.")
+                .When(x => DepartmentsPage.Add("TestDepartmentAdd", false), "When I add an item.")
                 .Then(x => DepartmentsPage.Contains("TestDepartmentAdd", true), "Then it is added to the system.")
                 .BDDfy<DepartmentStory>();
         }
@@ -66,7 +66,7 @@ namespace Tests.Stories
         public void UserCanEditDepartments()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
-                .And(x=> DepartmentsPage.Add("TestDepartmentEdit", true), "And the department \"TestDepartmentEdit\" exists.")
+                .And(x => DepartmentsPage.Add("TestDepartmentEdit", true), "And the department \"TestDepartmentEdit\" exists.")
                 .When(x => DepartmentsPage.Edit("TestDepartmentEdit"), "When I edit an item.")
                 .Then(x => DepartmentsPage.Contains("TestDepartmentEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<DepartmentStory>();
@@ -91,7 +91,7 @@ namespace Tests.Stories
                 .Then(x => DepartmentsPage.Contains("TestDepartmentNonRelevant", false), "Then the original department is no longer shown.")
                 .BDDfy<DepartmentStory>();
         }
-        
+
         [Test]
         public void DepartmentsSearch_ApplySearchCriteria_ReleventItemsShownInResults()
         {

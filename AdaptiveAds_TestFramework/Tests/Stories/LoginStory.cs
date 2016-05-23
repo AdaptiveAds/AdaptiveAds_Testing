@@ -26,8 +26,8 @@ namespace Tests.Stories
         {
             Driver.ActionWait(Period.Medium, () =>
             {
-                Driver.SignOut(errorIfAlreadySignedOut: false);
-                Driver.GoTo(Location.Login);
+                Driver.SignOut(false);
+                Driver.GoTo(Location.Login, false, false);
             });
         }
 

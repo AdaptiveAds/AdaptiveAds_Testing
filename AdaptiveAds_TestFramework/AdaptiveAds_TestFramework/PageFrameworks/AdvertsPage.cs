@@ -15,16 +15,22 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// Adds an advert.
         /// </summary>
         /// <param name="advertName">Name of the advert to add.</param>
+        /// <param name="departmentName">Name of the department to add the advert to. Leaving blank will add the new advert to the first department.</param>
         /// <param name="check">Asserts the advert is added to the system if true.</param>
-        public static void Add(string advertName, bool check)
+        public static void Add(string advertName, string departmentName, bool check)
         {
             IWebElement addButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAdd));
             addButton.Click();
+            Thread.Sleep(1000);//wait for pop-up to open
+
             IWebElement nameInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddName));
             nameInput.SendKeys(advertName);
+
+            IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddDepartments));
+            departmentInput.SendKeys(departmentName);
+
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddSave));
             saveButton.Click();
-
             Thread.Sleep(1000);//wait for pop-up to collapse
 
             //check
@@ -107,19 +113,56 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// <param name="advertName">Name of the advert to change.</param>
         public static void EditName(string advertName)
         {
-            var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.AdvertEdit));
-            editButtons[NumberInList(advertName) - 1].Click();
-
-            Thread.Sleep(250);//wait for pop-up to become visible
+            OpenEditWindow(advertName);
 
             var nameInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditName));
             nameInput.Clear();
             nameInput.SendKeys(advertName + "_Edited");
 
-            Thread.Sleep(500);//wait for text to be entered fully
+            Thread.Sleep(1000);//wait for text to be entered fully
 
             var confirmButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditSave));
             confirmButton.Click();
+        }
+
+        /// <summary>
+        /// Opens the Editor window for a given advert.
+        /// </summary>
+        /// <param name="advertName">Name of the advert to open edit window for.</param>
+        public static void OpenEditWindow(string advertName)
+        {
+            var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.AdvertEdit));
+            editButtons[NumberInList(advertName) - 1].Click();
+
+            Thread.Sleep(1000); //wait for pop-up to become visible
+        }
+
+        /// <summary>
+        /// Saves the Editor window.
+        /// </summary>
+        public static void SaveEditWindow()
+        {
+            IWebElement closeButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditSave));
+            closeButton.Click();
+
+            Thread.Sleep(1000); //wait for pop-up to disappear
+        }
+
+        /// <summary>
+        /// Switches the assigned department of a given advert.
+        /// </summary>
+        /// <param name="advertName">Name of the advert to edit department.</param>
+        /// <param name="departmentName">Name of the department to switch to.</param>
+        public static void EditAdvertDepartment(string advertName, string departmentName)
+        {
+            OpenEditWindow(advertName);
+
+            IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddDepartments));
+            departmentInput.SendKeys(departmentName);
+
+            Thread.Sleep(1000); //wait for text to be input fully
+
+            SaveEditWindow();
         }
 
         /// <summary>
@@ -159,6 +202,51 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
             searchBox.SendKeys(Keys.Return);
+        }
+
+        /// <summary>
+        /// Checks the given advert belongs to the given department.
+        /// </summary>
+        /// <param name="advertName">Name of the advert to find the depart of.</param>
+        /// <param name="departmentName">Name of the department to compare with.</param>
+        public static void AdvertIsAssignedToDepartment(string advertName, string departmentName)
+        {
+            OpenEditWindow(advertName);
+
+            IWebElement departmentsSelection = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditDepartments));
+            string assignedDepartment = "";
+            int selected = 0;
+            int.TryParse(departmentsSelection.GetAttribute("selectedIndex"), out selected);
+            string[] split = departmentsSelection.Text.Split(new char[] { '\r', '\n' });
+            int emptyOffset = 0;
+            for (int i = 0; i < selected+1; i++)
+            {
+                if (string.IsNullOrWhiteSpace(split[i + emptyOffset]))
+                {
+                    emptyOffset++;
+                    i--;
+                }
+                else
+                {
+                    if (i == selected)
+                    {
+                        assignedDepartment = split[i + emptyOffset];
+                    }
+                }
+            }
+
+            if (assignedDepartment == "")
+            {
+                throw new Exception("Department selection not found.");
+            }
+
+            if (!assignedDepartment.Equals(departmentName))
+            {
+                throw new Exception("Advert Is not assigned to that department, actual department is " + assignedDepartment + ".");
+            }
+
+            SaveEditWindow();//no changes are made so save is ok
+
         }
 
         /// <summary>
