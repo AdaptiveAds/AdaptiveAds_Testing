@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="98C98F65-5EAD-4581-BDAF-843792247E09" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.2.2.0 was released in 2016 on May 26th at 19:53(UTC).
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        
+        <list class="bullet">
+          <listItem>
+            <para>New Framework functionality added to manipulate menu button due to new layout hiding features until the menu button is clicked.</para>
+          </listItem>
+
+          <listItem>
+            <para>
+              Changes made to framework to be more forgiving to website processing time due to it being less responsive than previously was.
+              It is unsure whether this is a result of local machine running at different pace to usual or new version of the website being less responsive.
+              Regardless the framework is now more robust to handle such eventualities.
+            </para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

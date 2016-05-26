@@ -110,6 +110,7 @@
   <HelpKINode Title="ConfigData.LoginButtonClass field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginButtonClass.htm" />
   <HelpKINode Title="ConfigData.LoginPasswordBoxName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginPasswordBoxName.htm" />
   <HelpKINode Title="ConfigData.LoginUsernameBoxName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginUsernameBoxName.htm" />
+  <HelpKINode Title="ConfigData.MainMenuButtonName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_MainMenuButtonName.htm" />
   <HelpKINode Title="ConfigData.Password field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Password.htm" />
   <HelpKINode Title="ConfigData.Routes field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Routes.htm" />
   <HelpKINode Title="ConfigData.SignInName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignInName.htm" />
@@ -174,6 +175,7 @@
   <HelpKINode Title="Driver.IsAt method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_IsAt.htm" />
   <HelpKINode Title="Driver.IsNotAt method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_IsNotAt.htm" />
   <HelpKINode Title="Driver.LoggedIn method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_LoggedIn.htm" />
+  <HelpKINode Title="Driver.OpenCloseMenuBar method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_OpenCloseMenuBar.htm" />
   <HelpKINode Title="Driver.Quit method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_Quit.htm" />
   <HelpKINode Title="Driver.SignOut method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_SignOut.htm" />
   <HelpKINode Title="Driver.WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
@@ -225,12 +227,14 @@
   <HelpKINode Title="LoginPasswordBoxName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginPasswordBoxName.htm" />
   <HelpKINode Title="LoginUsernameBoxName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginUsernameBoxName.htm" />
   <HelpKINode Title="Long enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
+  <HelpKINode Title="MainMenuButtonName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_MainMenuButtonName.htm" />
   <HelpKINode Title="Medium enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="None enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="NumberInList method">
     <HelpKINode Title="AdvertsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_NumberInList.htm" />
     <HelpKINode Title="DepartmentsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_NumberInList.htm" />
   </HelpKINode>
+  <HelpKINode Title="OpenCloseMenuBar method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_OpenCloseMenuBar.htm" />
   <HelpKINode Title="OpenEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_OpenEditWindow.htm" />
   <HelpKINode Title="PageBackgrounds enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
@@ -288,6 +292,7 @@
     <HelpKINode Title="history, version history, 1.1.1.0" Url="html/F0DE4ED8-B2B7-4823-8B0E-1F3AAF41D010.htm" />
     <HelpKINode Title="history, version history, 1.2.0.0" Url="html/F96F24FC-A72D-4048-8D22-E23297C18236.htm" />
     <HelpKINode Title="history, version history, 1.2.1.0" Url="html/64C433C3-DA63-4299-994B-ADC4956324A1.htm" />
+    <HelpKINode Title="history, version history, 1.2.2.0" Url="html/98C98F65-5EAD-4581-BDAF-843792247E09.htm" />
   </HelpKINode>
   <HelpKINode Title="WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
   <HelpKINode Title="WaitPeriods field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_WaitPeriods.htm" />

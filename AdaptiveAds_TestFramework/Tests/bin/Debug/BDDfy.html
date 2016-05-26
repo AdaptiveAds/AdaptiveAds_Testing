@@ -9,7 +9,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
 /*If you drop a custom stylesheet named BDDfyCustom.css in your output folder it gets embedded here. This way you can apply some custom styles over your html report.*/
 
     </style>
-    <title>BDDfy Test Result 24/05/2016</title>
+    <title>BDDfy Test Result 26/05/2016</title>
   </head>
   <body>
     <div id='main'>
@@ -35,7 +35,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>27</span>
+              <span class='summaryCount'>24</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -53,7 +53,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='Failed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Failed</div>
-              <span class='summaryCount'>1</span>
+              <span class='summaryCount'>4</span>
             </div>
           </li>
         </ul>
@@ -68,7 +68,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
         </div>
         <ul class='testResult'>
           <li>
-            <div class='story Passed'>
+            <div class='story Failed'>
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Advert story</div>
                 <ul class='storyNarrative'>
@@ -143,7 +143,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-3'>AdvertsSearch ApplySearchCriteria NonRelevantItemsRemovedFromResults</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-3'>AdvertsSearch ApplySearchCriteria NonRelevantItemsRemovedFromResults</div>
                   <ul class='steps' id='scenario-3'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-3-1' >
                       <span>Given I am at the Adverts page.</span>
@@ -157,8 +157,21 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     <li class='step Passed  Transition ' data-toggle-target='step-3-4' >
                       <span>When I search for "TestAdvertOther".</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-3-5' >
-                      <span>Then the original advert is no longer shown.</span>
+                    <li class='step Failed  Assertion canToggle' data-toggle-target='step-3-5' >
+                      <span>Then the original advert is no longer shown. [Exception Message: 'Found the item TestAdvertNonRelevant when not expected.']</span>
+                      <div class='step FailedException' id='step-3-5'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
+   at lambda_method(Closure , AdvertStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.AdvertStory.AdvertsSearch_ApplySearchCriteria_NonRelevantItemsRemovedFromResults() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 120</code>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -180,7 +193,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-5'>AdvertsSearch FilterCleared NonRelevantItemsReShown</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-5'>AdvertsSearch FilterCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-5'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-5-1' >
                       <span>Given I am at the Adverts page.</span>
@@ -194,19 +207,32 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-5-4' >
                       <span>And I search the name of another item.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-5-5' >
-                      <span>And the advert is no longer shown.</span>
+                    <li class='step Failed  ConsecutiveSetupState canToggle' data-toggle-target='step-5-5' >
+                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterFilter when not expected.']</span>
+                      <div class='step FailedException' id='step-5-5'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
+   at lambda_method(Closure , AdvertStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.AdvertStory.AdvertsSearch_FilterCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 154</code>
+                      </div>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-5-6' >
+                    <li class='step NotExecuted  Transition ' data-toggle-target='step-5-6' >
                       <span>When I clear the filter.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-5-7' >
+                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-5-7' >
                       <span>Then the advert is shown.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-6'>AdvertsSearch SearchCleared NonRelevantItemsReShown</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-6'>AdvertsSearch SearchCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-6'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-6-1' >
                       <span>Given I am at the Adverts page.</span>
@@ -220,13 +246,26 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-6-4' >
                       <span>And I search the name of another item.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-6-5' >
-                      <span>And the advert is no longer shown.</span>
+                    <li class='step Failed  ConsecutiveSetupState canToggle' data-toggle-target='step-6-5' >
+                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterSearch when not expected.']</span>
+                      <div class='step FailedException' id='step-6-5'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
+   at lambda_method(Closure , AdvertStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.AdvertStory.AdvertsSearch_SearchCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 141</code>
+                      </div>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-6-6' >
+                    <li class='step NotExecuted  Transition ' data-toggle-target='step-6-6' >
                       <span>When I clear the search Criteria.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-6-7' >
+                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-6-7' >
                       <span>Then the advert is shown.</span>
                     </li>
                   </ul>
@@ -670,7 +709,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
             </div>
           </li>
         </ul>
-        <p><span>Tested at: 24/05/2016 00:00:48</span></p>
+        <p><span>Tested at: 26/05/2016 20:19:22</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>

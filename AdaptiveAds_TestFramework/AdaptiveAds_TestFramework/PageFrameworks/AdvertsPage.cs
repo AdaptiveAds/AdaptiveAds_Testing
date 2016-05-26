@@ -202,6 +202,8 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
             searchBox.SendKeys(Keys.Return);
+
+            Thread.Sleep(500);//wait for search to be applied.
         }
 
         /// <summary>

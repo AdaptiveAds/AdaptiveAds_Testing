@@ -89,9 +89,11 @@ namespace AdaptiveAds_TestFramework
 
         /// <summary>
         /// URL of the application, This should be "http://adaptiveads.uk" and modified for local testing only.
+        /// http://localhost should be used for local testing.
+        /// http://ct6008-15c.studentsites.glos.ac.uk for uni server.
         /// Changes to this should only be committed to production if the default location of the application changes.
         /// </summary>
-        public static string UrlAddress = "http://localhost";
+        public static string UrlAddress = "http://ct6008-15c.studentsites.glos.ac.uk";
 
         /// <summary>
         /// Time for the automation framework to wait before throwing an error as default.
@@ -129,6 +131,11 @@ namespace AdaptiveAds_TestFramework
 
         #region Login
 
+        /// <summary>
+        /// Name of the main menu button.
+        /// </summary>
+        public static string MainMenuButtonName = "mainmenu-btn";
+        
         /// <summary>
         /// Name of the SignIn link.
         /// </summary>

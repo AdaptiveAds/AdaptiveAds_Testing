@@ -14,6 +14,34 @@
         <para>Select a version below to see a description of its changes.</para>
 
         <list class="bullet">
+
+          <!-- Version 1.2.2.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="98C98F65-5EAD-4581-BDAF-843792247E09" />
+            </para>
+          </listItem>
+          
+          <!-- Version 1.2.1.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="64C433C3-DA63-4299-994B-ADC4956324A1" />
+            </para>
+          </listItem>
+          
+          <!-- Version 1.2.0.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="F96F24FC-A72D-4048-8D22-E23297C18236" />
+            </para>
+          </listItem>
+
+          <!-- Version 1.1.1.0 -->
+          <listItem>
+            <para>
+              <link xlink:href="F0DE4ED8-B2B7-4823-8B0E-1F3AAF41D010" />
+            </para>
+          </listItem>
           
           <!-- Version 1.1.0.0 -->
           <listItem>

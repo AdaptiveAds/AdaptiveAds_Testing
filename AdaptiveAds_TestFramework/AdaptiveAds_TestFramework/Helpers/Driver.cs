@@ -207,11 +207,30 @@ namespace AdaptiveAds_TestFramework.Helpers
         }
 
         /// <summary>
+        /// Clicks on the main menu button to open or close the main menu.
+        /// </summary>
+        public static void OpenCloseMenuBar()
+        {
+            try
+            {
+                IWebElement menuButton = Instance.FindElement(By.Name(ConfigData.MainMenuButtonName));
+                menuButton.Click();
+            }
+            catch (Exception e)
+            {
+
+                throw new NoSuchElementException("Could not find the Menu button element.", e);
+            }
+        }
+
+        /// <summary>
         /// Asserts the logged in state agents the parameter.
         /// </summary>
         /// <param name="checkLoggedIn">Parameter to check agents logged in state.</param>
         public static void LoggedIn(bool checkLoggedIn)
         {
+            OpenCloseMenuBar();
+
             bool signInFound;
             bool signOutFound;
             bool isLoggedIn = false;
