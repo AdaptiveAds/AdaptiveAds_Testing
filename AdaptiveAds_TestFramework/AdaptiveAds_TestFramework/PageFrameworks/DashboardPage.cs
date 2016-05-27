@@ -34,7 +34,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             {
                 _linkObj = Driver.Instance.FindElement(By.Name(linkName));
                 _linkObj.Click();
-                Thread.Sleep(500);//wait for page to change
+                Thread.Sleep(1000);//wait for page to change
             }
             catch (NoSuchElementException e)
             {
