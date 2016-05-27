@@ -18,6 +18,10 @@ namespace Tests.Stories
         public void Init()
         {
             Driver.Initialise();
+            Driver.ActionWait(Period.Medium, () =>
+                Driver.GoTo(Location.Departments, true, true));
+            DepartmentsPage.Add("TestDepartmentForPlaylistTests1", false);
+            DepartmentsPage.Add("TestDepartmentForPlaylistTests2", false);
         }
 
         [SetUp]
@@ -30,6 +34,9 @@ namespace Tests.Stories
         [OneTimeTearDown]
         public void CleanUp()
         {
+            Driver.GoTo(Location.Departments, true, true);
+            DepartmentsPage.Remove("TestDepartmentForPlaylistTests1", false);
+            DepartmentsPage.Remove("TestDepartmentForPlaylistTests2", false);
             Driver.Quit();
         }
 
@@ -47,11 +54,6 @@ namespace Tests.Stories
             PlaylistsPage.Remove("TestPlaylistNonRelevant", true);
             PlaylistsPage.Remove("TestPlaylistReShownAfterSearch", true);
             PlaylistsPage.Remove("TestPlaylistReShownAfterFilter", true);
-
-            Driver.GoTo(Location.Departments, true, false);
-            DepartmentsPage.Remove("TestDepartmentForPlaylists", true);
-            DepartmentsPage.Remove("TestDepartmentForPlaylists1", true);
-            DepartmentsPage.Remove("TestDepartmentForPlaylists2", true);
         }
 
         #endregion
@@ -60,7 +62,7 @@ namespace Tests.Stories
         public void UserCanAddPlaylists()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .When(x => PlaylistsPage.Add("TestPlaylistAdd", "", false), "When I add an item.")
+                .When(x => PlaylistsPage.Add("TestPlaylistAdd", "TestDepartmentForPlaylistTests1", false), "When I add an item.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistAdd", true), "Then it is added to the system.")
                 .BDDfy<PlaylistStory>();
         }
@@ -69,7 +71,7 @@ namespace Tests.Stories
         public void UserCanEditPlaylists()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistEdit", "", true), "And the playlist \"TestPlaylistEdit\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistEdit", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistEdit\" exists.")
                 .When(x => PlaylistsPage.EditName("TestPlaylistEdit"), "When I edit an item.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<PlaylistStory>();
@@ -79,7 +81,7 @@ namespace Tests.Stories
         public void UserCanRemovePlaylists()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistRemove", "", true), "And the playlist \"TestPlaylistRemove\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistRemove", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistRemove\" exists.")
                 .When(x => PlaylistsPage.Remove("TestPlaylistRemove", false), "When I remove an item.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistRemove", false), "Then it is no longer in the system.")
                 .BDDfy<PlaylistStory>();
@@ -88,30 +90,22 @@ namespace Tests.Stories
         [Test]
         public void AddPlaylist_SpecifyDepartment_PlaylistIsAddedToSpecifiedDepartment()
         {
-            this.Given(x => Driver.GoTo(Location.Departments, true, true), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForPlaylists", false), "And I add a new test department.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForPlaylists", true), "And it is successfully added to the system.")
-                .When(x => Driver.GoTo(Location.Playlists, true, true), "When I go to the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylists", false), "And I add an item specifying the department.")
+            this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
+                .When(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1", false), "When I add an item specifying the department.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistDepartment", true), "Then it is added to the system.")
-                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylists"), "And it is added to the correct department.")
+                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1"), "And it is added to the correct department.")
                 .BDDfy<PlaylistStory>();
         }
 
         [Test]
         public void PlaylistDepartment_EditDepartment_PlaylistDepartmentUpdated()
         {
-            this.Given(x => Driver.GoTo(Location.Departments, true, true), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForPlaylists1", false), "And I add a new test department.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForPlaylists1", true), "And it is successfully added to the system.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForPlaylists2", false), "And I add another.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForPlaylists2", true), "And it is also successfully added to the system.")
-                .And(x => Driver.GoTo(Location.Playlists, true, true), "And I go to the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylists1", false), "And I add an item specifying the first department.")
+            this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
+                .And(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1", false), "And I add an item specifying the first department.")
                 .And(x => PlaylistsPage.Contains("TestPlaylistDepartment", true), "And it is added to the system.")
-                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylists1"), "And it is added to the correct department.")
-                .When(x=>PlaylistsPage.EditPlaylistDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylists2"),"When I edit the department of the playlist to the second department.")
-                .Then(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylists2"), "Then it is updated to the correct department.")
+                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1"), "And it is added to the correct department.")
+                .When(x=>PlaylistsPage.EditPlaylistDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"),"When I edit the department of the playlist to the second department.")
+                .Then(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"), "Then it is updated to the correct department.")
                 .BDDfy<PlaylistStory>();
         }
 
@@ -119,8 +113,8 @@ namespace Tests.Stories
         public void PlaylistsSearch_ApplySearchCriteria_ReleventItemsShownAndNonRelevantItemsRemoved()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistRelevant", "", true), "And the playlist \"TestPlaylistRelevant\" exists.")
-                .And(x => PlaylistsPage.Add("TestPlaylistNonRelevant", "", true), "And the playlist \"TestPlaylistNonRelevant\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistRelevant", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistRelevant\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistNonRelevant", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistNonRelevant\" exists.")
                 .When(x => PlaylistsPage.Search("TestPlaylistRelevant"), "When I search \"TestPlaylistRelevant\".")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistRelevant", true), "Then the playlist \"TestPlaylistRelevant\" is shown.")
                 .And(x => PlaylistsPage.Contains("TestPlaylistNonRelevant", false), "And the playlist \"TestPlaylistNonRelevant\" is not shown.")
@@ -131,8 +125,8 @@ namespace Tests.Stories
         public void PlaylistsSearch_SearchCleared_NonRelevantItemsReShown()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistReShownAfterSearch", "", true), "And the playlist \"TestPlaylistReShownAfterSearch\" exists.")
-                .And(x => PlaylistsPage.Add("TestPlaylistOther", "", true), "And the playlist \"TestPlaylistOther\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistReShownAfterSearch", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistReShownAfterSearch\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistOther", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistOther\" exists.")
                 .And(x => PlaylistsPage.Search("TestPlaylistOther"), "And I search the name of another item.")
                 .And(x => PlaylistsPage.Contains("TestPlaylistReShownAfterSearch", false), "And the playlist is no longer shown.")
                 .When(x => PlaylistsPage.ClearSearch(), "When I clear the search Criteria.")
@@ -144,8 +138,8 @@ namespace Tests.Stories
         public void PlaylistsSearch_FilterCleared_NonRelevantItemsReShown()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistReShownAfterFilter", "", true), "And the playlist \"TestPlaylistReShownAfterFilter\" exists.")
-                .And(x => PlaylistsPage.Add("TestPlaylistOther", "", true), "And the playlist \"TestPlaylistOther\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistReShownAfterFilter", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistReShownAfterFilter\" exists.")
+                .And(x => PlaylistsPage.Add("TestPlaylistOther", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistOther\" exists.")
                 .And(x => PlaylistsPage.Search("TestPlaylistOther"), "And I search the name of another item.")
                 .And(x => PlaylistsPage.Contains("TestPlaylistReShownAfterFilter", false), "And the playlist is no longer shown.")
                 .When(x => PlaylistsPage.ClearFilter(), "When I clear the filter.")

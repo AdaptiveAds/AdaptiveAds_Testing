@@ -21,19 +21,19 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             IWebElement addButton = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistAdd));
             addButton.Click();
-            Thread.Sleep(1000);//wait for pop-up to open
+            Thread.Sleep(500);//wait for pop-up to open
 
             IWebElement nameInput = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistAddName));
             nameInput.SendKeys(playlistName);
-            Thread.Sleep(1000);//wait for text to be entered fully
+            Thread.Sleep(500);//wait for text to be entered fully
 
             IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistAddDepartments));
             departmentInput.SendKeys(departmentName);
-            Thread.Sleep(1000);//wait for text to be entered fully
+            Thread.Sleep(500);//wait for text to be entered fully
 
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistAddSave));
             saveButton.Click();
-            Thread.Sleep(1000);//wait for pop-up to collapse
+            Thread.Sleep(500);//wait for pop-up to collapse
 
             //check
             if (check)
@@ -153,11 +153,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var nameInput = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistEditName));
             nameInput.Clear();
             nameInput.SendKeys(playlistName + "_Edited");
-            Thread.Sleep(1000);//wait for text to be entered fully
+            Thread.Sleep(500);//wait for text to be entered fully
 
             var confirmButton = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistEditSave));
             confirmButton.Click();
-            Thread.Sleep(1000);// wait for window to close
+            Thread.Sleep(500);// wait for window to close
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.PlaylistEdit));
             editButtons[NumberInList(playlistName) - 1].Click();
-            Thread.Sleep(1000);//wait for pop-up to become visible
+            Thread.Sleep(500);//wait for pop-up to become visible
         }
 
         /// <summary>
@@ -178,7 +178,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             IWebElement closeButton = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistEditSave));
             closeButton.Click();
-            Thread.Sleep(1000);// wait for window to close
+            Thread.Sleep(500);// wait for window to close
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 
             IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistAddDepartments));
             departmentInput.SendKeys(departmentName);
-            Thread.Sleep(1000); //wait for text to be input fully
+            Thread.Sleep(500); //wait for text to be input fully
 
             SaveEditWindow();
         }
@@ -210,11 +210,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             if (position != -1)
             {
                 deleteButtons[position - 1].Click();
-                Thread.Sleep(1000);//wait for pop-up to become visible
+                Thread.Sleep(500);//wait for pop-up to become visible
 
                 var confirmButtons = Driver.Instance.FindElements(By.Name(ConfigData.PlaylistDeleteConfirm));
                 confirmButtons[1].Click();
-                Thread.Sleep(1000);// wait for updated data
+                Thread.Sleep(500);// wait for updated data
             }
 
             //check
@@ -233,9 +233,9 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistSearchBox));
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
-            Thread.Sleep(1000); //wait for text to be input fully
+            Thread.Sleep(500); //wait for text to be input fully
             searchBox.SendKeys(Keys.Return);
-            Thread.Sleep(1000);// wait for updated data
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistSearchBox));
             searchBox.Clear();
             searchBox.SendKeys(Keys.Enter);
-            Thread.Sleep(1000);// wait for updated data
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -301,7 +301,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var clearFilterButton = Driver.Instance.FindElement(By.Name(ConfigData.PlaylistClearFilterButton));
             clearFilterButton.Click();
-            Thread.Sleep(1000);// wait for updated data
+            Thread.Sleep(500);// wait for updated data
         }
     }
 }

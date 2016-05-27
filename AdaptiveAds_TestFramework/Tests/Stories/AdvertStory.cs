@@ -18,6 +18,14 @@ namespace Tests.Stories
         public void Init()
         {
             Driver.Initialise();
+            Driver.ActionWait(Period.Medium, () =>
+                Driver.GoTo(Location.Departments, true, true));
+            DepartmentsPage.Add("TestDepartmentForAdvertTests1", false);
+            DepartmentsPage.Add("TestDepartmentForAdvertTests2", false);
+            Driver.ActionWait(Period.Medium, () =>
+                Driver.GoTo(Location.PageBackgrounds, true, true));
+            BackgroundsPage.Add("TestBackgroundAdvert1", false);
+            BackgroundsPage.Add("TestBackgroundAdvert2", false);
         }
 
         [SetUp]
@@ -30,6 +38,12 @@ namespace Tests.Stories
         [OneTimeTearDown]
         public void CleanUp()
         {
+            Driver.GoTo(Location.Departments, true, true);
+            DepartmentsPage.Remove("TestDepartmentForAdvertTests1", false);
+            DepartmentsPage.Remove("TestDepartmentForAdvertTests2", false);
+            Driver.GoTo(Location.PageBackgrounds, true, true);
+            BackgroundsPage.Remove("TestBackgroundAdvert1", false);
+            BackgroundsPage.Remove("TestBackgroundAdvert2", false);
             Driver.Quit();
         }
 
@@ -47,11 +61,6 @@ namespace Tests.Stories
             AdvertsPage.Remove("TestAdvertNonRelevant", true);
             AdvertsPage.Remove("TestAdvertReShownAfterSearch", true);
             AdvertsPage.Remove("TestAdvertReShownAfterFilter", true);
-
-            Driver.GoTo(Location.Departments, true, false);
-            DepartmentsPage.Remove("TestDepartmentForAdverts", true);
-            DepartmentsPage.Remove("TestDepartmentForAdverts1", true);
-            DepartmentsPage.Remove("TestDepartmentForAdverts2", true);
         }
 
         #endregion
@@ -60,7 +69,7 @@ namespace Tests.Stories
         public void UserCanAddAdverts()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .When(x => AdvertsPage.Add("TestAdvertAdd", "", false), "When I add an item.")
+                .When(x => AdvertsPage.Add("TestAdvertAdd", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", false), "When I add an item.")
                 .Then(x => AdvertsPage.Contains("TestAdvertAdd", true), "Then it is added to the system.")
                 .BDDfy<AdvertStory>();
         }
@@ -69,7 +78,7 @@ namespace Tests.Stories
         public void UserCanEditAdverts()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertEdit", "", true), "And the advert \"TestAdvertEdit\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertEdit", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertEdit\" exists.")
                 .When(x => AdvertsPage.EditName("TestAdvertEdit"), "When I edit an item.")
                 .Then(x => AdvertsPage.Contains("TestAdvertEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<AdvertStory>();
@@ -79,7 +88,7 @@ namespace Tests.Stories
         public void UserCanRemoveAdverts()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertRemove", "", true), "And the advert \"TestAdvertRemove\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertRemove", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertRemove\" exists.")
                 .When(x => AdvertsPage.Remove("TestAdvertRemove", false), "When I remove an item.")
                 .Then(x => AdvertsPage.Contains("TestAdvertRemove", false), "Then it is no longer in the system.")
                 .BDDfy<AdvertStory>();
@@ -88,30 +97,22 @@ namespace Tests.Stories
         [Test]
         public void AddAdvert_SpecifyDepartment_AdvertIsAddedToSpecifiedDepartment()
         {
-            this.Given(x => Driver.GoTo(Location.Departments, true, true), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForAdverts", false), "And I add a new test department.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForAdverts", true), "And it is successfully added to the system.")
-                .When(x => Driver.GoTo(Location.Adverts, true, true), "When I go to the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertDepartment", "TestDepartmentForAdverts", false), "And I add an item specifying the department.")
+            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
+                .When(x => AdvertsPage.Add("TestAdvertDepartment", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", false), "When I add an item specifying the department.")
                 .Then(x => AdvertsPage.Contains("TestAdvertDepartment", true), "Then it is added to the system.")
-                .And(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdverts"), "And it is added to the correct department.")
+                .And(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests1"), "And it is added to the correct department.")
                 .BDDfy<AdvertStory>();
         }
 
         [Test]
         public void AdvertDepartment_EditDepartment_AdvertDepartmentUpdated()
         {
-            this.Given(x => Driver.GoTo(Location.Departments, true, true), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForAdverts1", false), "And I add a new test department.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForAdverts1", true), "And it is successfully added to the system.")
-                .And(x => DepartmentsPage.Add("TestDepartmentForAdverts2", false), "And I add another.")
-                .And(x => DepartmentsPage.Contains("TestDepartmentForAdverts2", true), "And it is also successfully added to the system.")
-                .And(x => Driver.GoTo(Location.Adverts, true, true), "And I go to the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertDepartment", "TestDepartmentForAdverts1", false), "And I add an item specifying the first department.")
+            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
+                .And(x => AdvertsPage.Add("TestAdvertDepartment", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", false), "And I add an item specifying the first department.")
                 .And(x => AdvertsPage.Contains("TestAdvertDepartment", true), "And it is added to the system.")
-                .And(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdverts1"), "And it is added to the correct department.")
-                .When(x=>AdvertsPage.EditAdvertDepartment("TestAdvertDepartment", "TestDepartmentForAdverts2"),"When I edit the department of the advert to the second department.")
-                .Then(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdverts2"), "Then it is updated to the correct department.")
+                .And(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests1"), "And it is added to the correct department.")
+                .When(x=>AdvertsPage.EditAdvertDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests2"),"When I edit the department of the advert to the second department.")
+                .Then(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests2"), "Then it is updated to the correct department.")
                 .BDDfy<AdvertStory>();
         }
 
@@ -119,8 +120,8 @@ namespace Tests.Stories
         public void AdvertsSearch_ApplySearchCriteria_ReleventItemsShownAndNonRelevantItemsRemoved()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertRelevant", "", true), "And the advert \"TestAdvertRelevant\" exists.")
-                .And(x => AdvertsPage.Add("TestAdvertNonRelevant", "", true), "And the advert \"TestAdvertNonRelevant\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertRelevant", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertRelevant\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertNonRelevant", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertNonRelevant\" exists.")
                 .When(x => AdvertsPage.Search("TestAdvertRelevant"), "When I search \"TestAdvertRelevant\".")
                 .Then(x => AdvertsPage.Contains("TestAdvertRelevant", true), "Then the advert \"TestAdvertRelevant\" is shown.")
                 .And(x => AdvertsPage.Contains("TestAdvertNonRelevant", false), "And the advert \"TestAdvertNonRelevant\" is not shown.")
@@ -131,8 +132,8 @@ namespace Tests.Stories
         public void AdvertsSearch_SearchCleared_NonRelevantItemsReShown()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertReShownAfterSearch", "", true), "And the advert \"TestAdvertReShownAfterSearch\" exists.")
-                .And(x => AdvertsPage.Add("TestAdvertOther", "", true), "And the advert \"TestAdvertOther\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertReShownAfterSearch", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertReShownAfterSearch\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertOther", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertOther\" exists.")
                 .And(x => AdvertsPage.Search("TestAdvertOther"), "And I search the name of another item.")
                 .And(x => AdvertsPage.Contains("TestAdvertReShownAfterSearch", false), "And the advert is no longer shown.")
                 .When(x => AdvertsPage.ClearSearch(), "When I clear the search Criteria.")
@@ -144,8 +145,8 @@ namespace Tests.Stories
         public void AdvertsSearch_FilterCleared_NonRelevantItemsReShown()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertReShownAfterFilter", "", true), "And the advert \"TestAdvertReShownAfterFilter\" exists.")
-                .And(x => AdvertsPage.Add("TestAdvertOther", "", true), "And the advert \"TestAdvertOther\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertReShownAfterFilter", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertReShownAfterFilter\" exists.")
+                .And(x => AdvertsPage.Add("TestAdvertOther", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertOther\" exists.")
                 .And(x => AdvertsPage.Search("TestAdvertOther"), "And I search the name of another item.")
                 .And(x => AdvertsPage.Contains("TestAdvertReShownAfterFilter", false), "And the advert is no longer shown.")
                 .When(x => AdvertsPage.ClearFilter(), "When I clear the filter.")

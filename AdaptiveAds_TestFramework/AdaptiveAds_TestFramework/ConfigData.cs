@@ -250,7 +250,7 @@ namespace AdaptiveAds_TestFramework
         /// Name of the drop box for editing advert Background.
         /// </summary>
         public static string AdvertEditBackground = "drpBackgrounds";
-        
+
         /// <summary>
         /// Name of the button to save an edit.
         /// </summary>
@@ -307,6 +307,91 @@ namespace AdaptiveAds_TestFramework
         public static string AdvertsConfigure = "btnConfig";
 
         #endregion //Advert
+
+        #region Background
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a background.
+        /// </summary>
+        public static string BackgroundAdd = "btnAddBackground";
+
+        /// <summary>
+        /// Name of the text input for background name.
+        /// </summary>
+        public static string BackgroundAddName = "txtBackgroundName";
+        
+        /// <summary>
+        /// Name of the button to save a background.
+        /// </summary>
+        public static string BackgroundAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a background.
+        /// </summary>
+        public static string BackgroundEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing background name.
+        /// </summary>
+        public static string BackgroundEditName = "txtBackgroundName";
+        
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string BackgroundEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a background.
+        /// </summary>
+        public static string BackgroundDelete = "btnDeleted";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string BackgroundDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string BackgroundDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        #region Search
+
+        /// <summary>
+        /// Name of the search box for backgrounds.
+        /// </summary>
+        public static string BackgroundSearchBox = "txtBackgroundSearch";
+
+        /// <summary>
+        /// Name of the drop box for backgrounds departments.
+        /// </summary>
+        public static string BackgroundDepartmentFilter = "drpDepartments";
+
+        /// <summary>
+        /// Name of the button to clear the filter on backgrounds.
+        /// </summary>
+        public static string BackgroundClearFilterButton = "btnFindAll";
+
+        #endregion //Search
+
+        /// <summary>
+        /// Name of the container for backgrounds.
+        /// </summary>
+        public static string BackgroundContainer = "lstBackgrounds";
+
+        #endregion //Background
 
         #region Department
 
