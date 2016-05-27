@@ -93,7 +93,7 @@ namespace AdaptiveAds_TestFramework
         /// http://ct6008-15c.studentsites.glos.ac.uk for uni server.
         /// Changes to this should only be committed to production if the default location of the application changes.
         /// </summary>
-        public static string UrlAddress = "http://ct6008-15c.studentsites.glos.ac.uk";
+        public static string UrlAddress = "http://localhost";
 
         /// <summary>
         /// Time for the automation framework to wait before throwing an error as default.
@@ -383,6 +383,111 @@ namespace AdaptiveAds_TestFramework
         public static string DepartmentClearFilterButton = "btnFindAll";
 
         #endregion //Department
+
+        #region Playlist
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a playlist.
+        /// </summary>
+        public static string PlaylistAdd = "btnAddPlaylist";
+
+        /// <summary>
+        /// Name of the text input for playlist name.
+        /// </summary>
+        public static string PlaylistAddName = "txtPlaylistName";
+
+        /// <summary>
+        /// Name of the drop box for playlist Department.
+        /// </summary>
+        public static string PlaylistAddDepartments = "drpDepartments";
+
+        /// <summary>
+        /// Name of the check box to specify if playlist is global.
+        /// </summary>
+        public static string PlaylistAddIsGlobal = "chkIsGlobal";
+
+        /// <summary>
+        /// Name of the button to save a playlist.
+        /// </summary>
+        public static string PlaylistAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a playlist.
+        /// </summary>
+        public static string PlaylistEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing playlist name.
+        /// </summary>
+        public static string PlaylistEditName = "txtPlaylistName";
+
+        /// <summary>
+        /// Name of the drop box for editing playlist Department.
+        /// </summary>
+        public static string PlaylistEditDepartments = "drpDepartments";
+        
+        /// <summary>
+        /// Name of the check box for editing if playlist is global.
+        /// </summary>
+        public static string PlaylistEditIsGlobal = "chkIsGlobal";
+
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string PlaylistEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a playlist.
+        /// </summary>
+        public static string PlaylistDelete = "btnDeleted";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string PlaylistDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string PlaylistDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        #region Search
+
+        /// <summary>
+        /// Name of the search box for playlists.
+        /// </summary>
+        public static string PlaylistSearchBox = "txtPlaylistSearch";
+
+        /// <summary>
+        /// Name of the drop box for playlists departments.
+        /// </summary>
+        public static string PlaylistDepartmentFilter = "drpDepartments";
+
+        /// <summary>
+        /// Name of the button to clear the filter on playlists.
+        /// </summary>
+        public static string PlaylistClearFilterButton = "btnFindAll";
+
+        #endregion //Search
+
+        /// <summary>
+        /// Name of the container for playlists.
+        /// </summary>
+        public static string PlaylistContainer = "lstPlaylistItem";
+
+        #endregion //Playlist
 
     }
 }

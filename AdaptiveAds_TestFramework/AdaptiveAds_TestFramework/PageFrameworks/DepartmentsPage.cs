@@ -20,12 +20,15 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             IWebElement addButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentAdd));
             addButton.Click();
+            Thread.Sleep(500);//wait for pop-up to open
+
             IWebElement nameInput = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentAddName));
             nameInput.SendKeys(departmentName);
+            Thread.Sleep(500);//wait for text to be entered fully
+
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentAddSave));
             saveButton.Click();
-
-            Thread.Sleep(1000);//wait for pop-up to collapse
+            Thread.Sleep(500);//wait for pop-up to collapse
 
             //check
             if (check)
@@ -109,17 +112,16 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentEdit));
             editButtons[NumberInList(departmentName) - 1].Click();
-
             Thread.Sleep(500);//wait for pop-up to become visible
 
             var nameInput = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentEditName));
             nameInput.Clear();
             nameInput.SendKeys(departmentName + "_Edited");
-
             Thread.Sleep(500);//wait for text to be entered fully
 
             var confirmButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentEditSave));
             confirmButton.Click();
+            Thread.Sleep(500);// wait for window to close
         }
 
         /// <summary>
@@ -135,11 +137,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             if (position != -1)
             {
                 deleteButtons[position - 1].Click();
-
-                Thread.Sleep(500);
+                Thread.Sleep(500);//wait for pop-up to become visible
 
                 var confirmButtons = Driver.Instance.FindElements(By.Name(ConfigData.DepartmentDeleteConfirm));
                 confirmButtons[1].Click();
+                Thread.Sleep(500);// wait for window to close
             }
 
             //check
@@ -159,7 +161,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
             searchBox.SendKeys(Keys.Return);
-            Thread.Sleep(500);//wait to allow search to occur and update visuals
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -170,6 +172,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentSearchBox));
             searchBox.Clear();
             searchBox.SendKeys(Keys.Enter);
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -179,6 +182,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var clearFilterButton = Driver.Instance.FindElement(By.Name(ConfigData.DepartmentClearFilterButton));
             clearFilterButton.Click();
+            Thread.Sleep(500);// wait for updated data
         }
     }
 }

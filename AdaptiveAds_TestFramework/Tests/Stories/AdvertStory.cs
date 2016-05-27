@@ -7,7 +7,7 @@ using TestStack.BDDfy;
 namespace Tests.Stories
 {
     [TestFixture]
-    [Story(AsA = "As user",
+    [Story(AsA = "As a user",
             IWant = "I want an adverts page",
             SoThat = "So that I can manage adverts in the system.")]
     public class AdvertStory
@@ -36,21 +36,22 @@ namespace Tests.Stories
         [TearDown]
         public void Clean()
         {
-            Driver.GoTo(Location.Departments, true, false);
-            DepartmentsPage.Remove("TestDepartmentForAdverts", true);
-            DepartmentsPage.Remove("TestDepartmentForAdverts1", true);
-            DepartmentsPage.Remove("TestDepartmentForAdverts2", true);
-
             Driver.GoTo(Location.Adverts, true, false);
+            AdvertsPage.Remove("TestAdvertDepartment", true);
             AdvertsPage.Remove("TestAdvertOther", true);
             AdvertsPage.Remove("TestAdvertAdd", true);
             AdvertsPage.Remove("TestAdvertEdit", true);
             AdvertsPage.Remove("TestAdvertEdit_Edited", true);
             AdvertsPage.Remove("TestAdvertRemove", true);
+            AdvertsPage.Remove("TestAdvertRelevant", true);
             AdvertsPage.Remove("TestAdvertNonRelevant", true);
-            AdvertsPage.Remove("TestAdvertSearch", true);
             AdvertsPage.Remove("TestAdvertReShownAfterSearch", true);
             AdvertsPage.Remove("TestAdvertReShownAfterFilter", true);
+
+            Driver.GoTo(Location.Departments, true, false);
+            DepartmentsPage.Remove("TestDepartmentForAdverts", true);
+            DepartmentsPage.Remove("TestDepartmentForAdverts1", true);
+            DepartmentsPage.Remove("TestDepartmentForAdverts2", true);
         }
 
         #endregion
@@ -115,23 +116,14 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void AdvertsSearch_ApplySearchCriteria_NonRelevantItemsRemovedFromResults()
+        public void AdvertsSearch_ApplySearchCriteria_ReleventItemsShownAndNonRelevantItemsRemoved()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
+                .And(x => AdvertsPage.Add("TestAdvertRelevant", "", true), "And the advert \"TestAdvertRelevant\" exists.")
                 .And(x => AdvertsPage.Add("TestAdvertNonRelevant", "", true), "And the advert \"TestAdvertNonRelevant\" exists.")
-                .And(x => AdvertsPage.Add("TestAdvertOther", "", true), "And the advert \"TestAdvertOther\" exists.")
-                .When(x => AdvertsPage.Search("TestAdvertOther"), "When I search for \"TestAdvertOther\".")
-                .Then(x => AdvertsPage.Contains("TestAdvertNonRelevant", false), "Then the original advert is no longer shown.")
-                .BDDfy<AdvertStory>();
-        }
-
-        [Test]
-        public void AdvertsSearch_ApplySearchCriteria_ReleventItemsShownInResults()
-        {
-            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertSearch", "", true), "And the advert \"TestAdvertSearch\" exists.")
-                .When(x => AdvertsPage.Search("TestAdvertSearch"), "When I search the name of the item.")
-                .Then(x => AdvertsPage.Contains("TestAdvertSearch", true), "Then the advert is shown.")
+                .When(x => AdvertsPage.Search("TestAdvertRelevant"), "When I search \"TestAdvertRelevant\".")
+                .Then(x => AdvertsPage.Contains("TestAdvertRelevant", true), "Then the advert \"TestAdvertRelevant\" is shown.")
+                .And(x => AdvertsPage.Contains("TestAdvertNonRelevant", false), "And the advert \"TestAdvertNonRelevant\" is not shown.")
                 .BDDfy<AdvertStory>();
         }
 

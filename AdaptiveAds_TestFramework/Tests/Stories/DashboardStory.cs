@@ -7,7 +7,7 @@ using TestStack.BDDfy;
 namespace Tests.Stories
 {
     [TestFixture]
-    [Story(AsA = "As user",
+    [Story(AsA = "As a user",
             IWant = "I want a dashboard with links to key tasks",
             SoThat = "So that I can quickly navigate the system.")]
     public class DashboardStory

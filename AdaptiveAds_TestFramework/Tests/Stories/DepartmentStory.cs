@@ -10,7 +10,7 @@ using TestStack.BDDfy;
 namespace Tests.Stories
 {
     [TestFixture]
-    [Story(AsA = "As user",
+    [Story(AsA = "As a user",
             IWant = "I want a departments page",
             SoThat = "So that I can manage departments in the system.")]
     public class DepartmentStory
@@ -45,8 +45,8 @@ namespace Tests.Stories
             DepartmentsPage.Remove("TestDepartmentEdit", true);
             DepartmentsPage.Remove("TestDepartmentEdit_Edited", true);
             DepartmentsPage.Remove("TestDepartmentRemove", true);
+            DepartmentsPage.Remove("TestDepartmentRelevant", true);
             DepartmentsPage.Remove("TestDepartmentNonRelevant", true);
-            DepartmentsPage.Remove("TestDepartmentSearch", true);
             DepartmentsPage.Remove("TestDepartmentReShownAfterSearch", true);
             DepartmentsPage.Remove("TestDepartmentReShownAfterFilter", true);
         }
@@ -81,24 +81,16 @@ namespace Tests.Stories
                 .Then(x => DepartmentsPage.Contains("TestDepartmentRemove", false), "Then it is no longer in the system.")
                 .BDDfy<DepartmentStory>();
         }
-
+        
         [Test]
-        public void DepartmentsSearch_ApplySearchCriteria_NonRelevantItemsRemovedFromResults()
+        public void DepartmentsSearch_ApplySearchCriteria_ReleventItemsShownAndNonRelevantItemsRemoved()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
+                .And(x => DepartmentsPage.Add("TestDepartmentRelevant", true), "And the department \"TestDepartmentRelevant\" exists.")
                 .And(x => DepartmentsPage.Add("TestDepartmentNonRelevant", true), "And the department \"TestDepartmentNonRelevant\" exists.")
-                .When(x => DepartmentsPage.Search("TestDepartmentOther"), "When I search the name of another item.")
-                .Then(x => DepartmentsPage.Contains("TestDepartmentNonRelevant", false), "Then the original department is no longer shown.")
-                .BDDfy<DepartmentStory>();
-        }
-
-        [Test]
-        public void DepartmentsSearch_ApplySearchCriteria_ReleventItemsShownInResults()
-        {
-            this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
-                .And(x => DepartmentsPage.Add("TestDepartmentSearch", true), "And the department \"TestDepartmentSearch\" exists.")
-                .When(x => DepartmentsPage.Search("TestDepartmentSearch"), "When I search the name of the item.")
-                .Then(x => DepartmentsPage.Contains("TestDepartmentSearch", true), "Then the department is shown.")
+                .When(x => DepartmentsPage.Search("TestDepartmentRelevant"), "When I search \"TestDepartmentRelevant\".")
+                .Then(x => DepartmentsPage.Contains("TestDepartmentRelevant", true), "Then the department \"TestDepartmentRelevant\" is shown.")
+                .And(x => DepartmentsPage.Contains("TestDepartmentNonRelevant", false), "And the department \"TestDepartmentNonRelevant\" is not shown.")
                 .BDDfy<DepartmentStory>();
         }
 

@@ -9,7 +9,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
 /*If you drop a custom stylesheet named BDDfyCustom.css in your output folder it gets embedded here. This way you can apply some custom styles over your html report.*/
 
     </style>
-    <title>BDDfy Test Result 26/05/2016</title>
+    <title>BDDfy Test Result 27/05/2016</title>
   </head>
   <body>
     <div id='main'>
@@ -23,19 +23,19 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
           <li class='storySummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Stories</div>
-              <span class='summaryCount'>4</span>
+              <span class='summaryCount'>5</span>
             </div>
           </li>
           <li class='scenarioSummary'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Scenarios</div>
-              <span class='summaryCount'>28</span>
+              <span class='summaryCount'>34</span>
             </div>
           </li>
           <li class='Passed'>
             <div class='summaryLine'>
               <div class='summaryLabel'>Passed</div>
-              <span class='summaryCount'>24</span>
+              <span class='summaryCount'>30</span>
             </div>
           </li>
           <li class='Inconclusive'>
@@ -72,7 +72,7 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Advert story</div>
                 <ul class='storyNarrative'>
-                  <li>As a As user</li>
+                  <li>As a user</li>
                   <li>I want an adverts page</li>
                   <li>So that I can manage adverts in the system.</li>
                 </ul>
@@ -143,24 +143,27 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-3'>AdvertsSearch ApplySearchCriteria NonRelevantItemsRemovedFromResults</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-3'>AdvertsSearch ApplySearchCriteria ReleventItemsShownAndNonRelevantItemsRemoved</div>
                   <ul class='steps' id='scenario-3'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-3-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-3-2' >
-                      <span>And the advert "TestAdvertNonRelevant" exists.</span>
+                      <span>And the advert "TestAdvertRelevant" exists.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-3-3' >
-                      <span>And the advert "TestAdvertOther" exists.</span>
+                      <span>And the advert "TestAdvertNonRelevant" exists.</span>
                     </li>
                     <li class='step Passed  Transition ' data-toggle-target='step-3-4' >
-                      <span>When I search for "TestAdvertOther".</span>
+                      <span>When I search "TestAdvertRelevant".</span>
                     </li>
-                    <li class='step Failed  Assertion canToggle' data-toggle-target='step-3-5' >
-                      <span>Then the original advert is no longer shown. [Exception Message: 'Found the item TestAdvertNonRelevant when not expected.']</span>
-                      <div class='step FailedException' id='step-3-5'>
-                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
+                    <li class='step Passed  Assertion ' data-toggle-target='step-3-5' >
+                      <span>Then the advert "TestAdvertRelevant" is shown.</span>
+                    </li>
+                    <li class='step Failed  ConsecutiveAssertion canToggle' data-toggle-target='step-3-6' >
+                      <span>And the advert "TestAdvertNonRelevant" is not shown. [Exception Message: 'Found the item TestAdvertNonRelevant when not expected.']</span>
+                      <div class='step FailedException' id='step-3-6'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 59
    at lambda_method(Closure , AdvertStory )
    at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
    at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
@@ -170,36 +173,58 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
    at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
    at TestStack.BDDfy.Engine.Run()
    at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
-   at Tests.Stories.AdvertStory.AdvertsSearch_ApplySearchCriteria_NonRelevantItemsRemovedFromResults() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 120</code>
+   at Tests.Stories.AdvertStory.AdvertsSearch_ApplySearchCriteria_ReleventItemsShownAndNonRelevantItemsRemoved() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 121</code>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-4'>AdvertsSearch ApplySearchCriteria ReleventItemsShownInResults</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-4'>AdvertsSearch FilterCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-4'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-4-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-4-2' >
-                      <span>And the advert "TestAdvertSearch" exists.</span>
+                      <span>And the advert "TestAdvertReShownAfterFilter" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-4-3' >
-                      <span>When I search the name of the item.</span>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-4-3' >
+                      <span>And the advert "TestAdvertOther" exists.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-4-4' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-4-4' >
+                      <span>And I search the name of another item.</span>
+                    </li>
+                    <li class='step Failed  ConsecutiveSetupState canToggle' data-toggle-target='step-4-5' >
+                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterFilter when not expected.']</span>
+                      <div class='step FailedException' id='step-4-5'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 59
+   at lambda_method(Closure , AdvertStory )
+   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
+   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
+   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
+   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
+   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
+   at TestStack.BDDfy.Engine.Run()
+   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
+   at Tests.Stories.AdvertStory.AdvertsSearch_FilterCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 146</code>
+                      </div>
+                    </li>
+                    <li class='step NotExecuted  Transition ' data-toggle-target='step-4-6' >
+                      <span>When I clear the filter.</span>
+                    </li>
+                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-4-7' >
                       <span>Then the advert is shown.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-5'>AdvertsSearch FilterCleared NonRelevantItemsReShown</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-5'>AdvertsSearch SearchCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-5'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-5-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-5-2' >
-                      <span>And the advert "TestAdvertReShownAfterFilter" exists.</span>
+                      <span>And the advert "TestAdvertReShownAfterSearch" exists.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-5-3' >
                       <span>And the advert "TestAdvertOther" exists.</span>
@@ -208,9 +233,9 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                       <span>And I search the name of another item.</span>
                     </li>
                     <li class='step Failed  ConsecutiveSetupState canToggle' data-toggle-target='step-5-5' >
-                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterFilter when not expected.']</span>
+                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterSearch when not expected.']</span>
                       <div class='step FailedException' id='step-5-5'>
-                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 59
    at lambda_method(Closure , AdvertStory )
    at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
    at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
@@ -220,11 +245,11 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
    at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
    at TestStack.BDDfy.Engine.Run()
    at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
-   at Tests.Stories.AdvertStory.AdvertsSearch_FilterCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 154</code>
+   at Tests.Stories.AdvertStory.AdvertsSearch_SearchCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 133</code>
                       </div>
                     </li>
                     <li class='step NotExecuted  Transition ' data-toggle-target='step-5-6' >
-                      <span>When I clear the filter.</span>
+                      <span>When I clear the search Criteria.</span>
                     </li>
                     <li class='step NotExecuted  Assertion ' data-toggle-target='step-5-7' >
                       <span>Then the advert is shown.</span>
@@ -232,88 +257,49 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-6'>AdvertsSearch SearchCleared NonRelevantItemsReShown</div>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-6'>User can add adverts</div>
                   <ul class='steps' id='scenario-6'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-6-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-6-2' >
-                      <span>And the advert "TestAdvertReShownAfterSearch" exists.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-6-3' >
-                      <span>And the advert "TestAdvertOther" exists.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-6-4' >
-                      <span>And I search the name of another item.</span>
-                    </li>
-                    <li class='step Failed  ConsecutiveSetupState canToggle' data-toggle-target='step-6-5' >
-                      <span>And the advert is no longer shown. [Exception Message: 'Found the item TestAdvertReShownAfterSearch when not expected.']</span>
-                      <div class='step FailedException' id='step-6-5'>
-                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage.Contains(String advertName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\AdvertsPage.cs:line 57
-   at lambda_method(Closure , AdvertStory )
-   at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
-   at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
-   at TestStack.BDDfy.Processors.ScenarioExecutor.<>c__DisplayClass3_0.<ExecuteStep>b__0()
-   at TestStack.BDDfy.Processors.AsyncTestRunner.Run(Func`1 performStep)
-   at TestStack.BDDfy.Processors.ScenarioExecutor.ExecuteStep(Step step)
-   at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
-   at TestStack.BDDfy.Engine.Run()
-   at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
-   at Tests.Stories.AdvertStory.AdvertsSearch_SearchCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\AdvertStory.cs:line 141</code>
-                      </div>
-                    </li>
-                    <li class='step NotExecuted  Transition ' data-toggle-target='step-6-6' >
-                      <span>When I clear the search Criteria.</span>
-                    </li>
-                    <li class='step NotExecuted  Assertion ' data-toggle-target='step-6-7' >
-                      <span>Then the advert is shown.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-7'>User can add adverts</div>
-                  <ul class='steps' id='scenario-7'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-7-1' >
-                      <span>Given I am at the Adverts page.</span>
-                    </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-7-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-6-2' >
                       <span>When I add an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-7-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-6-3' >
                       <span>Then it is added to the system.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-8'>User can edit adverts</div>
-                  <ul class='steps' id='scenario-8'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-8-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-7'>User can edit adverts</div>
+                  <ul class='steps' id='scenario-7'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-7-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-8-2' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-7-2' >
                       <span>And the advert "TestAdvertEdit" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-8-3' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-7-3' >
                       <span>When I edit an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-8-4' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-7-4' >
                       <span>Then it is updated in the system.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-9'>User can remove adverts</div>
-                  <ul class='steps' id='scenario-9'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-9-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-8'>User can remove adverts</div>
+                  <ul class='steps' id='scenario-8'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-8-1' >
                       <span>Given I am at the Adverts page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-9-2' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-8-2' >
                       <span>And the advert "TestAdvertRemove" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-9-3' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-8-3' >
                       <span>When I remove an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-9-4' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-8-4' >
                       <span>Then it is no longer in the system.</span>
                     </li>
                   </ul>
@@ -326,161 +312,161 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Dashboard story</div>
                 <ul class='storyNarrative'>
-                  <li>As a As user</li>
+                  <li>As a user</li>
                   <li>I want a dashboard with links to key tasks</li>
                   <li>So that I can quickly navigate the system.</li>
                 </ul>
               </div>
               <div class='scenarios'>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-10'>User can navigate to the adverts page from the dashboard</div>
-                  <ul class='steps' id='scenario-10'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-10-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-9'>User can navigate to the adverts page from the dashboard</div>
+                  <ul class='steps' id='scenario-9'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-9-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-10-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-9-2' >
                       <span>When I select the adverts link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-10-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-9-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-10-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-9-4' >
                       <span>I should be at the Adverts page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-11'>User can navigate to the departments page from the dashboard</div>
-                  <ul class='steps' id='scenario-11'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-11-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-10'>User can navigate to the departments page from the dashboard</div>
+                  <ul class='steps' id='scenario-10'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-10-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-11-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-10-2' >
                       <span>When I select the departments link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-11-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-10-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-11-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-10-4' >
                       <span>I should be at the Departments page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-12'>User can navigate to the locations page from the dashboard</div>
-                  <ul class='steps' id='scenario-12'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-12-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-11'>User can navigate to the locations page from the dashboard</div>
+                  <ul class='steps' id='scenario-11'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-11-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-12-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-11-2' >
                       <span>When I select the locations link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-12-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-11-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-12-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-11-4' >
                       <span>I should be at the Locations page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-13'>User can navigate to the page backgrounds page from the dashboard</div>
-                  <ul class='steps' id='scenario-13'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-13-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-12'>User can navigate to the page backgrounds page from the dashboard</div>
+                  <ul class='steps' id='scenario-12'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-12-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-13-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-12-2' >
                       <span>When I select the Page Backgrounds link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-13-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-12-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-13-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-12-4' >
                       <span>I should be at the Page Backgrounds page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-14'>User can navigate to the playlists page from the dashboard</div>
-                  <ul class='steps' id='scenario-14'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-14-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-13'>User can navigate to the playlists page from the dashboard</div>
+                  <ul class='steps' id='scenario-13'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-13-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-14-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-13-2' >
                       <span>When I select the playlists link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-14-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-13-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-14-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-13-4' >
                       <span>I should be at the Playlists page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-15'>User can navigate to the privileges page from the dashboard</div>
-                  <ul class='steps' id='scenario-15'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-15-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-14'>User can navigate to the privileges page from the dashboard</div>
+                  <ul class='steps' id='scenario-14'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-14-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-15-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-14-2' >
                       <span>When I select the privileges link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-15-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-14-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-15-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-14-4' >
                       <span>I should be at the Privileges page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-16'>User can navigate to the screens page from the dashboard</div>
-                  <ul class='steps' id='scenario-16'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-16-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-15'>User can navigate to the screens page from the dashboard</div>
+                  <ul class='steps' id='scenario-15'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-15-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-16-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-15-2' >
                       <span>When I select the screens link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-16-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-15-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-16-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-15-4' >
                       <span>I should be at the Screens page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-17'>User can navigate to the templates page from the dashboard</div>
-                  <ul class='steps' id='scenario-17'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-17-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-16'>User can navigate to the templates page from the dashboard</div>
+                  <ul class='steps' id='scenario-16'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-16-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-17-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-16-2' >
                       <span>When I select the templates link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-17-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-16-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-17-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-16-4' >
                       <span>I should be at the Templates page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-18'>User can navigate to the users page from the dashboard</div>
-                  <ul class='steps' id='scenario-18'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-18-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-17'>User can navigate to the users page from the dashboard</div>
+                  <ul class='steps' id='scenario-17'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-17-1' >
                       <span>Given I am at the Dashboard.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-18-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-17-2' >
                       <span>When I select the users link.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-18-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-17-3' >
                       <span>Then I should no longer be at the Dashboard page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-18-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-17-4' >
                       <span>I should be at the Users page.</span>
                     </li>
                   </ul>
@@ -493,91 +479,80 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               <div class='storyMetadata'>
                 <div class='storyTitle'>Story: Department story</div>
                 <ul class='storyNarrative'>
-                  <li>As a As user</li>
+                  <li>As a user</li>
                   <li>I want a departments page</li>
                   <li>So that I can manage departments in the system.</li>
                 </ul>
               </div>
               <div class='scenarios'>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-19'>DepartmentsSearch ApplySearchCriteria NonRelevantItemsRemovedFromResults</div>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-18'>DepartmentsSearch ApplySearchCriteria ReleventItemsShownAndNonRelevantItemsRemoved</div>
+                  <ul class='steps' id='scenario-18'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-18-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-18-2' >
+                      <span>And the department "TestDepartmentRelevant" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-18-3' >
+                      <span>And the department "TestDepartmentNonRelevant" exists.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-18-4' >
+                      <span>When I search "TestDepartmentRelevant".</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-18-5' >
+                      <span>Then the department "TestDepartmentRelevant" is shown.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-18-6' >
+                      <span>And the department "TestDepartmentNonRelevant" is not shown.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-19'>DepartmentsSearch FilterCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-19'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-19-1' >
                       <span>Given I am at the Departments page.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-19-2' >
-                      <span>And the department "TestDepartmentNonRelevant" exists.</span>
+                      <span>And the department "TestDepartmentReShownAfterFilter" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-19-3' >
-                      <span>When I search the name of another item.</span>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-19-3' >
+                      <span>And I search the name of another item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-19-4' >
-                      <span>Then the original department is no longer shown.</span>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-19-4' >
+                      <span>And the department is no longer shown.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-19-5' >
+                      <span>When I clear the filter.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-19-6' >
+                      <span>Then the department is shown.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-20'>DepartmentsSearch ApplySearchCriteria ReleventItemsShownInResults</div>
+                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-20'>DepartmentsSearch SearchCleared NonRelevantItemsReShown</div>
                   <ul class='steps' id='scenario-20'>
                     <li class='step Passed  SetupState ' data-toggle-target='step-20-1' >
                       <span>Given I am at the Departments page.</span>
                     </li>
                     <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-20-2' >
-                      <span>And the department "TestDepartmentSearch" exists.</span>
-                    </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-20-3' >
-                      <span>When I search the name of the item.</span>
-                    </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-20-4' >
-                      <span>Then the department is shown.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-21'>DepartmentsSearch FilterCleared NonRelevantItemsReShown</div>
-                  <ul class='steps' id='scenario-21'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-21-1' >
-                      <span>Given I am at the Departments page.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-21-2' >
-                      <span>And the department "TestDepartmentReShownAfterFilter" exists.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-21-3' >
-                      <span>And I search the name of another item.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-21-4' >
-                      <span>And the department is no longer shown.</span>
-                    </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-21-5' >
-                      <span>When I clear the filter.</span>
-                    </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-21-6' >
-                      <span>Then the department is shown.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class='scenario'>
-                  <div class='Failed canToggle scenarioTitle' data-toggle-target='scenario-22'>DepartmentsSearch SearchCleared NonRelevantItemsReShown</div>
-                  <ul class='steps' id='scenario-22'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-22-1' >
-                      <span>Given I am at the Departments page.</span>
-                    </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-22-2' >
                       <span>And the department "TestDepartmentReShownAfterSearch" exists.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-22-3' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-20-3' >
                       <span>And I search the name of another item.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-22-4' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-20-4' >
                       <span>And the department is no longer shown.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-22-5' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-20-5' >
                       <span>When I clear the search Criteria.</span>
                     </li>
-                    <li class='step Failed  Assertion canToggle' data-toggle-target='step-22-6' >
+                    <li class='step Failed  Assertion canToggle' data-toggle-target='step-20-6' >
                       <span>Then the department is shown. [Exception Message: 'Could not find item TestDepartmentReShownAfterSearch.']</span>
-                      <div class='step FailedException' id='step-22-6'>
-                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.DepartmentsPage.Contains(String departmentName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\DepartmentsPage.cs:line 59
+                      <div class='step FailedException' id='step-20-6'>
+                        <code>   at AdaptiveAds_TestFramework.PageFrameworks.DepartmentsPage.Contains(String departmentName, Boolean doesContain) in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\AdaptiveAds_TestFramework\PageFrameworks\DepartmentsPage.cs:line 63
    at lambda_method(Closure , DepartmentStory )
    at TestStack.BDDfy.StepActionFactory.<>c__DisplayClass1_0`1.<GetStepAction>b__0(Object o)
    at TestStack.BDDfy.StepExecutor.Execute(Step step, Object testObject)
@@ -587,55 +562,55 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
    at TestStack.BDDfy.Processors.ExceptionProcessor.Process(Story story)
    at TestStack.BDDfy.Engine.Run()
    at TestStack.BDDfy.BDDfyExtensions.BDDfy[TStory](Object testObject, String scenarioTitle)
-   at Tests.Stories.DepartmentStory.DepartmentsSearch_SearchCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\DepartmentStory.cs:line 108</code>
+   at Tests.Stories.DepartmentStory.DepartmentsSearch_SearchCleared_NonRelevantItemsReShown() in D:\GitVS\AdaptiveAds_Testing\AdaptiveAds_TestFramework\Tests\Stories\DepartmentStory.cs:line 100</code>
                       </div>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-23'>User can add departments</div>
-                  <ul class='steps' id='scenario-23'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-23-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-21'>User can add departments</div>
+                  <ul class='steps' id='scenario-21'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-21-1' >
                       <span>Given I am at the Departments page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-23-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-21-2' >
                       <span>When I add an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-23-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-21-3' >
                       <span>Then it is added to the system.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-24'>User can edit departments</div>
-                  <ul class='steps' id='scenario-24'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-24-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-22'>User can edit departments</div>
+                  <ul class='steps' id='scenario-22'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-22-1' >
                       <span>Given I am at the Departments page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-24-2' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-22-2' >
                       <span>And the department "TestDepartmentEdit" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-24-3' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-22-3' >
                       <span>When I edit an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-24-4' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-22-4' >
                       <span>Then it is updated in the system.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-25'>User can remove departments</div>
-                  <ul class='steps' id='scenario-25'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-25-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-23'>User can remove departments</div>
+                  <ul class='steps' id='scenario-23'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-23-1' >
                       <span>Given I am at the Departments page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-25-2' >
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-23-2' >
                       <span>And the department "TestDepartmentRemove" exists.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-25-3' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-23-3' >
                       <span>When I remove an item.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-25-4' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-23-4' >
                       <span>Then it is no longer in the system.</span>
                     </li>
                   </ul>
@@ -655,52 +630,52 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               </div>
               <div class='scenarios'>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-26'>User can login with correct credentials</div>
-                  <ul class='steps' id='scenario-26'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-26-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-24'>User can login with correct credentials</div>
+                  <ul class='steps' id='scenario-24'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-24-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-26-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-24-2' >
                       <span>When I provide a correct username and password.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-26-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-24-3' >
                       <span>Then I should no longer be at the login page.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-26-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-24-4' >
                       <span>I should be at the Dashboard page.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-27'>User cant login with incorrect password</div>
-                  <ul class='steps' id='scenario-27'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-27-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-25'>User cant login with incorrect password</div>
+                  <ul class='steps' id='scenario-25'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-25-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-27-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-25-2' >
                       <span>When I provide an incorrect password.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-27-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-25-3' >
                       <span>Then I should still be at the login screen.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-27-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-25-4' >
                       <span>And a message is shown to inform of an unsuccessful login attempt.</span>
                     </li>
                   </ul>
                 </div>
                 <div class='scenario'>
-                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-28'>User cant login with incorrect username</div>
-                  <ul class='steps' id='scenario-28'>
-                    <li class='step Passed  SetupState ' data-toggle-target='step-28-1' >
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-26'>User cant login with incorrect username</div>
+                  <ul class='steps' id='scenario-26'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-26-1' >
                       <span>Given I am at the login page.</span>
                     </li>
-                    <li class='step Passed  Transition ' data-toggle-target='step-28-2' >
+                    <li class='step Passed  Transition ' data-toggle-target='step-26-2' >
                       <span>When I provide an incorrect username.</span>
                     </li>
-                    <li class='step Passed  Assertion ' data-toggle-target='step-28-3' >
+                    <li class='step Passed  Assertion ' data-toggle-target='step-26-3' >
                       <span>Then I should still be at the login screen.</span>
                     </li>
-                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-28-4' >
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-26-4' >
                       <span>And a message is shown to inform of an unsuccessful login attempt.</span>
                     </li>
                   </ul>
@@ -708,8 +683,209 @@ body{margin:0;padding:0;padding-bottom:40px;max-width:100%;background-color:#fff
               </div>
             </div>
           </li>
+          <li>
+            <div class='story Passed'>
+              <div class='storyMetadata'>
+                <div class='storyTitle'>Story: Playlist story</div>
+                <ul class='storyNarrative'>
+                  <li>As a user</li>
+                  <li>I want a playlists page</li>
+                  <li>So that I can manage playlists in the system.</li>
+                </ul>
+              </div>
+              <div class='scenarios'>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-27'>AddPlaylist SpecifyDepartment PlaylistIsAddedToSpecifiedDepartment</div>
+                  <ul class='steps' id='scenario-27'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-27-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-27-2' >
+                      <span>And I add a new test department.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-27-3' >
+                      <span>And it is successfully added to the system.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-27-4' >
+                      <span>When I go to the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveTransition ' data-toggle-target='step-27-5' >
+                      <span>And I add an item specifying the department.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-27-6' >
+                      <span>Then it is added to the system.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-27-7' >
+                      <span>And it is added to the correct department.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-28'>PlaylistDepartment EditDepartment PlaylistDepartmentUpdated</div>
+                  <ul class='steps' id='scenario-28'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-28-1' >
+                      <span>Given I am at the Departments page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-2' >
+                      <span>And I add a new test department.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-3' >
+                      <span>And it is successfully added to the system.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-4' >
+                      <span>And I add another.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-5' >
+                      <span>And it is also successfully added to the system.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-6' >
+                      <span>And I go to the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-7' >
+                      <span>And I add an item specifying the first department.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-8' >
+                      <span>And it is added to the system.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-28-9' >
+                      <span>And it is added to the correct department.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-28-10' >
+                      <span>When I edit the department of the playlist to the second department.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-28-11' >
+                      <span>Then it is updated to the correct department.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-29'>PlaylistsSearch ApplySearchCriteria ReleventItemsShownAndNonRelevantItemsRemoved</div>
+                  <ul class='steps' id='scenario-29'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-29-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-29-2' >
+                      <span>And the playlist "TestPlaylistRelevant" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-29-3' >
+                      <span>And the playlist "TestPlaylistNonRelevant" exists.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-29-4' >
+                      <span>When I search "TestPlaylistRelevant".</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-29-5' >
+                      <span>Then the playlist "TestPlaylistRelevant" is shown.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveAssertion ' data-toggle-target='step-29-6' >
+                      <span>And the playlist "TestPlaylistNonRelevant" is not shown.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-30'>PlaylistsSearch FilterCleared NonRelevantItemsReShown</div>
+                  <ul class='steps' id='scenario-30'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-30-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-30-2' >
+                      <span>And the playlist "TestPlaylistReShownAfterFilter" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-30-3' >
+                      <span>And the playlist "TestPlaylistOther" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-30-4' >
+                      <span>And I search the name of another item.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-30-5' >
+                      <span>And the playlist is no longer shown.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-30-6' >
+                      <span>When I clear the filter.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-30-7' >
+                      <span>Then the playlist is shown.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-31'>PlaylistsSearch SearchCleared NonRelevantItemsReShown</div>
+                  <ul class='steps' id='scenario-31'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-31-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-31-2' >
+                      <span>And the playlist "TestPlaylistReShownAfterSearch" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-31-3' >
+                      <span>And the playlist "TestPlaylistOther" exists.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-31-4' >
+                      <span>And I search the name of another item.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-31-5' >
+                      <span>And the playlist is no longer shown.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-31-6' >
+                      <span>When I clear the search Criteria.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-31-7' >
+                      <span>Then the playlist is shown.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-32'>User can add playlists</div>
+                  <ul class='steps' id='scenario-32'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-32-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-32-2' >
+                      <span>When I add an item.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-32-3' >
+                      <span>Then it is added to the system.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-33'>User can edit playlists</div>
+                  <ul class='steps' id='scenario-33'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-33-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-33-2' >
+                      <span>And the playlist "TestPlaylistEdit" exists.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-33-3' >
+                      <span>When I edit an item.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-33-4' >
+                      <span>Then it is updated in the system.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class='scenario'>
+                  <div class='Passed canToggle scenarioTitle' data-toggle-target='scenario-34'>User can remove playlists</div>
+                  <ul class='steps' id='scenario-34'>
+                    <li class='step Passed  SetupState ' data-toggle-target='step-34-1' >
+                      <span>Given I am at the Playlists page.</span>
+                    </li>
+                    <li class='step Passed  ConsecutiveSetupState ' data-toggle-target='step-34-2' >
+                      <span>And the playlist "TestPlaylistRemove" exists.</span>
+                    </li>
+                    <li class='step Passed  Transition ' data-toggle-target='step-34-3' >
+                      <span>When I remove an item.</span>
+                    </li>
+                    <li class='step Passed  Assertion ' data-toggle-target='step-34-4' >
+                      <span>Then it is no longer in the system.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
-        <p><span>Tested at: 26/05/2016 20:19:22</span></p>
+        <p><span>Tested at: 27/05/2016 08:03:04</span></p>
       </div>
     </div>
     <div class='footer'>Powered by <a href='https://github.com/TestStack/TestStack.BDDfy'>BDDfy</a> framework</div>

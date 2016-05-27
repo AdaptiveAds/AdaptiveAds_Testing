@@ -65,6 +65,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Stories\PlaylistStory.cs" />
     <Compile Include="Stories\DashboardStory.cs" />
     <Compile Include="Stories\AdvertStory.cs" />
     <Compile Include="Stories\DepartmentStory.cs" />
