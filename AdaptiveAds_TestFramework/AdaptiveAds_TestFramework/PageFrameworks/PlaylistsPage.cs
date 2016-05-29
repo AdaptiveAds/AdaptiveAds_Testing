@@ -85,7 +85,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             Collection<string> items = new Collection<String>();
             foreach (string s in splitted)
             {
-                if (!s.Equals("Edit") && !s.Equals("") && !s.Equals("Delete"))
+                if (!s.Equals("Edit") && !s.Equals("Design") && !s.Equals("") && !s.Equals("Delete"))
                 {
                     items.Add(s);
                 }
@@ -118,7 +118,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             Collection<string> items = new Collection<String>();
             foreach (string s in splitted)
             {
-                if (!s.Equals("Edit") && !s.Equals("") && !s.Equals("Delete") && !s.Equals("Global Playlist"))
+                if (!s.Equals("Edit") && !s.Equals("Design") && !s.Equals("") && !s.Equals("Delete") && !s.Equals("Global Playlist"))
                 {
                     items.Add(s);
                 }

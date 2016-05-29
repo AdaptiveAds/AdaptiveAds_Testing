@@ -93,7 +93,7 @@ namespace AdaptiveAds_TestFramework
         /// http://ct6008-15c.studentsites.glos.ac.uk for uni server.
         /// Changes to this should only be committed to production if the default location of the application changes.
         /// </summary>
-        public static string UrlAddress = "http://localhost";
+        public static string UrlAddress = "http://ct6008-15c.studentsites.glos.ac.uk";
 
         /// <summary>
         /// Time for the automation framework to wait before throwing an error as default.
