@@ -10,14 +10,18 @@
   <HelpKINode Title="AdaptiveAds_TestFramework.Location enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks namespace" Url="html/N_AdaptiveAds_TestFramework_PageFrameworks.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.AdvertsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.BackgroundsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.DashboardPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.DepartmentsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginCommand class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginCommand.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.LoginPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_LoginPage.htm" />
+  <HelpKINode Title="AdaptiveAds_TestFramework.PageFrameworks.PlaylistsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage.htm" />
   <HelpKINode Title="AdaptiveAds_TestFramework.Period enumeration" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="Add method">
     <HelpKINode Title="AdvertsPage.Add Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Add.htm" />
+    <HelpKINode Title="BackgroundsPage.Add Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Add.htm" />
     <HelpKINode Title="DepartmentsPage.Add Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Add.htm" />
+    <HelpKINode Title="PlaylistsPage.Add Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Add.htm" />
   </HelpKINode>
   <HelpKINode Title="AdvertAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_AdvertAdd.htm" />
   <HelpKINode Title="AdvertAddBackground field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_AdvertAddBackground.htm" />
@@ -59,14 +63,46 @@
   <HelpKINode Title="AdvertsPage.Remove method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Remove.htm" />
   <HelpKINode Title="AdvertsPage.SaveEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_SaveEditWindow.htm" />
   <HelpKINode Title="AdvertsPage.Search method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Search.htm" />
+  <HelpKINode Title="BackgroundAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAdd.htm" />
+  <HelpKINode Title="BackgroundAddName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAddName.htm" />
+  <HelpKINode Title="BackgroundAddSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAddSave.htm" />
+  <HelpKINode Title="BackgroundClearFilterButton field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundClearFilterButton.htm" />
+  <HelpKINode Title="BackgroundContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundContainer.htm" />
+  <HelpKINode Title="BackgroundDelete field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDelete.htm" />
+  <HelpKINode Title="BackgroundDeleteCancel field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDeleteCancel.htm" />
+  <HelpKINode Title="BackgroundDeleteConfirm field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDeleteConfirm.htm" />
+  <HelpKINode Title="BackgroundDepartmentFilter field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDepartmentFilter.htm" />
+  <HelpKINode Title="BackgroundEdit field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEdit.htm" />
+  <HelpKINode Title="BackgroundEditName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEditName.htm" />
+  <HelpKINode Title="BackgroundEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEditSave.htm" />
+  <HelpKINode Title="BackgroundSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundSearchBox.htm" />
+  <HelpKINode Title="BackgroundsPage class">
+    <HelpKINode Title="BackgroundsPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage.htm" />
+    <HelpKINode Title="about BackgroundsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BackgroundsPage.Add method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Add.htm" />
+  <HelpKINode Title="BackgroundsPage.ClearFilter method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_ClearFilter.htm" />
+  <HelpKINode Title="BackgroundsPage.ClearSearch method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_ClearSearch.htm" />
+  <HelpKINode Title="BackgroundsPage.Contains method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Contains.htm" />
+  <HelpKINode Title="BackgroundsPage.Edit method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Edit.htm" />
+  <HelpKINode Title="BackgroundsPage.NumberInList method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_NumberInList.htm" />
+  <HelpKINode Title="BackgroundsPage.OpenEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_OpenEditWindow.htm" />
+  <HelpKINode Title="BackgroundsPage.Remove method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Remove.htm" />
+  <HelpKINode Title="BackgroundsPage.SaveEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_SaveEditWindow.htm" />
+  <HelpKINode Title="BackgroundsPage.Search method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Search.htm" />
   <HelpKINode Title="CheckForLavarelError method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_CheckForLavarelError.htm" />
   <HelpKINode Title="ClearFilter method">
     <HelpKINode Title="AdvertsPage.ClearFilter Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_ClearFilter.htm" />
+    <HelpKINode Title="BackgroundsPage.ClearFilter Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_ClearFilter.htm" />
     <HelpKINode Title="DepartmentsPage.ClearFilter Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_ClearFilter.htm" />
+    <HelpKINode Title="PlaylistsPage.ClearFilter Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_ClearFilter.htm" />
   </HelpKINode>
   <HelpKINode Title="ClearSearch method">
     <HelpKINode Title="AdvertsPage.ClearSearch Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_ClearSearch.htm" />
+    <HelpKINode Title="BackgroundsPage.ClearSearch Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_ClearSearch.htm" />
     <HelpKINode Title="DepartmentsPage.ClearSearch Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_ClearSearch.htm" />
+    <HelpKINode Title="PlaylistsPage.ClearSearch Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_ClearSearch.htm" />
   </HelpKINode>
   <HelpKINode Title="ConfigData class">
     <HelpKINode Title="ConfigData Class" Url="html/T_AdaptiveAds_TestFramework_ConfigData.htm" />
@@ -91,6 +127,19 @@
   <HelpKINode Title="ConfigData.AdvertEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_AdvertEditSave.htm" />
   <HelpKINode Title="ConfigData.AdvertsConfigure field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_AdvertsConfigure.htm" />
   <HelpKINode Title="ConfigData.AdvertSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_AdvertSearchBox.htm" />
+  <HelpKINode Title="ConfigData.BackgroundAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAdd.htm" />
+  <HelpKINode Title="ConfigData.BackgroundAddName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAddName.htm" />
+  <HelpKINode Title="ConfigData.BackgroundAddSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundAddSave.htm" />
+  <HelpKINode Title="ConfigData.BackgroundClearFilterButton field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundClearFilterButton.htm" />
+  <HelpKINode Title="ConfigData.BackgroundContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundContainer.htm" />
+  <HelpKINode Title="ConfigData.BackgroundDelete field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDelete.htm" />
+  <HelpKINode Title="ConfigData.BackgroundDeleteCancel field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDeleteCancel.htm" />
+  <HelpKINode Title="ConfigData.BackgroundDeleteConfirm field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDeleteConfirm.htm" />
+  <HelpKINode Title="ConfigData.BackgroundDepartmentFilter field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundDepartmentFilter.htm" />
+  <HelpKINode Title="ConfigData.BackgroundEdit field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEdit.htm" />
+  <HelpKINode Title="ConfigData.BackgroundEditName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEditName.htm" />
+  <HelpKINode Title="ConfigData.BackgroundEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundEditSave.htm" />
+  <HelpKINode Title="ConfigData.BackgroundSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_BackgroundSearchBox.htm" />
   <HelpKINode Title="ConfigData.DashboardLinks field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DashboardLinks.htm" />
   <HelpKINode Title="ConfigData.DefaultWaitPeriod field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DefaultWaitPeriod.htm" />
   <HelpKINode Title="ConfigData.DepartmentAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_DepartmentAdd.htm" />
@@ -112,6 +161,23 @@
   <HelpKINode Title="ConfigData.LoginUsernameBoxName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_LoginUsernameBoxName.htm" />
   <HelpKINode Title="ConfigData.MainMenuButtonName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_MainMenuButtonName.htm" />
   <HelpKINode Title="ConfigData.Password field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Password.htm" />
+  <HelpKINode Title="ConfigData.PlaylistAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAdd.htm" />
+  <HelpKINode Title="ConfigData.PlaylistAddDepartments field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddDepartments.htm" />
+  <HelpKINode Title="ConfigData.PlaylistAddIsGlobal field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddIsGlobal.htm" />
+  <HelpKINode Title="ConfigData.PlaylistAddName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddName.htm" />
+  <HelpKINode Title="ConfigData.PlaylistAddSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddSave.htm" />
+  <HelpKINode Title="ConfigData.PlaylistClearFilterButton field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistClearFilterButton.htm" />
+  <HelpKINode Title="ConfigData.PlaylistContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistContainer.htm" />
+  <HelpKINode Title="ConfigData.PlaylistDelete field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDelete.htm" />
+  <HelpKINode Title="ConfigData.PlaylistDeleteCancel field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDeleteCancel.htm" />
+  <HelpKINode Title="ConfigData.PlaylistDeleteConfirm field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDeleteConfirm.htm" />
+  <HelpKINode Title="ConfigData.PlaylistDepartmentFilter field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDepartmentFilter.htm" />
+  <HelpKINode Title="ConfigData.PlaylistEdit field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEdit.htm" />
+  <HelpKINode Title="ConfigData.PlaylistEditDepartments field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditDepartments.htm" />
+  <HelpKINode Title="ConfigData.PlaylistEditIsGlobal field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditIsGlobal.htm" />
+  <HelpKINode Title="ConfigData.PlaylistEditName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditName.htm" />
+  <HelpKINode Title="ConfigData.PlaylistEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditSave.htm" />
+  <HelpKINode Title="ConfigData.PlaylistSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistSearchBox.htm" />
   <HelpKINode Title="ConfigData.Routes field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Routes.htm" />
   <HelpKINode Title="ConfigData.SignInName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignInName.htm" />
   <HelpKINode Title="ConfigData.SignOutName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_SignOutName.htm" />
@@ -120,7 +186,9 @@
   <HelpKINode Title="ConfigData.WaitPeriods field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_WaitPeriods.htm" />
   <HelpKINode Title="Contains method">
     <HelpKINode Title="AdvertsPage.Contains Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Contains.htm" />
+    <HelpKINode Title="BackgroundsPage.Contains Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Contains.htm" />
     <HelpKINode Title="DepartmentsPage.Contains Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Contains.htm" />
+    <HelpKINode Title="PlaylistsPage.Contains Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Contains.htm" />
   </HelpKINode>
   <HelpKINode Title="Dashboard enumeration member" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   <HelpKINode Title="DashboardLink enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
@@ -179,9 +247,16 @@
   <HelpKINode Title="Driver.Quit method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_Quit.htm" />
   <HelpKINode Title="Driver.SignOut method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_SignOut.htm" />
   <HelpKINode Title="Driver.WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
-  <HelpKINode Title="Edit method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Edit.htm" />
+  <HelpKINode Title="Edit method">
+    <HelpKINode Title="BackgroundsPage.Edit Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Edit.htm" />
+    <HelpKINode Title="DepartmentsPage.Edit Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Edit.htm" />
+  </HelpKINode>
   <HelpKINode Title="EditAdvertDepartment method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_EditAdvertDepartment.htm" />
-  <HelpKINode Title="EditName method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_EditName.htm" />
+  <HelpKINode Title="EditName method">
+    <HelpKINode Title="AdvertsPage.EditName Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_EditName.htm" />
+    <HelpKINode Title="PlaylistsPage.EditName Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_EditName.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EditPlaylistDepartment method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_EditPlaylistDepartment.htm" />
   <HelpKINode Title="ErrorMessage method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_LoginPage_ErrorMessage.htm" />
   <HelpKINode Title="ErrorMessageClass field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_ErrorMessageClass.htm" />
   <HelpKINode Title="FireFoxPath field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_FireFoxPath.htm" />
@@ -232,20 +307,61 @@
   <HelpKINode Title="None enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
   <HelpKINode Title="NumberInList method">
     <HelpKINode Title="AdvertsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_NumberInList.htm" />
+    <HelpKINode Title="BackgroundsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_NumberInList.htm" />
     <HelpKINode Title="DepartmentsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_NumberInList.htm" />
+    <HelpKINode Title="PlaylistsPage.NumberInList Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_NumberInList.htm" />
   </HelpKINode>
   <HelpKINode Title="OpenCloseMenuBar method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_OpenCloseMenuBar.htm" />
-  <HelpKINode Title="OpenEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_OpenEditWindow.htm" />
+  <HelpKINode Title="OpenEditWindow method">
+    <HelpKINode Title="AdvertsPage.OpenEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_OpenEditWindow.htm" />
+    <HelpKINode Title="BackgroundsPage.OpenEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_OpenEditWindow.htm" />
+    <HelpKINode Title="PlaylistsPage.OpenEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_OpenEditWindow.htm" />
+  </HelpKINode>
   <HelpKINode Title="PageBackgrounds enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
   <HelpKINode Title="Password field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Password.htm" />
   <HelpKINode Title="Period enumeration" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
+  <HelpKINode Title="PlaylistAdd field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAdd.htm" />
+  <HelpKINode Title="PlaylistAddDepartments field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddDepartments.htm" />
+  <HelpKINode Title="PlaylistAddIsGlobal field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddIsGlobal.htm" />
+  <HelpKINode Title="PlaylistAddName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddName.htm" />
+  <HelpKINode Title="PlaylistAddSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistAddSave.htm" />
+  <HelpKINode Title="PlaylistClearFilterButton field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistClearFilterButton.htm" />
+  <HelpKINode Title="PlaylistContainer field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistContainer.htm" />
+  <HelpKINode Title="PlaylistDelete field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDelete.htm" />
+  <HelpKINode Title="PlaylistDeleteCancel field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDeleteCancel.htm" />
+  <HelpKINode Title="PlaylistDeleteConfirm field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDeleteConfirm.htm" />
+  <HelpKINode Title="PlaylistDepartmentFilter field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistDepartmentFilter.htm" />
+  <HelpKINode Title="PlaylistEdit field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEdit.htm" />
+  <HelpKINode Title="PlaylistEditDepartments field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditDepartments.htm" />
+  <HelpKINode Title="PlaylistEditIsGlobal field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditIsGlobal.htm" />
+  <HelpKINode Title="PlaylistEditName field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditName.htm" />
+  <HelpKINode Title="PlaylistEditSave field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistEditSave.htm" />
+  <HelpKINode Title="PlaylistIsAssignedToDepartment method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_PlaylistIsAssignedToDepartment.htm" />
   <HelpKINode Title="Playlists enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
+  <HelpKINode Title="PlaylistSearchBox field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_PlaylistSearchBox.htm" />
+  <HelpKINode Title="PlaylistsPage class">
+    <HelpKINode Title="PlaylistsPage Class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage.htm" />
+    <HelpKINode Title="about PlaylistsPage class" Url="html/T_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlaylistsPage.Add method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Add.htm" />
+  <HelpKINode Title="PlaylistsPage.ClearFilter method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_ClearFilter.htm" />
+  <HelpKINode Title="PlaylistsPage.ClearSearch method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_ClearSearch.htm" />
+  <HelpKINode Title="PlaylistsPage.Contains method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Contains.htm" />
+  <HelpKINode Title="PlaylistsPage.EditName method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_EditName.htm" />
+  <HelpKINode Title="PlaylistsPage.EditPlaylistDepartment method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_EditPlaylistDepartment.htm" />
+  <HelpKINode Title="PlaylistsPage.NumberInList method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_NumberInList.htm" />
+  <HelpKINode Title="PlaylistsPage.OpenEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_OpenEditWindow.htm" />
+  <HelpKINode Title="PlaylistsPage.PlaylistIsAssignedToDepartment method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_PlaylistIsAssignedToDepartment.htm" />
+  <HelpKINode Title="PlaylistsPage.Remove method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Remove.htm" />
+  <HelpKINode Title="PlaylistsPage.SaveEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_SaveEditWindow.htm" />
+  <HelpKINode Title="PlaylistsPage.Search method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Search.htm" />
   <HelpKINode Title="Privileges enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
@@ -253,20 +369,28 @@
   <HelpKINode Title="Quit method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Driver_Quit.htm" />
   <HelpKINode Title="Remove method">
     <HelpKINode Title="AdvertsPage.Remove Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Remove.htm" />
+    <HelpKINode Title="BackgroundsPage.Remove Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Remove.htm" />
     <HelpKINode Title="DepartmentsPage.Remove Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Remove.htm" />
+    <HelpKINode Title="PlaylistsPage.Remove Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Remove.htm" />
   </HelpKINode>
   <HelpKINode Title="RouteLocation method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteLocation.htm" />
   <HelpKINode Title="Routes field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_Routes.htm" />
   <HelpKINode Title="RouteUrl method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrl.htm" />
   <HelpKINode Title="RouteUrlExtension method" Url="html/M_AdaptiveAds_TestFramework_Helpers_Helper_RouteUrlExtension.htm" />
-  <HelpKINode Title="SaveEditWindow method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_SaveEditWindow.htm" />
+  <HelpKINode Title="SaveEditWindow method">
+    <HelpKINode Title="AdvertsPage.SaveEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_SaveEditWindow.htm" />
+    <HelpKINode Title="BackgroundsPage.SaveEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_SaveEditWindow.htm" />
+    <HelpKINode Title="PlaylistsPage.SaveEditWindow Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_SaveEditWindow.htm" />
+  </HelpKINode>
   <HelpKINode Title="Screens enumeration member">
     <HelpKINode Title="DashboardLink Enumeration" Url="html/T_AdaptiveAds_TestFramework_DashboardLink.htm" />
     <HelpKINode Title="Location Enumeration" Url="html/T_AdaptiveAds_TestFramework_Location.htm" />
   </HelpKINode>
   <HelpKINode Title="Search method">
     <HelpKINode Title="AdvertsPage.Search Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_AdvertsPage_Search.htm" />
+    <HelpKINode Title="BackgroundsPage.Search Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_BackgroundsPage_Search.htm" />
     <HelpKINode Title="DepartmentsPage.Search Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DepartmentsPage_Search.htm" />
+    <HelpKINode Title="PlaylistsPage.Search Method " Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_PlaylistsPage_Search.htm" />
   </HelpKINode>
   <HelpKINode Title="Select method" Url="html/M_AdaptiveAds_TestFramework_PageFrameworks_DashboardPage_Select.htm" />
   <HelpKINode Title="Short enumeration member" Url="html/T_AdaptiveAds_TestFramework_Period.htm" />
@@ -293,6 +417,10 @@
     <HelpKINode Title="history, version history, 1.2.0.0" Url="html/F96F24FC-A72D-4048-8D22-E23297C18236.htm" />
     <HelpKINode Title="history, version history, 1.2.1.0" Url="html/64C433C3-DA63-4299-994B-ADC4956324A1.htm" />
     <HelpKINode Title="history, version history, 1.2.2.0" Url="html/98C98F65-5EAD-4581-BDAF-843792247E09.htm" />
+    <HelpKINode Title="history, version history, 1.2.3.0" Url="html/421234E9-44E1-4687-87A4-16227E7E8C9F.htm" />
+    <HelpKINode Title="history, version history, 1.2.4.0" Url="html/B39D7770-623C-49F0-B2B4-89C9AE580D64.htm" />
+    <HelpKINode Title="history, version history, 1.3.0.0" Url="html/5FDD022E-2C1C-45FB-B963-C50367CEEE41.htm" />
+    <HelpKINode Title="history, version history, 1.3.1.0" Url="html/EB08468A-70E4-4E58-AEB4-B0200B85673E.htm" />
   </HelpKINode>
   <HelpKINode Title="WaitPeriod property" Url="html/P_AdaptiveAds_TestFramework_Helpers_Driver_WaitPeriod.htm" />
   <HelpKINode Title="WaitPeriods field" Url="html/F_AdaptiveAds_TestFramework_ConfigData_WaitPeriods.htm" />

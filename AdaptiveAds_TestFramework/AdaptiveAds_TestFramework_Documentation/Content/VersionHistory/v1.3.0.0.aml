@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="5FDD022E-2C1C-45FB-B963-C50367CEEE41" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.3.0.0 was released in 2016 on May 29th at 18:04(UTC).
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Functionality for C.R.U.D (Create Read Update Delete) finished for manipulation of playlists.</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>
+
