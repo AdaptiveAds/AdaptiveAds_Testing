@@ -250,7 +250,7 @@ namespace AdaptiveAds_TestFramework
         /// Name of the drop box for editing advert Background.
         /// </summary>
         public static string AdvertEditBackground = "drpBackgrounds";
-        
+
         /// <summary>
         /// Name of the button to save an edit.
         /// </summary>
@@ -307,6 +307,91 @@ namespace AdaptiveAds_TestFramework
         public static string AdvertsConfigure = "btnConfig";
 
         #endregion //Advert
+
+        #region Background
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a background.
+        /// </summary>
+        public static string BackgroundAdd = "btnAddBackground";
+
+        /// <summary>
+        /// Name of the text input for background name.
+        /// </summary>
+        public static string BackgroundAddName = "txtBackgroundName";
+        
+        /// <summary>
+        /// Name of the button to save a background.
+        /// </summary>
+        public static string BackgroundAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a background.
+        /// </summary>
+        public static string BackgroundEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing background name.
+        /// </summary>
+        public static string BackgroundEditName = "txtBackgroundName";
+        
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string BackgroundEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a background.
+        /// </summary>
+        public static string BackgroundDelete = "btnDeleted";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string BackgroundDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string BackgroundDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        #region Search
+
+        /// <summary>
+        /// Name of the search box for backgrounds.
+        /// </summary>
+        public static string BackgroundSearchBox = "txtBackgroundSearch";
+
+        /// <summary>
+        /// Name of the drop box for backgrounds departments.
+        /// </summary>
+        public static string BackgroundDepartmentFilter = "drpDepartments";
+
+        /// <summary>
+        /// Name of the button to clear the filter on backgrounds.
+        /// </summary>
+        public static string BackgroundClearFilterButton = "btnFindAll";
+
+        #endregion //Search
+
+        /// <summary>
+        /// Name of the container for backgrounds.
+        /// </summary>
+        public static string BackgroundContainer = "lstBackgrounds";
+
+        #endregion //Background
 
         #region Department
 
@@ -383,6 +468,111 @@ namespace AdaptiveAds_TestFramework
         public static string DepartmentClearFilterButton = "btnFindAll";
 
         #endregion //Department
+
+        #region Playlist
+
+        #region Add
+
+        /// <summary>
+        /// Name of the button to add a playlist.
+        /// </summary>
+        public static string PlaylistAdd = "btnAddPlaylist";
+
+        /// <summary>
+        /// Name of the text input for playlist name.
+        /// </summary>
+        public static string PlaylistAddName = "txtPlaylistName";
+
+        /// <summary>
+        /// Name of the drop box for playlist Department.
+        /// </summary>
+        public static string PlaylistAddDepartments = "drpDepartments";
+
+        /// <summary>
+        /// Name of the check box to specify if playlist is global.
+        /// </summary>
+        public static string PlaylistAddIsGlobal = "chkIsGlobal";
+
+        /// <summary>
+        /// Name of the button to save a playlist.
+        /// </summary>
+        public static string PlaylistAddSave = "btnSave";
+
+        #endregion //Add
+
+        #region Edit
+
+        /// <summary>
+        /// Name of the button to edit a playlist.
+        /// </summary>
+        public static string PlaylistEdit = "btnEdit";
+
+        /// <summary>
+        /// Name of the text input for editing playlist name.
+        /// </summary>
+        public static string PlaylistEditName = "txtPlaylistName";
+
+        /// <summary>
+        /// Name of the drop box for editing playlist Department.
+        /// </summary>
+        public static string PlaylistEditDepartments = "drpDepartments";
+        
+        /// <summary>
+        /// Name of the check box for editing if playlist is global.
+        /// </summary>
+        public static string PlaylistEditIsGlobal = "chkIsGlobal";
+
+        /// <summary>
+        /// Name of the button to save an edit.
+        /// </summary>
+        public static string PlaylistEditSave = "btnSave";
+
+        #endregion //Edit
+
+        #region Delete
+
+        /// <summary>
+        /// Name of the button to delete a playlist.
+        /// </summary>
+        public static string PlaylistDelete = "btnDeleted";
+
+        /// <summary>
+        /// Name of the button to confirm a delete.
+        /// </summary>
+        public static string PlaylistDeleteConfirm = "btnSave";
+
+        /// <summary>
+        /// Name of the button to cancel a delete.
+        /// </summary>
+        public static string PlaylistDeleteCancel = "btnCancel";
+
+        #endregion //Delete
+
+        #region Search
+
+        /// <summary>
+        /// Name of the search box for playlists.
+        /// </summary>
+        public static string PlaylistSearchBox = "txtPlaylistSearch";
+
+        /// <summary>
+        /// Name of the drop box for playlists departments.
+        /// </summary>
+        public static string PlaylistDepartmentFilter = "drpDepartments";
+
+        /// <summary>
+        /// Name of the button to clear the filter on playlists.
+        /// </summary>
+        public static string PlaylistClearFilterButton = "btnFindAll";
+
+        #endregion //Search
+
+        /// <summary>
+        /// Name of the container for playlists.
+        /// </summary>
+        public static string PlaylistContainer = "lstPlaylistItem";
+
+        #endregion //Playlist
 
     }
 }

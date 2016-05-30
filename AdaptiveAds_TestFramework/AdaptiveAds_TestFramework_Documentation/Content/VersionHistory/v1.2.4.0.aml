@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="B39D7770-623C-49F0-B2B4-89C9AE580D64" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v1.2.3.0 was released in 2016 on May 29th at 04:41(UTC).
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+        
+        <list class="bullet">
+          <listItem>
+            <para>Functionality for C.R.U.D (Create Read Update Delete) applied for manipulation of Backgrounds. This was needed due to changes in how the adverts are set up.</para>
+          </listItem>
+          <listItem>
+            <para>Adverts manipulation logic was also modified to take into account of backgrounds.</para>
+          </listItem>
+          <listItem>
+            <para>Changes to the searching and sorting algorithms because of changes in the content displayed in objects on screen.</para>
+          </listItem>
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="f0e38565-94e1-4c20-9716-f552a23ce0d0" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

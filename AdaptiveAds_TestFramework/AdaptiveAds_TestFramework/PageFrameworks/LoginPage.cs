@@ -120,7 +120,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             _loginButton.Click();
 
             //Wait allows system time to process login.
-            Thread.Sleep(2500);
+            Thread.Sleep( 2500 );// keep this as 2500 otherwise it will fuck up.
         }
 
         #endregion //Methods

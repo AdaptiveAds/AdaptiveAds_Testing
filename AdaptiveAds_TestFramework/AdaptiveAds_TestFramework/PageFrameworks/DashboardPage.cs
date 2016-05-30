@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using OpenQA.Selenium;
 using AdaptiveAds_TestFramework.Helpers;
 
@@ -33,6 +34,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             {
                 _linkObj = Driver.Instance.FindElement(By.Name(linkName));
                 _linkObj.Click();
+                Thread.Sleep(500);//wait for page to change
             }
             catch (NoSuchElementException e)
             {

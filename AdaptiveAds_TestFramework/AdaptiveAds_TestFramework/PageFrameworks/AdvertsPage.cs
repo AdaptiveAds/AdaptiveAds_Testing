@@ -16,22 +16,29 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         /// </summary>
         /// <param name="advertName">Name of the advert to add.</param>
         /// <param name="departmentName">Name of the department to add the advert to. Leaving blank will add the new advert to the first department.</param>
+        /// <param name="backgroundName">Name of the background to use for the advert.</param>
         /// <param name="check">Asserts the advert is added to the system if true.</param>
-        public static void Add(string advertName, string departmentName, bool check)
+        public static void Add(string advertName, string departmentName, string backgroundName, bool check)
         {
             IWebElement addButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAdd));
             addButton.Click();
-            Thread.Sleep(1000);//wait for pop-up to open
+            Thread.Sleep(500);//wait for pop-up to open
 
             IWebElement nameInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddName));
             nameInput.SendKeys(advertName);
+            Thread.Sleep(500);//wait for text to be entered fully
 
             IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddDepartments));
             departmentInput.SendKeys(departmentName);
+            Thread.Sleep(500);//wait for text to be entered fully
+
+            IWebElement backgroundInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddBackground));
+            backgroundInput.SendKeys(backgroundName);
+            Thread.Sleep(500);//wait for text to be entered fully
 
             IWebElement saveButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddSave));
             saveButton.Click();
-            Thread.Sleep(1000);//wait for pop-up to collapse
+            Thread.Sleep(500);//wait for pop-up to collapse
 
             //check
             if (check)
@@ -83,7 +90,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             Collection<string> items = new Collection<String>();
             foreach (string s in splitted)
             {
-                if (!s.Equals("Configure") && !s.Equals("Edit") && !s.Equals("") && !s.Equals("Delete"))
+                if (!s.Equals("Design") && !s.Equals("Edit") && !s.Equals("") && !s.Equals("Delete"))
                 {
                     items.Add(s);
                 }
@@ -118,11 +125,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var nameInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditName));
             nameInput.Clear();
             nameInput.SendKeys(advertName + "_Edited");
-
-            Thread.Sleep(1000);//wait for text to be entered fully
+            Thread.Sleep(500);//wait for text to be entered fully
 
             var confirmButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditSave));
             confirmButton.Click();
+            Thread.Sleep(500);// wait for window to close
         }
 
         /// <summary>
@@ -133,8 +140,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var editButtons = Driver.Instance.FindElements(By.Name(ConfigData.AdvertEdit));
             editButtons[NumberInList(advertName) - 1].Click();
-
-            Thread.Sleep(1000); //wait for pop-up to become visible
+            Thread.Sleep(500);//wait for pop-up to become visible
         }
 
         /// <summary>
@@ -144,8 +150,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             IWebElement closeButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertEditSave));
             closeButton.Click();
-
-            Thread.Sleep(1000); //wait for pop-up to disappear
+            Thread.Sleep(500);// wait for window to close
         }
 
         /// <summary>
@@ -159,8 +164,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
 
             IWebElement departmentInput = Driver.Instance.FindElement(By.Name(ConfigData.AdvertAddDepartments));
             departmentInput.SendKeys(departmentName);
-
-            Thread.Sleep(1000); //wait for text to be input fully
+            Thread.Sleep(500); //wait for text to be input fully
 
             SaveEditWindow();
         }
@@ -178,11 +182,11 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             if (position != -1)
             {
                 deleteButtons[position - 1].Click();
-
-                Thread.Sleep(500);
+                Thread.Sleep(500);//wait for pop-up to become visible
 
                 var confirmButtons = Driver.Instance.FindElements(By.Name(ConfigData.AdvertDeleteConfirm));
                 confirmButtons[1].Click();
+                Thread.Sleep(500);// wait for updated data
             }
 
             //check
@@ -202,8 +206,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             searchBox.Clear();
             searchBox.SendKeys(searchCriteria);
             searchBox.SendKeys(Keys.Return);
-
-            Thread.Sleep(500);//wait for search to be applied.
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -259,6 +262,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
             var searchBox = Driver.Instance.FindElement(By.Name(ConfigData.AdvertSearchBox));
             searchBox.Clear();
             searchBox.SendKeys(Keys.Enter);
+            Thread.Sleep(500);// wait for updated data
         }
 
         /// <summary>
@@ -268,6 +272,7 @@ namespace AdaptiveAds_TestFramework.PageFrameworks
         {
             var clearFilterButton = Driver.Instance.FindElement(By.Name(ConfigData.AdvertClearFilterButton));
             clearFilterButton.Click();
+            Thread.Sleep(500);// wait for updated data
         }
     }
 }

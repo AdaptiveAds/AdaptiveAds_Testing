@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using AdaptiveAds_TestFramework.PageFrameworks;
@@ -81,6 +82,7 @@ namespace AdaptiveAds_TestFramework.Helpers
         {
             // Navigate browser to the location.
             Instance.Navigate().GoToUrl(Helper.RouteUrl(location));
+            Thread.Sleep(500);// wait for system to navigate
             bool needToLogIn = false;
             if (logInIfNeeded)
             {
@@ -275,7 +277,7 @@ namespace AdaptiveAds_TestFramework.Helpers
 
             IWebElement signOut = Instance.FindElement(By.Name(ConfigData.SignOutName));
             signOut.Click();
-
+            Thread.Sleep(500);// wait for system to logout
         }
 
         #endregion//AppState
