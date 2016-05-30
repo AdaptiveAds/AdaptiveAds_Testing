@@ -51,7 +51,7 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanAddBackgrounds()
+        public void BackgroundsControl_AddABackground_SystemContainsNewBackground()
         {
             this.Given(x => Driver.IsAt(Location.PageBackgrounds), "Given I am at the Backgrounds page.")
                 .When(x => BackgroundsPage.Add("BackgroundAdd", false), "When I add an item.")
@@ -60,17 +60,17 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanEditBackgrounds()
+        public void BackgroundsControl_EditBackgroundName_UpdateIsAppliedToTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.PageBackgrounds), "Given I am at the Backgrounds page.")
                 .And(x => BackgroundsPage.Add("BackgroundEdit", true), "And the background \"BackgroundEdit\" exists.")
-                .When(x => BackgroundsPage.Edit("BackgroundEdit"), "When I edit an item.")
+                .When(x => BackgroundsPage.Edit("BackgroundEdit"), "When I edit its name.")
                 .Then(x => BackgroundsPage.Contains("BackgroundEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<BackgroundStory>();
         }
 
         [Test]
-        public void UserCanRemoveBackgrounds()
+        public void BackgroundsControl_DeleteBackground_BackgroundIsRemovedFromTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.PageBackgrounds), "Given I am at the Backgrounds page.")
                 .And(x => BackgroundsPage.Add("BackgroundRemove", true), "And the background \"BackgroundRemove\" exists.")

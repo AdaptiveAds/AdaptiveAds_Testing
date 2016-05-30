@@ -66,31 +66,11 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanAddAdverts()
+        public void AdvertsControl_AddAnAdvert_SystemContainsNewAdvert()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
                 .When(x => AdvertsPage.Add("TestAdvertAdd", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", false), "When I add an item.")
                 .Then(x => AdvertsPage.Contains("TestAdvertAdd", true), "Then it is added to the system.")
-                .BDDfy<AdvertStory>();
-        }
-
-        [Test]
-        public void UserCanEditAdverts()
-        {
-            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertEdit", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertEdit\" exists.")
-                .When(x => AdvertsPage.EditName("TestAdvertEdit"), "When I edit an item.")
-                .Then(x => AdvertsPage.Contains("TestAdvertEdit_Edited", true), "Then it is updated in the system.")
-                .BDDfy<AdvertStory>();
-        }
-
-        [Test]
-        public void UserCanRemoveAdverts()
-        {
-            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
-                .And(x => AdvertsPage.Add("TestAdvertRemove", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertRemove\" exists.")
-                .When(x => AdvertsPage.Remove("TestAdvertRemove", false), "When I remove an item.")
-                .Then(x => AdvertsPage.Contains("TestAdvertRemove", false), "Then it is no longer in the system.")
                 .BDDfy<AdvertStory>();
         }
 
@@ -105,14 +85,34 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void AdvertDepartment_EditDepartment_AdvertDepartmentUpdated()
+        public void AdvertsControl_EditAdvertName_UpdateIsAppliedToTheSystem()
+        {
+            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
+                .And(x => AdvertsPage.Add("TestAdvertEdit", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertEdit\" exists.")
+                .When(x => AdvertsPage.EditName("TestAdvertEdit"), "When I edit its name.")
+                .Then(x => AdvertsPage.Contains("TestAdvertEdit_Edited", true), "Then it is updated in the system.")
+                .BDDfy<AdvertStory>();
+        }
+
+        [Test]
+        public void AdvertsControl_EditAdvertDepartment_UpdateIsAppliedToTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
                 .And(x => AdvertsPage.Add("TestAdvertDepartment", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", false), "And I add an item specifying the first department.")
-                .And(x => AdvertsPage.Contains("TestAdvertDepartment", true), "And it is added to the system.")
+                .And(x => AdvertsPage.Contains("TestAdvertDepartment", true), "And it is successfully added to the system.")
                 .And(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests1"), "And it is added to the correct department.")
                 .When(x=>AdvertsPage.EditAdvertDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests2"),"When I edit the department of the advert to the second department.")
                 .Then(x => AdvertsPage.AdvertIsAssignedToDepartment("TestAdvertDepartment", "TestDepartmentForAdvertTests2"), "Then it is updated to the correct department.")
+                .BDDfy<AdvertStory>();
+        }
+
+        [Test]
+        public void AdvertsControl_DeleteAdvert_AdvertIsRemovedFromTheSystem()
+        {
+            this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
+                .And(x => AdvertsPage.Add("TestAdvertRemove", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertRemove\" exists.")
+                .When(x => AdvertsPage.Remove("TestAdvertRemove", false), "When I remove an item.")
+                .Then(x => AdvertsPage.Contains("TestAdvertRemove", false), "Then it is removed from the system.")
                 .BDDfy<AdvertStory>();
         }
 
@@ -134,10 +134,10 @@ namespace Tests.Stories
             this.Given(x => Driver.IsAt(Location.Adverts), "Given I am at the Adverts page.")
                 .And(x => AdvertsPage.Add("TestAdvertReShownAfterSearch", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertReShownAfterSearch\" exists.")
                 .And(x => AdvertsPage.Add("TestAdvertOther", "TestDepartmentForAdvertTests1", "TestBackgroundAdvert1", true), "And the advert \"TestAdvertOther\" exists.")
-                .And(x => AdvertsPage.Search("TestAdvertOther"), "And I search the name of another item.")
-                .And(x => AdvertsPage.Contains("TestAdvertReShownAfterSearch", false), "And the advert is no longer shown.")
+                .And(x => AdvertsPage.Search("TestAdvertOther"), "And I search for \"TestAdvertOther\".")
+                .And(x => AdvertsPage.Contains("TestAdvertReShownAfterSearch", false), "And \"TestAdvertReShownAfterSearch\" is no longer shown.")
                 .When(x => AdvertsPage.ClearSearch(), "When I clear the search Criteria.")
-                .Then(x => AdvertsPage.Contains("TestAdvertReShownAfterSearch", true), "Then the advert is shown.")
+                .Then(x => AdvertsPage.Contains("TestAdvertReShownAfterSearch", true), "Then \"TestAdvertReShownAfterSearch\" is re-shown.")
                 .BDDfy<AdvertStory>();
         }
 

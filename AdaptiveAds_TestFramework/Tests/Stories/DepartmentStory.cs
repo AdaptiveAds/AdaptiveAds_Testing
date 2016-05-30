@@ -54,7 +54,7 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanAddDepartments()
+        public void DepartmentsControl_AddADepartment_SystemContainsNewDepartment()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
                 .When(x => DepartmentsPage.Add("TestDepartmentAdd", false), "When I add an item.")
@@ -63,17 +63,17 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanEditDepartments()
+        public void DepartmentsControl_EditDepartmentName_UpdateIsAppliedToTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
                 .And(x => DepartmentsPage.Add("TestDepartmentEdit", true), "And the department \"TestDepartmentEdit\" exists.")
-                .When(x => DepartmentsPage.Edit("TestDepartmentEdit"), "When I edit an item.")
+                .When(x => DepartmentsPage.Edit("TestDepartmentEdit"), "When I edit it's name.")
                 .Then(x => DepartmentsPage.Contains("TestDepartmentEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<DepartmentStory>();
         }
 
         [Test]
-        public void UserCanRemoveDepartments()
+        public void DepartmentsControl_DeleteDepartment_DepartmentIsRemovedFromTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.Departments), "Given I am at the Departments page.")
                 .And(x => DepartmentsPage.Add("TestDepartmentRemove", true), "And the department \"TestDepartmentRemove\" exists.")

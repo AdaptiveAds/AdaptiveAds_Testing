@@ -40,7 +40,7 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanLoginWithCorrectCredentials()
+        public void UserAuthentication_ProvidedCorrectUsernameAndPassword_AccesGranted()
         {
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs(ConfigData.Username)
@@ -53,13 +53,13 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCantLoginWithIncorrectUsername()
+        public void UserAuthentication_ProvidedInorrectUsernameAndCorrectPassword_AccesDenied()
         {
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs("Incorrect Username")
                                     .WithPassword(ConfigData.Password)
                                     .Login(),
-                                    "When I provide an incorrect username.")
+                                    "When I provide an incorrect username and correct password.")
                 .Then(x => Driver.IsAt(Location.Login), "Then I should still be at the login screen.")
                 .And(x => LoginPage.ErrorMessage(true),
                           "And a message is shown to inform of an unsuccessful login attempt.")
@@ -67,13 +67,13 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCantLoginWithIncorrectPassword()
+        public void UserAuthentication_ProvidedCorrectUsernameAndIncorrectPassword_AccesDenied()
         {
             this.Given(x => Driver.IsAt(Location.Login), "Given I am at the login page.")
                 .When(x => LoginPage.LoginAs(ConfigData.Username)
                                     .WithPassword("Incorrect Password")
                                     .Login(),
-                                    "When I provide an incorrect password.")
+                                    "When I provide a correct username and an incorrect password..")
                 .Then(x => Driver.IsAt(Location.Login), "Then I should still be at the login screen.")
                 .And(x => LoginPage.ErrorMessage(true),
                           "And a message is shown to inform of an unsuccessful login attempt.")

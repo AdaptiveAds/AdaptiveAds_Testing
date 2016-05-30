@@ -36,7 +36,7 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanNavigateToTheAdvertsPageFromTheDashboard()
+        public void DashboardLinks_AdvertsClicked_NavigatedToAdvertsPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Adverts), "When I select the adverts link.")
@@ -46,7 +46,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToThePlaylistsPageFromTheDashboard()
+        public void DashboardLinks_PlaylistsClicked_NavigatedToPlaylistsPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Playlists), "When I select the playlists link.")
@@ -56,7 +56,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheLocationsPageFromTheDashboard()
+        public void DashboardLinks_LocationsClicked_NavigatedToLocationsPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Locations), "When I select the locations link.")
@@ -66,7 +66,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheDepartmentsPageFromTheDashboard()
+        public void DashboardLinks_DepartmentsClicked_NavigatedToDepartmentsPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Departments), "When I select the departments link.")
@@ -76,7 +76,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheScreensPageFromTheDashboard()
+        public void DashboardLinks_ScreensClicked_NavigatedToScreensPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Screens), "When I select the screens link.")
@@ -86,7 +86,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheUsersPageFromTheDashboard()
+        public void DashboardLinks_UsersClicked_NavigatedToUsersPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Users), "When I select the users link.")
@@ -96,7 +96,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToTheTemplatesPageFromTheDashboard()
+        public void DashboardLinks_TemplatesClicked_NavigatedToTemplatesPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Templates), "When I select the templates link.")
@@ -106,7 +106,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToThePageBackgroundsPageFromTheDashboard()
+        public void DashboardLinks_PageBackgroundsClicked_NavigatedToPageBackgroundsPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.PageBackgrounds), "When I select the Page Backgrounds link.")
@@ -116,7 +116,7 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanNavigateToThePrivilegesPageFromTheDashboard()
+        public void DashboardLinks_PrivilegesClicked_NavigatedToPrivilegesPage()
         {
             this.Given(x => Driver.IsAt(Location.Dashboard), "Given I am at the Dashboard.")
                 .When(x => DashboardPage.Select(DashboardLink.Privileges), "When I select the privileges link.")

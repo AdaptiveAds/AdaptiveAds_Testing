@@ -59,7 +59,7 @@ namespace Tests.Stories
         #endregion
 
         [Test]
-        public void UserCanAddPlaylists()
+        public void PlaylistsControl_AddAPlaylist_SystemContainsNewPlaylist()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
                 .When(x => PlaylistsPage.Add("TestPlaylistAdd", "TestDepartmentForPlaylistTests1", false), "When I add an item.")
@@ -68,17 +68,29 @@ namespace Tests.Stories
         }
 
         [Test]
-        public void UserCanEditPlaylists()
+        public void PlaylistsControl_EditPlaylistName_UpdateIsAppliedToTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
                 .And(x => PlaylistsPage.Add("TestPlaylistEdit", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistEdit\" exists.")
-                .When(x => PlaylistsPage.EditName("TestPlaylistEdit"), "When I edit an item.")
+                .When(x => PlaylistsPage.EditName("TestPlaylistEdit"), "When I edit its name.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistEdit_Edited", true), "Then it is updated in the system.")
                 .BDDfy<PlaylistStory>();
         }
 
         [Test]
-        public void UserCanRemovePlaylists()
+        public void PlaylistsControl_EditPlaylistDepartment_UpdateIsAppliedToTheSystem()
+        {
+            this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
+                .And(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1", false), "And I add an item specifying the first department.")
+                .And(x => PlaylistsPage.Contains("TestPlaylistDepartment", true), "And it is added to the system.")
+                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1"), "And it is added to the correct department.")
+                .When(x=>PlaylistsPage.EditPlaylistDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"),"When I edit the department of the playlist to the second department.")
+                .Then(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"), "Then it is updated to the correct department.")
+                .BDDfy<PlaylistStory>();
+        }
+
+        [Test]
+        public void PlaylistsControl_DeletePlaylist_PlaylistIsRemovedFromTheSystem()
         {
             this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
                 .And(x => PlaylistsPage.Add("TestPlaylistRemove", "TestDepartmentForPlaylistTests1", true), "And the playlist \"TestPlaylistRemove\" exists.")
@@ -94,18 +106,6 @@ namespace Tests.Stories
                 .When(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1", false), "When I add an item specifying the department.")
                 .Then(x => PlaylistsPage.Contains("TestPlaylistDepartment", true), "Then it is added to the system.")
                 .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1"), "And it is added to the correct department.")
-                .BDDfy<PlaylistStory>();
-        }
-
-        [Test]
-        public void PlaylistDepartment_EditDepartment_PlaylistDepartmentUpdated()
-        {
-            this.Given(x => Driver.IsAt(Location.Playlists), "Given I am at the Playlists page.")
-                .And(x => PlaylistsPage.Add("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1", false), "And I add an item specifying the first department.")
-                .And(x => PlaylistsPage.Contains("TestPlaylistDepartment", true), "And it is added to the system.")
-                .And(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests1"), "And it is added to the correct department.")
-                .When(x=>PlaylistsPage.EditPlaylistDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"),"When I edit the department of the playlist to the second department.")
-                .Then(x => PlaylistsPage.PlaylistIsAssignedToDepartment("TestPlaylistDepartment", "TestDepartmentForPlaylistTests2"), "Then it is updated to the correct department.")
                 .BDDfy<PlaylistStory>();
         }
 
